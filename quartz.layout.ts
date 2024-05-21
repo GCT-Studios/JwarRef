@@ -27,7 +27,15 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer({title: "Sections"})),
+    Component.DesktopOnly(Component.Explorer({
+      title: "Sections",
+      filterFn: (node) => {
+        // set containing names of everything you want to filter out
+        const omit = new Set(["definitions", "states", "terms_concepts", "traits"])
+        return !omit.has(node.name.toLowerCase())
+      }
+    }
+    )),
   ],
   right: [
 //    Component.Graph(),

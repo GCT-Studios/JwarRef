@@ -23,7 +23,7 @@ Bushido Companion App: [Android](https://play.google.com/store/apps/details?id=d
 [Bushido Wiki](http://bushidothegame.wikidot.com/)  
 
 > [!NOTE] Note for nerds
-> The source files are created using Obsidian, the Markdown editor, and make use of YAML frontmatter for supporting file properties such as feat details.
-> This site is intended as both a simple supporting resource for discussion and games, and as an example of what can be done with the source rules.
+> The [source files](https://github.com/GCT-Studios/JwarRef) are created using Obsidian, the Markdown editor, and make use of YAML frontmatter for supporting file properties such as feat details.  
+> This site is intended as both a simple supporting resource for discussion and games, and as an example of what can be done with the source rules.  
 > Check out the tools section of the Bushido Discord server if you want to know more.
 
