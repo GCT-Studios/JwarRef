@@ -1,18 +1,7 @@
-# Quartz v4
+# JwarRef
+A rules repository and knowledgebase for GCT Studio's Bushido tabletop miniatures skirmish game.  
+This auto-generated site will eventually contain all content from the Rulebook, every Ki Feat, the Tournament & Scenario Pack, Profiles, and the Official FAQ.  
+This isn’t intended to replace any existing community resources, but to complement them.  
+Any developers looking for the rules text and definitions, please look in the [content](https://github.com/GCT-Studios/JwarRef/tree/v4/content) folder.  
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
-
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
-
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+🔗 Built on Quartz v4: https://quartz.jzhao.xyz/
