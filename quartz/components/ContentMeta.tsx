@@ -12,11 +12,13 @@ interface ContentMetaOptions {
    */
   showReadingTime: boolean
   showComma: boolean
+  showRevision: boolean
 }
 
 const defaultOptions: ContentMetaOptions = {
-  showReadingTime: true,
+  showReadingTime: false,
   showComma: true,
+  showRevision: true,
 }
 
 export default ((opts?: Partial<ContentMetaOptions>) => {
@@ -40,6 +42,15 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
           minutes: Math.ceil(minutes),
         })
         segments.push(displayedTime)
+      }
+
+      // Display revision if enabled
+      if (options.showRevision) {
+        const revision = fileData.frontmatter?.revision
+        if (revision != null) {
+          const displayedRev = "revision: " + revision
+          segments.push(displayedRev)
+        }
       }
 
       const segmentsElements = segments.map((segment) => <span>{segment}</span>)

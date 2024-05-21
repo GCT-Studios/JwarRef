@@ -20,16 +20,17 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.FeatIcons(),
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({title: "Sections"})),
   ],
   right: [
-    Component.Graph(),
+//    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -43,7 +44,15 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({
+      title: "Sections",
+      filterFn: (node) => {
+        // set containing names of everything you want to filter out
+        const omit = new Set(["definitions", "states", "terms_concepts", "traits"])
+        return !omit.has(node.name.toLowerCase())
+      }
+    }
+    )),
   ],
   right: [],
 }

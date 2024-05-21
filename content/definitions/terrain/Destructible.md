@@ -1,0 +1,1 @@
+A model in [[BtB]] with this terrain and not in an Enemy [[ZoC]] can declare a [[Wait Action]] and spend 2 Ki to remove it from the table.
