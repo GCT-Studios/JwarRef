@@ -58,10 +58,13 @@ A: Assassin trumps either trait. Technically the player would choose which trait
 **Q: Can you declare a [[Charge]] where only the movement over [[Ideal]] terrain in the charge path will give you enough movement to reach the charge target? **
 A: Yes.
 
-**Q: Do I have to roll any dice to take advantage of [[Brutal]]/[[Parry]]/[[Resistance]]?**
+**Q: Do I have to roll any dice to take advantage of [[Brutal]]/[[Parry]]/[[Resistance]]?**  
 A: Yes.  Similarly if all dice roll 1s, you cannot benefit from these traits.
 > [!NOTE]
 > Previously this was different for each trait; this should be simpler overall.
+
+**Q: When an effect adds terrain to the Battlefield, does it last until the End Phase?**  
+A: No, terrain is not “An Effect” and so is only removed when explicitly stated, so it will remain for the rest of the game if no condition for removal is given.
 
 ---
 
