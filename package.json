@@ -20,8 +20,8 @@
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
   },
   "engines": {
-    "npm": ">=10.7.0",
-    "node": ">=22"
+    "npm": ">=9.3.1",
+    "node": ">=18.14"
   },
   "keywords": [
     "site generator",
