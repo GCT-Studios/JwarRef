@@ -8,4 +8,4 @@ range: 8
 limitations:
   - noBtB
 ---
-Target Enemy model suffers -3 Walk until the End Phase.
+Target Enemy model suffers -3 Move until the End Phase.
