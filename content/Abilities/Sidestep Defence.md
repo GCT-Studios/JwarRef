@@ -1,1 +1,0 @@
-If the Defence is successful, the Defender leaves [[BtB]] and then move away from the Attacker until the Defender leaves The Attacker’s ZoC, at which point its movement ends.

@@ -1,1 +1,0 @@
-This model suffers no Melee penalty for being Exhausted.

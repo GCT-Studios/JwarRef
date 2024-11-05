@@ -1,1 +1,0 @@
-If this model’s Attack is successful, and the individual dice results of the Damage Roll are the same number, remove the Defender from play.
