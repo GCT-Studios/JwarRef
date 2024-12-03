@@ -63,9 +63,23 @@ A: Yes.  Similarly if all dice roll 1s, you cannot benefit from these traits.
 > [!NOTE]
 > Previously this was different for each trait; this should be simpler overall.
 
+## Further Clarifications:
+
+Intercepting Ranged Attacks [Step 1 d) i) of the Ranged Sequence] uses "Line", not "LoS". No facing away to not allow the opponent to intercept
+
+**[[Grapple Attack]]**: it is intended that it stops the Melee Exchange even against models that are _Immune [Held]_.
+
+Using the [[Heal]] trait to enter/leave BtB with an opponent without fighting is intended. There must, however, be a legal Target to move to and Heal to declare this.
+
+A [[Kami]] spending Ki is _not_ considered "taking damage".
+
+[[Cloudwalk]]/[[Intangible]]-models _must_ ignore Terrain (not optional). Uniques apply.
+
 ---
 
 ![[Ronin]]
+
+![[The Awoken]]
 
 ![[Cult of Yurei]]
 
@@ -78,6 +92,8 @@ A: Yes.  Similarly if all dice roll 1s, you cannot benefit from these traits.
 ![[KKZ|Kage Kaze Zoku]]
 
 ![[Kinshi Temple]]
+
+![[Prefecture of Ryu]]
 
 ![[Shiho Clan]]
 

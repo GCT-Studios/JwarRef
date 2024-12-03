@@ -3,5 +3,6 @@ title: Cleave
 cost: 2
 timing: Active
 subject: Personal
+revision: 1
 ---
-This model gains [[Brutal]] (2) until the current action is resolved.
+This model gains [[Brutal]] [Melee] (2) until the current action is resolved.
