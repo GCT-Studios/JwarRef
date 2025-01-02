@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - damagetable
+---
 The Success Level indicates which column of the Wound Table the player should consult.
 
 > [!NOTE] Success Level Modifiers
