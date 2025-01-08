@@ -1,10 +1,8 @@
-[[Dice Discard Traits]]
-[[Re-Roll Traits]]
-[[Statistic Pool Modifier Traits|Statistic / Pool Modifier Traits]]
-[[Test Modifier Traits]]
-[[Melee Exchange Traits]]
-[[Ranged Attack Traits]]
-[[Ki Traits]]
+## Trait Groups:
+[[Dice Discard Traits]], [[Re-Roll Traits]]  
+[[Statistic Pool Modifier Traits|Statistic / Pool Modifier Traits]], [[Test Modifier Traits]]  
+[[Melee Exchange Traits]], [[Ranged Attack Traits]]  
+[[Ki Traits]]  
 ## A
 
 - [[Adept]]
