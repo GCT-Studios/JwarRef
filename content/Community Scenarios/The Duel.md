@@ -1,6 +1,3 @@
----
-title: Bavarian Botokū
----
 ## Community Scenario
 - Type:
 	- [[VIM]] (Warband Creation)
