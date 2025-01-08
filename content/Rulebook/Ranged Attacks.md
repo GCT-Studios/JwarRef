@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - headedtable
+---
 A model must have a ranged weapon to make a Ranged Attack.
 A Ranged Attack is a type of [[Challenge Test]], and the usual rules apply.
 
@@ -48,15 +52,11 @@ if you hit your Target or the Friendly model.
 	1. Any Boosts used for this attack expire.
 ## Determining the Ranged Attack Challenge Number
 
-<span class="headedtable">
-
 | Range Band | Challenge Number |
 | ---------- | ---------------- |
 | Short      | 4                |
 | Medium     | 5                |
 | Long       | 6                |
-
-</span>
 
 | Effect                                                       | Modifier |
 | ------------------------------------------------------------ | -------- |
@@ -76,14 +76,12 @@ if you hit your Target or the Friendly model.
 
 If a model Targets an Enemy model in [[BtB]] with a Friendly model then at step 4b, make a Ranged Challenge test (6), with the following modifiers.
 
-<span class="unheadedtable">
-
+| Target Size      | Modifier          |
+| ---------------- | ----------------- |
 | Target is Tiny   | +1                |
 | Target is Medium | -1                |
 | Target is Large  | -2                |
 | Target is Huge   | Automatic Success |
-
-</span>
 
 If the test is successful proceed as normal.
 If the test is a failure the Target of the Attack is changed to the nearest Friendly model in [[BtB]] with the original Target.
