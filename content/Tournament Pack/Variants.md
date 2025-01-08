@@ -19,13 +19,12 @@ Pairings after the first round should be using the Swiss Pairing system. Each pl
 During a tournament, the TO will leave enough terrain for the table but players set it up before each game. The TO should leave a pool of mixed terrain with a variety of types, suggested is not to have too much of any one type but to have as many different types as possible.
 ## Composition
 ### 2-list
-Players bring 2 lists of the same faction. Before each game players have 5 minutes to look at their opponent’s lists and choose which of their own lists to use.
-Players simultaneously reveal when both are ready.
-Both lists are entirely independent and may also include “Ordered For Battle” or “Strategic Deployment” theme cards so one or both lists may include a Sideboard or Two Lists (as limited by Strategic Deployment).
-All list choices and Sideboard options must be completed in the same 5 minutes; no additional time is given.
+Players bring 2 lists of the same faction. Before each game players have 5 minutes to look at their opponent’s lists and choose which of their own lists to use.  
+Players simultaneously reveal when both are ready.  
+Both lists are entirely independent but it is recommended that the Ronin Theme cards “Ordered For Battle” and “Strategic Deployment” are not permitted in this format.
 ## Sideboard
-Players bring 30 rice of additional cards in a Sideboard.
-Players have 5 minutes before the game to swap cards.
+Players bring 30 rice of additional cards in a Sideboard.  
+Players have 5 minutes before the game to swap cards.  
 Each of the following must be legal:
 - base list without the sideboard
 - list including the sideboard
