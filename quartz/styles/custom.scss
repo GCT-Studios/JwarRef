@@ -98,7 +98,7 @@ table tr td:first-child {
 }
 
 .woundtable thead { 
-	background-color: var(--quarternary); 
+	background-color: var(--dark); 
 }
 
 .woundtable tbody tr:nth-child(2), .woundtable tbody tr:nth-child(5), .woundtable tbody tr:nth-child(6), .woundtable tbody tr:nth-child(7), .woundtable tbody tr:nth-child(10) { 
@@ -110,7 +110,7 @@ table tr td:first-child {
 }
 
 .headedtable thead { 
-	background-color: var(--quarternary);
+	background-color: var(--dark);
 }
 
 .headedtable tr:nth-child(even) { 
