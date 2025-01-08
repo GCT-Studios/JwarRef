@@ -1,4 +1,3 @@
-Game Setup
 Before starting the first Turn, players need to set up the game using the following steps. This replaces the relevant sections of the Rulebook.
 1. Players move to their assigned table and share their Warband list with their Opponent.
 2. Players make any list-composition changes permitted.

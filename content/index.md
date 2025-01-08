@@ -1,7 +1,7 @@
 ---
 title: JwarRef
 ---
-This auto-generated site currently contains all content from the [[Rulebook/index|Rulebook]], every Ki Feat, the [[Tournament Pack/Contents|Tournament & Scenario Pack]], and the [[FAQ/index|Official FAQ]].  
+This auto-generated site currently contains all content from the [[Rulebook/index|Rulebook]], every Ki Feat, the [[Tournament Pack/index|Tournament & Scenario Pack]], and the [[FAQ/index|Official FAQ]].  
 Profiles will follow eventually.  
 This isn't intended to replace any existing community resources, but to complement them.  
 Currently maintained by MCMBen. [Buy him a coffee](https://ko-fi.com/mcmben)
@@ -10,7 +10,7 @@ Currently maintained by MCMBen. [Buy him a coffee](https://ko-fi.com/mcmben)
 > Whilst the content here is organised somewhat by source, the search function is the recommended method of navigation. It is ***very*** good!
 
 # [[Rulebook/index|Rulebook]]
-# [[Tournament Pack/Contents|Tournament & Scenario Pack]]
+# [[Tournament Pack/index|Tournament & Scenario Pack]]
 # [[FAQ/index|Frequently Asked Questions]]
 (sourced from the Official Errata document below)
 # [Official Errata](https://docs.google.com/document/d/1QVDOiHRrkplIJV72aeod3jDvE-Qkb_HlmljF8rgZAf0/edit?usp=sharing)

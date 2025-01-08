@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - headedtable
+---
 Below are a few optional rules to tailor your tournament to make it stand out or to adjust the official format to suit your local players.
 ## Organisation
 ### Strict Swiss

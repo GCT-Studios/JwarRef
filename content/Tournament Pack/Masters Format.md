@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - headedtable
+---
 The Masters Format is the premier Bushido Tournament. This allows players to show their mastery of the game as it should be played with competitive players fighting for scenario points, with sportsmanship a primary concern.
 This format requires the most player skill and knowledge of the various scenarios, but should be accessible for newer players to join in and not feel overwhelmed.
 Some Masters events attended by GCT Studios are designated Grand Masters. These large events allow for the top players to compete for the most coveted prize: the chance to work with GCT to design their own Bushido model and have it released as a new character to recruit in the game.

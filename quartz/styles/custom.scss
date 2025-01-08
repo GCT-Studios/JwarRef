@@ -90,15 +90,18 @@ TABLES
 }
 
 table tr td {
-	border-left: 1px solid var(--lightgray);
+	border-left: 1px solid gray;
 }
 
 table tr td:first-child {
 	border-left: 0;
 }
 
-.woundtable th,
-.woundtable tr:nth-child(0), .woundtable tr:nth-child(2), .woundtable tr:nth-child(5), .woundtable tr:nth-child(6), .woundtable tr:nth-child(7), .woundtable tr:nth-child(10) { 
+.woundtable thead { 
+	background-color: var(--quarternary); 
+}
+
+.woundtable tbody tr:nth-child(2), .woundtable tbody tr:nth-child(5), .woundtable tbody tr:nth-child(6), .woundtable tbody tr:nth-child(7), .woundtable tbody tr:nth-child(10) { 
 	background-color: var(--tertiary); 
 }
 
@@ -106,7 +109,11 @@ table tr td:first-child {
 	border-bottom: none;
 }
 
-.headedtable th, .headedtable tr:nth-child(even) { 
+.headedtable thead { 
+	background-color: var(--quarternary);
+}
+
+.headedtable tr:nth-child(even) { 
 	background-color: var(--tertiary);
 }
 

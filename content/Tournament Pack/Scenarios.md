@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - headedtable
+---
 These 12 scenarios are suitable for Tournament play.
 At a tournament the TO will choose scenarios.
 For pick-up games, you can generate a scenario randomly:
