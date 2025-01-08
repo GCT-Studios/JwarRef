@@ -58,7 +58,7 @@ export const defaultListPageLayout: PageLayout = {
       title: "Sections",
       filterFn: (node) => {
         // set containing names of everything you want to filter out
-        const omit = new Set(["definitions", "states", "terms_concepts", "traits"])
+        const omit = new Set(["definitions"])
         return !omit.has(node.name.toLowerCase())
       }
     }
