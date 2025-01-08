@@ -24,7 +24,7 @@ When a Ki Feat can be used depends on its timing. Instant and Active Ki Feats ar
 
 Other than during a Melee Exchange or Ranged Attack, if both players wish to use Instant or Active Ki feats the [[Active Player]] goes first.
 
-Any [[traits]] or [[Effects]] that would impact the result of a [[Dice Rolls|dice roll]], [[Tests|test]] or [[Movement|movement]] must be declared, and any cost paid before the dice are rolled.
+Any [[Traits]] or [[Effects]] that would impact the result of a [[Dice Rolls|dice roll]], [[Tests|test]] or [[Movement|movement]] must be declared, and any cost paid before the dice are rolled.
 
 Instant and Active Ki Feats as well as Ki Boosts, cannot be used to affect dice that have already been rolled. However, Ki Feats that grant re-rolls may be used after seeing the initial dice values.
 

@@ -85,7 +85,7 @@
 - [[Mettle]]
 - [[Oni Rage]]
 - [[Order]]
-- [[Overwhelm]]
+- [[Feats/Overwhelm]]
 - [[Pack]]
 - [[Parry]]
 - [[Pierce]]
@@ -101,7 +101,7 @@
 - [[Resistance]]
 - [[Rise]]
 ## S
-- [[Sacrifice]]
+- [[Feats/Sacrifice]]
 - [[Scout]]
 - [[Sharp]]
 - [[Sixth Sense]]

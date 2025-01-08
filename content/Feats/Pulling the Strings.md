@@ -6,4 +6,4 @@ subject: Target
 range: "6"
 opposed: true
 ---
-You may [[Walk]] [[Target]] Enemy model 2".
+You may [[Walk]] [[definitions/feats/Target]] Enemy model 2".

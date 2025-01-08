@@ -5,4 +5,4 @@ subject: Personal
 limitations:
   - OpG
 ---
-[[Place]] this model in contact with any Webbed Ground Terrain.
+[[Movement/Place]] this model in contact with any Webbed Ground Terrain.

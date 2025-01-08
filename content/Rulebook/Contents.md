@@ -1,6 +1,6 @@
 ## [[Game Overview]]
 ### [[Getting Ready]]
-### [[Terms Concepts|Terms & Concepts]]
+### [[Terms & Concepts|Terms & Concepts]]
 ### [[Cards]]
 ### [[Warband Composition]]
 ## [[Game Setup Turn|Game Setup & Turn]]

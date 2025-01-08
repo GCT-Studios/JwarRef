@@ -74,7 +74,7 @@ If a card has no printed Max (X) trait, it is assumed to be Max (1).
 
 There are three types of Special cards that players can recruit when creating their Warband - Enhancements, Events, and Terrain. Each type acts differently in how and what they affect during the game. These are explained in detail below, but all special cards are comprised of the following features:
 
-**Name:** The card’s name.
+- **Name:** The card’s name.
 - **Faction:** Special cards may only be purchased if they have the same Faction symbol as the Warband, or the Ronin Faction symbol.
 - **Type:** This specifies if it is an Event, Enhancement or Terrain card.
 - **Description:** Describes the card’s effects.
@@ -90,7 +90,8 @@ Models with the Insignificant trait cannot have Enhancement cards Attached to th
 Some models have multiple profile cards. If a card says X and Y are considered the same model when creating a Warband, then any Enhancement cards bought for either card are moved to the one starting in play before the game.
 
 Some cards represent multiple models and have multiple wound tracks. Enhancement cards will specify if they can be bought for such models multiple times or can only be bought for a single model on the card. In the case of enhancements applied to a single model on a card representing multiple models, the enhanced model must be distinguishable from otherwise identical models without the enhancement.
-Enhancement Card Traits:
+
+**Enhancement Card Traits:**
 - **Equipment:** This represents a physical item. A model may have only one Equipment card attached to it.
 - **Max (X):** This card can be purchased for a Warband up to X times.
 - **Requirement \[Type]:** This card can only be Attached to this type of model.
@@ -99,7 +100,8 @@ Enhancement Card Traits:
 Event cards are played once, at a time detailed on the card. Once the card is resolved, then it is discarded and removed from the game.
 Unless stated otherwise Event Cards are used in the same way as Instant Ki Feats (p.56). They are not, however, considered to be Ki Feats.
 Some event cards may result in another special card being put into play, often as a result of some action on the table. In these cases, the other special card will be printed on the reverse side of the Event card and can only be recruited in this way.
-### Event Card Traits
+
+**Event Card Traits:**
 - **Max (X):** This card can be purchased for a Warband up to X times.
 - **Requirement \[Type]:** This card is restricted in how it can be played or recruited and requires a \[Type] of model or specifies another restriction.
 ## Terrain Cards
@@ -108,9 +110,11 @@ Terrain cards allow a player to deploy a specified Terrain element on the table 
 Terrain elements deployed due to Terrain cards must follow standard rules for Terrain element deployment unless stated on the card.
 
 If restrictions mean that the terrain cannot be deployed, the opposing player must make as small an alteration as possible to allow the bought terrain to be placed.
-### Terrain Card Traits:
+
+**Terrain Card Traits:**
 ![[Destructible]]
-Requirement \[Type]: This card is restricted in how it can be played or recruited and requires a \[Type] model.
+
+Requirement [Type]: This card is restricted in how it can be played or recruited and requires a [Type] model.
 For Passage, Visibility and Size traits see [[Terrain]].
 ## Communal Cards
 Some factions have access to a Communal Card. These cost no Rice and can always be recruited. You may only recruit one Communal Card with the same name.
@@ -130,7 +134,7 @@ A player can only use one Theme per [[Warband]]. Themed lists allow you to trade
 >[!example]
 >Aiko is recruited into the Righteous Warriors Theme, Silverback can now be recruited even though animals, gorillas and Silverback are not listed in the Permitted models.
 
-### Theme Card Traits:
+**Theme Card Traits:**
 - **Permitted (Type):** Only models with a matching type can be recruited into this Warband, Ronin models of the type may only be included if the theme states Ronin of that type are permitted.
   If a Theme list card does not have this trait, all models from the chosen Faction are available to recruit into the theme.
   If a Ronin Theme list card does not have this trait, all models from the chosen Faction and all Ronin available to that Faction are available to recruit into the theme.
