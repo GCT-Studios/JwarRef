@@ -1,6 +1,6 @@
 ---
 cssclasses:
-  - damagetable
+  - woundtable
 ---
 The Success Level indicates which column of the Wound Table the player should consult.
 
@@ -19,8 +19,6 @@ If the final result would be higher than 12, treat it as 12.
 >[!NOTE] Wound Result Modifiers
 >[[Sharp]], [[Durable]], & [[Tough]]
 
-<span id="damagetable">
-
 | *2D6*    | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  |
 | -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ***2***  | 0   | 0   | 0   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   |
@@ -35,7 +33,6 @@ If the final result would be higher than 12, treat it as 12.
 | ***11*** | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  |
 | ***12*** | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  | 13  |
 
-</span>
 
 > [!example]
 > Masaema Aya manages to hit Ito Itsunagi for a Success Level 3, Rolling 2D6 for damage she gets a 3 and 5, adding her Strength of +1 we see a total of 9.
