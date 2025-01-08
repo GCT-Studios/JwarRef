@@ -17,7 +17,7 @@ if you hit your Target or the Friendly model.
 1. 
 	1. If the Model has multiple ranged Weapons, choose which one it will make the Ranged Attack with.
 	2. Target a model.
-	3. Measure the distance to the Enemy model and check this distance against the weapon’s Range Bands to see which Range the Ranged Attack is at (see Profile Cards, p.12).
+	3. Measure the distance to the Enemy model and check this distance against the weapon’s Range Bands to see which Range the Ranged Attack is at.
 	   If the distance is further than the Long Range of the weapon the action fails, move to step 7.
 	4. The player Controlling the Targeted model may at this point nominate a different Friendly model as the new Target if:
 		1. Any LoS from the Attacker crosses through the nominated model’s ZoC before contacting the original Target’s Base.

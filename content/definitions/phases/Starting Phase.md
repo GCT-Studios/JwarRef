@@ -1,4 +1,4 @@
-1. Roll for Variable Turns. See Scenarios (p.78).
+1. Roll for Variable Turns. See [[Scenarios]].
 2. Ki Generation: All models gain a number of Ki Tokens equal to the first number of their Ki Statistic.
 3. All models gain 2 Activation Counters each.
 4. Tactical Test: Resolve the Tactical Test to see which player is Active.

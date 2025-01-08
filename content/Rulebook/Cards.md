@@ -98,7 +98,7 @@ Some cards represent multiple models and have multiple wound tracks. Enhancement
 - **Exclusion \[Type]:** This card cannot be Attached to this type of model.
 ## Event Cards
 Event cards are played once, at a time detailed on the card. Once the card is resolved, then it is discarded and removed from the game.
-Unless stated otherwise Event Cards are used in the same way as Instant Ki Feats (p.56). They are not, however, considered to be Ki Feats.
+Unless stated otherwise Event Cards are used in the same way as Instant Ki Feats. They are not, however, considered to be Ki Feats.
 Some event cards may result in another special card being put into play, often as a result of some action on the table. In these cases, the other special card will be printed on the reverse side of the Event card and can only be recruited in this way.
 
 **Event Card Traits:**
