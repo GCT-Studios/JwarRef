@@ -6,6 +6,7 @@ export interface ColorScheme {
   dark: string
   secondary: string
   tertiary: string
+  quarternary: string
   highlight: string
 }
 

@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - headedtable
+---
 Bushido is best enjoyed by playing a scenario. Whilst beating your opponent into the ground until the last man is standing is fun, especially when learning the rules, there will come a time when you want to explore the full strategically challenging potential that Bushido has to offer.
 Scenarios are named and then broken down into five simple sections, that when understood allow players to quickly pick up and play any scenario.
 ## Name
