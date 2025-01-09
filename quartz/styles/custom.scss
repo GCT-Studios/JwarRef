@@ -115,6 +115,10 @@ table tr td:first-child {
 	background-color: var(--dark); 
 }
 
+.woundtable thead tr { 
+	color: var(--light);
+}
+
 .woundtable tbody tr:nth-child(2), .woundtable tbody tr:nth-child(5), .woundtable tbody tr:nth-child(6), .woundtable tbody tr:nth-child(7), .woundtable tbody tr:nth-child(10) { 
 	background-color: var(--tertiary); 
 }
