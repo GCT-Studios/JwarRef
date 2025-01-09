@@ -12,8 +12,8 @@ The player then makes a Damage Roll using 2D6, adding together results along wit
 >[!NOTE] Damage Roll Modifiers
 >[[Assassin]], Weapon Strength, [[Pierce]], [[Strong]], [[Vengeance]], [[Armour]], [[Weak]]
 
-1’s are not failures when making a Damage Roll.
-If the final result would be less than 2, treat it  as 2.
+1’s are not failures when making a Damage Roll.  
+If the final result would be less than 2, treat it  as 2.  
 If the final result would be higher than 12, treat it as 12.
 
 >[!NOTE] Wound Result Modifiers
