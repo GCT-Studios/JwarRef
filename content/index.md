@@ -27,6 +27,8 @@ Maintained by MCMBen. [Buy him a coffee](https://ko-fi.com/mcmben)
 > Bushido Game Mode App: [Android](https://play.google.com/store/apps/details?id=de.molkow.bushido_gm), [iOS](https://apps.apple.com/gb/app/bushido-game-mode/id6670756121)  
 > [Mootaz' Unofficial FAQ](https://docs.google.com/document/d/1HM9FM4ea5xhFmDj2TLgnHlz_2to8a_uLu6rfzfASwm4/edit?usp=sharing)
 
+---
+
 > [!NOTE] Note for nerds
 > The [source files](https://github.com/GCT-Studios/JwarRef) are created using Obsidian, the Markdown editor, and make use of YAML frontmatter for supporting file properties such as feat details.  
 > This site is intended as both a simple supporting resource for discussion and games, and as an example of what can be done with the source rules.  
