@@ -86,11 +86,20 @@ CALLOUTS
 	padding: 1rem 0;
 	color: var(--tertiary);
 
-	&[data-callout] {
-		--color: #448aff;
-		--border: #448aff44;
+	&[data-callout],
+	&[data-callout="abstract"],
+	&[data-callout="info"],
+	&[data-callout="todo"],
+	&[data-callout="tip"],
+	&[data-callout="success"],
+	&[data-callout="question"],
+	&[data-callout="warning"],
+	&[data-callout="failure"],
+	&[data-callout="bug"],
+	&[data-callout="danger"],
+	&[data-callout="example"],
+	&[data-callout="quote"] {
 		--bg: var(--highlight);
-		--callout-icon: var(--callout-icon-note);
 	  }
 }
 
