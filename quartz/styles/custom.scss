@@ -85,7 +85,9 @@ CALLOUTS
 	gap: 5px;
 	padding: 1rem 0;
 	color: var(--tertiary);
+}
 
+.callout {
 	&[data-callout],
 	&[data-callout="abstract"],
 	&[data-callout="info"],
