@@ -27,11 +27,11 @@ When declaring the use of Ki Feats (Including Ki Boosts) during any test, the Op
 
 ![[Opposed Test]]
 
+![[Tactical Test]]
+
 ![[Challenge Test]]
 
 ![[Size Challenge Test]]
-
-![[Tactical Test]]
 
 ![[Fear Challenge Test]]
 
