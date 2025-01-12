@@ -6,3 +6,5 @@ Once in contact with the Targeted model’s ZoC or if the targeted model is in t
 
 Once the charging model contacts the Target model’s ZoC, it must move directly towards the target until it is in [[BtB]].
 This movement need not be along the straight path of the charge movement.
+
+![[diagram-charge.webp]]

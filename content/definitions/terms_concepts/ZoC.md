@@ -10,3 +10,5 @@ Models beginning their activation in one or more Enemy model’s ZoC must either
 
 Models can ignore the ZoC of Models that are in [[BtB]] with Enemy models for movement and declaring or performing actions (such as Ranged Attack Actions or Scenario Actions which otherwise cannot be performed in a ZoC).
 If a model moves out of [[BtB]], then it may ignore the ZoC until that move is completed.
+
+![[diagram-ZoC.webp]]

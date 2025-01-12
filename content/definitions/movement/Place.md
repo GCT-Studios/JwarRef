@@ -5,3 +5,5 @@ It does not have a move path, and it ignores ZoC, models and terrain between it,
 If a model is Placed, it cannot be placed into the area of an Impassable Terrain Element, another model or into [[BtB]] with an Enemy model.
 Each specific Place effect may have further restrictions.
 The player Placing the model decides the model’s Facing.
+
+![[diagram-place.webp]]

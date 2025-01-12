@@ -2,3 +2,5 @@ A model’s Facing line is directly in the centre of the front of its base. It s
 Ninety degrees either side of a model’s facing line shows its Front Arc and should be marked on the model’s base with lines or dots.
 A model is Facing anything forward of its Front Arc.
 A model is Directly Facing anything in front of its facing line.
+
+![[diagram-facing.webp]]

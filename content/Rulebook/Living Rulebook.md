@@ -1,11 +1,11 @@
 ---
 draft: "true"
 ---
+# About This Document
+I need to include a little text here explaining how this living rulebook is generated.
+
 # Game Overview
 ![[Game Overview]]
-
-## About This Document
-I need to include a little text here explaining how this living rulebook is generated.
 
 ## Getting Ready
 ![[Getting Ready]]

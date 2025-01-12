@@ -59,7 +59,7 @@ title: Terms & Concepts
 
 ![[Owner]]
 
-![[definitions/terms_concepts/Place]]
+![[term-place]]
 
 ![[Replace]]
 
