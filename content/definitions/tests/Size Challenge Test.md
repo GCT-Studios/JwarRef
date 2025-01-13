@@ -3,9 +3,9 @@ title: Size Challenge Tests
 cssclasses:
   - headedtable
 ---
-A Size Challenge Test is a [[Challenge Test]] using a model’s Size in place of a Statistic.
-A model taking a Size Challenge Test rolls a number of dice based on its size as shown in the table below.
-Modifiers are then applied to the result of the roll, if applicable.
+A Size Challenge Test is a [[Challenge Test]] using a model’s Size in place of a Statistic.  
+A model taking a Size Challenge Test rolls a number of dice based on its size as shown in the table below.  
+Modifiers are then applied to the result of the roll, if applicable.  
 
 | Size   | Number of Dice |
 | ------ | -------------- |

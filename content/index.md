@@ -1,8 +1,7 @@
 ---
 title: JwarRef
 ---
-Thissite currently contains all content from the [[Rulebook/index|Rulebook]], every released Ki Feat, the [[Tournament Pack/index|Tournament & Scenario Pack]], and the [[FAQ/index|Official FAQ]].  
-Profiles will follow eventually.  
+This site currently contains all content from the [[Rulebook/index|Rulebook]], every released Ki Feat, the [[Tournament Pack/index|Tournament & Scenario Pack]], and the [[FAQ/index|Official FAQ]]. Profiles will follow eventually.  
 This isn't intended to replace any existing community resources, but to complement them.  
 Maintained by MCMBen. [Buy him a coffee](https://ko-fi.com/mcmben)
 
@@ -15,6 +14,7 @@ Maintained by MCMBen. [Buy him a coffee](https://ko-fi.com/mcmben)
 (sourced from the Official Errata document below)
 # [Official Errata](https://docs.google.com/document/d/1QVDOiHRrkplIJV72aeod3jDvE-Qkb_HlmljF8rgZAf0/edit?usp=sharing)
 
+---
 # Community Tools & Resources
 
 [Bushido Database](https://bushidodb.ddns.net/bushido/)  

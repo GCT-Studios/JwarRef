@@ -1,5 +1,5 @@
 ---
 title: Leadership [Descriptor](X/Y")
 ---
-Whilst within Y” Friendly [Descriptor] models add X to the final Result when taking a Fear Test.
+Whilst within Y” Friendly [Descriptor] models add X to the final Result when taking a Fear Test.  
 If in range of multiple models with Leadership, use only the highest X value.

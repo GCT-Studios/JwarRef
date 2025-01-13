@@ -1,7 +1,7 @@
 ---
 title: Opposed Tests
 ---
-These type of tests require two models to roll a number of dice equal to the Statistic value for the test. For an Opposed Melee Test, for example, you would roll a number of dice equal to the models’ Melee Pool Statistics.
+These type of tests require two models to roll a number of dice equal to the Statistic value for the test. For an Opposed Melee Test, for example, you would roll a number of dice equal to the models’ Melee Pool Statistics.  
 
 Opposed Tests are resolved in the following order:
 1. The models calculate their dice pools, deciding if they will use any [[Special Abilities]], [[Ki Feats]] or increase the Statistic being used through [[Ki Boosts]]. The [[Active Player]] declares second.

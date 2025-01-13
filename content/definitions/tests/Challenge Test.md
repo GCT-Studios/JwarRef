@@ -1,10 +1,10 @@
 ---
 title: Challenge Tests
 ---
-These type of tests require one model to roll a number of dice equal to the Statistic value for the test. These will be called out with a Challenge Number in brackets, for example, Ki Challenge Test (5) or Move Challenge Test (6).
+These type of tests require one model to roll a number of dice equal to the Statistic value for the test. These will be called out with a Challenge Number in brackets, for example, Ki Challenge Test (5) or Move Challenge Test (6).  
 
-The Challenge Number is the number that must be equalled or exceeded by the final result of the dice rolled. If no Statistic is specified, then the Challenge test is made using a single D6.
-The Challenge Number can also be modified; it is possible for the Challenge number to be zero or negative.
+The Challenge Number is the number that must be equalled or exceeded by the final result of the dice rolled. If no Statistic is specified, then the Challenge test is made using a single D6.  
+The Challenge Number can also be modified; it is possible for the Challenge number to be zero or negative.  
 ### Rolling a Challenge Test
 1. Calculate the model’s dice pool, deciding if they will use any abilities, Ki Feats or increase the Statistic being used through a Ki Boost.
 2. Roll the dice and conduct any rerolls.

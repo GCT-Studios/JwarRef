@@ -2,9 +2,9 @@
 title: Melee Exchanges
 aliases: []
 ---
-A Melee Attack is a type of Opposed test, and all the usual rules apply, during a Melee Attack the use of Instant and Active Ki Feats (and effects that can be used as Instants) is restricted. For a Melee Exchange, however, two tests are rolled simultaneously, with each model rolling Attack and Defence dice at the same time and applying traits to see which model comes out of the exchange victorious.
+A Melee Attack is a type of Opposed test, and all the usual rules apply, during a Melee Attack the use of Instant and Active Ki Feats (and effects that can be used as Instants) is restricted. For a Melee Exchange, however, two tests are rolled simultaneously, with each model rolling Attack and Defence dice at the same time and applying traits to see which model comes out of the exchange victorious.  
 ## Overview
-A Melee Exchange represents the awesome conflicts between the characters of Bushido using Katanas, Martial Arts, claws and teeth, Magical abilities and other stranger fighting techniques.
+A Melee Exchange represents the awesome conflicts between the characters of Bushido using Katanas, Martial Arts, claws and teeth, Magical abilities and other stranger fighting techniques.  
 
 > [!example]
 > Hiro is involved in a Melee Exchange.
@@ -17,28 +17,28 @@ A Melee Exchange represents the awesome conflicts between the characters of Bush
 > 
 > or any other combination totalling 5 dice.
 
-Melee exchanges usually occur as part of a Melee Action which allows you to move into [[BtB]] contact; often a melee action will be declared when already in [[BtB]] contact.
+Melee exchanges usually occur as part of a Melee Action which allows you to move into [[BtB]] contact; often a melee action will be declared when already in [[BtB]] contact.  
 
-Once in [[BtB]] turn both models to face directly toward each other.
-Next, players may declare any Instant Ki feats that will affect the melee, including Ki boosting the melee pool. The defender declares first.
+Once in [[BtB]] turn both models to face directly toward each other.  
+Next, players may declare any Instant Ki feats that will affect the melee, including Ki boosting the melee pool. The defender declares first.  
 
-Next players allocate dice pools. Secretly take your dice (You should have two colours of Dice, one for attack and one for Defence) and assign them, so you have a total equal to your melee pool.
+Next players allocate dice pools. Secretly take your dice (You should have two colours of Dice, one for attack and one for Defence) and assign them, so you have a total equal to your melee pool.  
 
-You also need to remove dice from the Melee Pool to pay for any Special Attack or Defence.
-Once both players have secretly allocated dice, reveal any special Attack or Defence and roll all the dice together.
+You also need to remove dice from the Melee Pool to pay for any Special Attack or Defence.  
+Once both players have secretly allocated dice, reveal any special Attack or Defence and roll all the dice together.  
 
-In Tests, dice with a value of 1 are removed from tests. Put them to one side they are not counted for the rest of the melee exchange.
+In Tests, dice with a value of 1 are removed from tests. Put them to one side they are not counted for the rest of the melee exchange.  
 
-The Active player’s model attacks first. Take the value of the highest attack dice rolled, and also up to two other attack dice to become a supporting dice which each add +1 to the highest value, to find the result of the attack.
+The Active player’s model attacks first. Take the value of the highest attack dice rolled, and also up to two other attack dice to become a supporting dice which each add +1 to the highest value, to find the result of the attack.  
 
-The defender does the same with their defence dice, taking the highest and adding +1 for each supporting dice.
+The defender does the same with their defence dice, taking the highest and adding +1 for each supporting dice.  
 
-If the Attacker succeeds, the difference between the final results is the Success Level of the attack. Any Special Attack or Defence is applied depending on the outcome.
-This is used, along with a 2D6 Damage Roll on the damage table to find the total damage of the attack.
+If the Attacker succeeds, the difference between the final results is the Success Level of the attack. Any Special Attack or Defence is applied depending on the outcome.  
+This is used, along with a 2D6 Damage Roll on the damage table to find the total damage of the attack.  
 
-Assuming the defender is still around to make an attack, the defending player can now total his Attack Dice in the same way and check against the Attackers Defence to see if he also caused damage or uses a Special Attack or Defence.
+Assuming the defender is still around to make an attack, the defending player can now total his Attack Dice in the same way and check against the Attackers Defence to see if he also caused damage or uses a Special Attack or Defence.  
 
-Once the Melee Exchange is over, remove an Activation Counter from both models.
+Once the Melee Exchange is over, remove an Activation Counter from both models.  
 
 > [!example]
 > Masaema Aya is in [[BtB]] with Chiyo.
@@ -107,8 +107,6 @@ Use the following steps to resolve a Melee Exchange:
 
 ---
 
-<span class="headedtable">
-
 | Effect                                                  | Dice Pool Modifier     |
 | ------------------------------------------------------- | ---------------------- |
 | Model is Exhausted                                      | -1                     |
@@ -118,9 +116,7 @@ Use the following steps to resolve a Melee Exchange:
 | Model is Surprised                                      | -1                     |
 | Model declared a Stand Up action                        | -1                     |
 
-</span>
-
 ---
 ## Melee Assist
-Models in Melee Exchanges suffer a -1 modifier for each Enemy model in BtB with which they are not currently resolving a Melee Exchange, and which is not also in BtB with a Friendly model.
+Models in Melee Exchanges suffer a -1 modifier for each Enemy model in BtB with which they are not currently resolving a Melee Exchange, and which is not also in BtB with a Friendly model.  
 The enemy model is said to be Assisting the Melee.

@@ -7,8 +7,8 @@ When two rules come into direct conflict, use the following order of precedence 
 3.	If effects happen at the same time, the active player chooses the order to resolve them.
 
 > [!example]
-> Kenko uses Slam Attack on Manu.
-> Manu has the Immovable Trait.
-> Slam Attack makes no reference to Immovable, & vice versa - so test 1 does not resolve this.
+> Kenko uses Slam Attack on Manu.  
+> Manu has the Immovable Trait.  
+> Slam Attack makes no reference to Immovable, & vice versa - so test 1 does not resolve this.  
 > As per test 2, since Immovable is stopping an effect from happening, it takes priority over the Slam rules so Manu is not moved or made Prone.
 

@@ -2,13 +2,13 @@
 cssclasses:
   - headedtable
 ---
-These 12 scenarios are suitable for Tournament play.
-At a tournament the TO will choose scenarios.
+These 12 scenarios are suitable for Tournament play.  
+At a tournament the TO will choose scenarios.  
 For pick-up games, you can generate a scenario randomly:
 - Roll D6 or choose to use Basic or Advanced
 - Roll D6 to determine the scenario
-Alternatively you can randomly determine a scenario of a given type quite easily using the tables provided. Any method to randomly determine a scenario is fine, provided both players are clear on the method. If you have a D12 to hand, you can simply use that.
-Some TOs like to roll each scenario live in front of the players, this creates a fun moment of tension but make sure you have the required zones or objectives for any given scenario!
+Alternatively you can randomly determine a scenario of a given type quite easily using the tables provided. Any method to randomly determine a scenario is fine, provided both players are clear on the method. If you have a D12 to hand, you can simply use that.  
+Some TOs like to roll each scenario live in front of the players, this creates a fun moment of tension but make sure you have the required zones or objectives for any given scenario!  
 
 >[!NOTE]
 >In the following Scenario diagrams the position of Scenario Objectives is measured to their centre point, whereas the position of Zones is measured to their edges.
