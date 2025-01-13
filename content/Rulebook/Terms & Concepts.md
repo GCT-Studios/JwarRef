@@ -1,5 +1,7 @@
 ---
 title: Terms & Concepts
+cssclasses:
+  - diagram
 ---
 ![[Activating Model]]
 

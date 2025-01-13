@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - diagram
+---
 *Melee exchanges in Bushido involve samurai sword masters and monks with mystical martial arts; they are not merely about hitting the opponent. A wide variety of different abilities can be used in a melee exchange.*
 
 If a model is able to attempt one of these Special Attacks or Defences, it will appear on the model’s [[Cards#Profile Cards|Profile Card]] in the weapon grid.
