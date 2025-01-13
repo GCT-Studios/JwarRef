@@ -33,7 +33,7 @@ img {
 }
 
 .diagram img {
-	border: 1px solid slategrey;
+	border: 1px solid var(--tertiary);
 	border-radius: 5px;
   }
 
@@ -60,7 +60,7 @@ blockquote {
 	margin: 0 0 10px 0;
 	padding-left: 0;
 	padding: 10px;
-	border: 1px solid slategrey;
+	border: 1px solid var(--tertiary);
 	border-radius: 5px;
   }
 
