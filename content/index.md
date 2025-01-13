@@ -11,21 +11,20 @@ Maintained by MCMBen. [Buy him a coffee](https://ko-fi.com/mcmben)
 # [[Rulebook/index|Rulebook]]
 # [[Tournament Pack/index|Tournament & Scenario Pack]]
 # [[FAQ/index|Frequently Asked Questions]]
-(sourced from the Official Errata document below)
-# [Official Errata](https://docs.google.com/document/d/1QVDOiHRrkplIJV72aeod3jDvE-Qkb_HlmljF8rgZAf0/edit?usp=sharing)
+(sourced from the [Official Errata](https://docs.google.com/document/d/1QVDOiHRrkplIJV72aeod3jDvE-Qkb_HlmljF8rgZAf0/edit?usp=sharing) document)
 
 ---
 # Community Tools & Resources
-
-[Bushido Database](https://bushidodb.ddns.net/bushido/)  
-[Battlescribe Data Files](https://github.com/BSData/bushido)  
-[Warrior Way App](https://warriorway.netlify.app/)  
-[Bushido Wiki](http://bushidothegame.wikidot.com/)  
 
 > [!INFO] Mootaz' Corner
 > Bushido Companion App: [Android](https://play.google.com/store/apps/details?id=de.molkow.bushido), [iOS](https://apps.apple.com/gb/app/bushido-companion/id1582528969)   
 > Bushido Game Mode App: [Android](https://play.google.com/store/apps/details?id=de.molkow.bushido_gm), [iOS](https://apps.apple.com/gb/app/bushido-game-mode/id6670756121)  
 > [Mootaz' Unofficial FAQ](https://docs.google.com/document/d/1HM9FM4ea5xhFmDj2TLgnHlz_2to8a_uLu6rfzfASwm4/edit?usp=sharing)
+
+[Bushido Database](https://bushidodb.ddns.net/bushido/)  
+[Battlescribe Data Files](https://github.com/BSData/bushido)  
+[Warrior Way App](https://warriorway.netlify.app/)  
+[Bushido Wiki](http://bushidothegame.wikidot.com/)  
 
 ---
 
