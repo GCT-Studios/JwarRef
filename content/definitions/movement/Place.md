@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - diagram
+---
 Placing a model is not considered Movement.
 Just pick up the model and place it in its new permitted location.
 It does not have a move path, and it ignores ZoC, models and terrain between it, and its final location.

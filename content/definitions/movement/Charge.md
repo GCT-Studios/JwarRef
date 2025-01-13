@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - diagram
+---
 The model Targets an Enemy model, moving up to double its Move Statistic towards that model in a straight line which would bring its base into contact with the Target’s base or ZoC.
 
 During this movement, it may not contact an enemy ZoC other than the Target’s.

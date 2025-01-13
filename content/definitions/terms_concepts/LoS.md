@@ -1,5 +1,7 @@
 ---
 title: Line of Sight (LoS)
+cssclasses:
+  - diagram
 ---
 A model can draw LoS to points in its [[Facing]]. LoS is achieved if you can draw a straight line from any part of the origin model’s Base to a point in that origin model’s Facing.
 

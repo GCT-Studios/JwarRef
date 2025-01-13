@@ -1,5 +1,7 @@
 ---
 title: Zone of Control (ZoC)
+cssclasses:
+  - diagram
 ---
 In Bushido, every model has a ZoC extending 1” from the edge of its base to any point within its [LoS](Line of Sight).
 Models ignore [Friendly](Enemy-Friendly.md) ZoC, but once a model enters an Enemy model’s ZoC, it may only [move](Movement.md) directly towards that model, or directly away, until it leaves the ZoC.

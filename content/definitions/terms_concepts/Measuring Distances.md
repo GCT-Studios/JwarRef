@@ -1,3 +1,7 @@
+---
+cssclasses:
+  - diagram
+---
 The unit of measure in Bushido is inches.
 - [[Movement]] distances are measured from the nearest base edge to the point the model wishes to move following the route the model’s base will take.
 - Targeting  distances are measured from the nearest base edge of a model to the nearest base edge of the [[definitions/terms_concepts/Target]].
