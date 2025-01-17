@@ -33,7 +33,7 @@ export const defaultContentPageLayout: PageLayout = {
       title: "Sections",
       filterFn: (node) => {
         // set containing names of everything you want to filter out
-        const omit = new Set(["definitions"])
+        const omit = new Set(["definitions","LRB"])
         return !omit.has(node.name.toLowerCase())
       }
     }
@@ -58,7 +58,7 @@ export const defaultListPageLayout: PageLayout = {
       title: "Sections",
       filterFn: (node) => {
         // set containing names of everything you want to filter out
-        const omit = new Set(["definitions"])
+        const omit = new Set(["definitions","LRB"])
         return !omit.has(node.name.toLowerCase())
       }
     }
