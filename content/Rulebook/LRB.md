@@ -10,8 +10,6 @@ I need to include a little text here explaining how this living rulebook is gene
 
 ![[Getting Ready]]
 
-![[Getting Ready]]
-
 ![[Cards]]
 
 # The Rules
