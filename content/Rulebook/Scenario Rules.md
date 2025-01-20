@@ -58,7 +58,8 @@ If the Scenario uses Scenario Objectives, then players should place them on the 
 
 The Scenario Objectives' base size will appear in brackets. There are three different base sizes: Small, Medium, and Large.  
 
-If the deployment zone is too small it is permitted to remove any [[Impassable]] terrain from the deployment zone. If you find you still cannot fit all models that need to be deployed in the deployment zone, models not deployed are removed from play.  
+If you can't deploy all of your models due to insufficient space, you are permitted to remove any impassable terrain that restricts your deployment space.  
+If you find you still cannot fit all models that need to be deployed in the deployment zone, models not deployed are removed from play.  
 
 # Game Length
 The length of a game of Bushido can be Fixed or Variable and lasts a number of Turns detailed below. The game ends in the End Phase of the last turn or in the End Phase after one player has no models left in play. If either player has no models left in play, calculate Scenario Points and Victory Points, and then determine the final score. Once this is done, the game ends.  

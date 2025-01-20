@@ -69,7 +69,7 @@ Once the Melee Exchange is over, remove an Activation Counter from both models.
 
 Use the following steps to resolve a Melee Exchange:
 
-1. Rotate both models so that their Facings are aligned with each other.
+1. If the two models are in BtB, Rotate both models so that their Facings are aligned with each other.  Otherwise Skip to Step 14.
 2. Choose which weapon will be used for the exchange, non-Activating model first. This will determine which Traits and Special attacks and defences are available.
 3. 
 	1. Determine which model has the Initiative.

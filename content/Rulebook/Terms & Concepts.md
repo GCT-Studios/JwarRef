@@ -39,6 +39,8 @@ cssclasses:
 
 ![[Faction]]
 
+![[Generate Ki]]
+
 ![[Initiative]]
 
 ![[In Play]]
