@@ -133,7 +133,7 @@ Some cards represent multiple models and have multiple wound tracks. Enhancement
 - **Max (X):** This card can be purchased for a Warband up to X times.
 - **Requirement \[Type]:** This card can only be Attached to this type of model.
 - **Exclusion \[Type]:** This card cannot be Attached to this type of model.
-- 
+
 ## Event Cards
 Event cards are played once, at a time detailed on the card. Once the card is resolved, then it is discarded and removed from the game.  
 
@@ -145,7 +145,7 @@ Some event cards may result in another special card being put into play, often a
 **Event Card Traits:**
 - **Max (X):** This card can be purchased for a Warband up to X times.
 - **Requirement \[Type]:** This card is restricted in how it can be played or recruited and requires a \[Type] of model or specifies another restriction.
-- 
+
 ## Terrain Cards
 Terrain cards allow a player to deploy a specified Terrain element on the table during the player’s normal Deployment of their Warband.  
 
