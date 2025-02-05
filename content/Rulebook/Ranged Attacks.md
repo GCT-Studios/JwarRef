@@ -58,18 +58,18 @@ if you hit your Target or the Friendly model.
 | Medium     | 5                |
 | Long       | 6                |
 
-| Effect                                                       | Modifier |
-| ------------------------------------------------------------ | -------- |
-| Target is Tiny                                               | +1       |
-| Target is Medium                                             | -1       |
-| Target is Large                                              | -2       |
-| Target is Huge                                               | -3       |
-| Target is Prone                                              | -1       |
-| Target is Surprised                                          | -1       |
-| Target is in Cover                                           | +2       |
-| Target Ran this turn                                         | +1       |
-| Activating model Moved, or will Move, as part of this action | +1       |
-| Activating model already made a Ranged Attack this turn      | +1       |
+| Effect                                                      | Modifier |
+| ----------------------------------------------------------- | -------- |
+| Target is Tiny                                              | +1       |
+| Target is Medium                                            | -1       |
+| Target is Large                                             | -2       |
+| Target is Huge                                              | -3       |
+| Target is Prone                                             | -1       |
+| Target is Surprised                                         | -1       |
+| Target is in Cover                                          | +2       |
+| Target Ran this turn                                        | +1       |
+| Attacking model Moved, or will Move, as part of this action | +1       |
+| Attacking model already made a Ranged Attack this turn      | +1       |
 
 *Traits and Effects may also modify the roll.*
 ## Targeting a Model in [[BtB]] with a Friendly Model

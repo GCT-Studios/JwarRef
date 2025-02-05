@@ -40,3 +40,7 @@ Standard actions in the game fall into two categories - Simple or Complex. Simpl
 
 ![[Complex Scenario Action]]
 
+> [!NOTE]
+> During a model’s action in which the declared action becomes invalid or impossible to complete, it instead reverts to the position it was in when it declared the action.
+> It then removes one Activation Counter, even if the declared action was Complex.
+> The activation is then considered to be complete.

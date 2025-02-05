@@ -15,6 +15,7 @@ steps:
 		- No [[Impassable]] Terrain element may be deployed within a Scenario or Deployment Zone.
 		- No Impassable Terrain element may be deployed within 2” of a Scenario Objective or another Terrain element with the Impassable trait.
 5. The Winner of the Deployment Tactical Test deploys terrain that is part of their Warband first, followed by the second player deploying terrain from their Warband.
+   If you can't deploy all of your models due to insufficient space, you are permitted to remove any Impassable terrain that restricts your deployment space.
 6. Players simultaneously Declare or Record any [[VIM]]s.
 7. Player 1 then decides which player deploys first; that player then deploys their entire force as detailed by the scenario. The second player then deploys their entire force as detailed by the scenario. See the [[Scout]] and [[Flank]] traits for deployment exceptions.
 8. The First Turn then begins.

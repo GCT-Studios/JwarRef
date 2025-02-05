@@ -30,3 +30,18 @@ From three Imperial Princesses expecting hospitality from the Tengu, to Sojobo l
 > First choose a faction (Prefecture, Ito, Silvermoon etc…) and choose Ronin available to that faction.  
 > It is not a “Ronin Faction” list as this is not permitted.
 
+## “Considered to be the same model when creating a Warband”
+
+Some models are represented by more than one model and profile card. Such models are considered to be the same model when creating a Warband.  
+Start the game using the model and profile card with a rice cost. Deploy that model unless the profile allows the option to select which model to deploy. Other profile cards and models relating to the same model are not in play until an effect allows them to replace a model in play or enter elsewhere.  
+
+Unless otherwise stated, if one such model is replaced with another, transfer all State Markers, Tokens, Counters, Enhancements and game effects to the newly deployed model in play on the battlefield deployed using the Replace rules.  Mark or unmark wound boxes on the new profile, or as otherwise directed, to match the replaced model's marked wound boxes. If the replace was the result of a Ki Feat that ends in the end phase, this replace will not expire in the end phase unless noted on the profile card.  
+
+If models are replaced within an Action, this replacement will resolve the removed model's part of the Action, then complete the remaining Action steps with the new model and profile. Remove an Activation Counter from the new model following the Action steps to resolve the declared Action.
+  
+Only one profile card will have a Rice Cost. If needed during a game, use the unadjusted Rice Cost printed on whichever profile card has a Rice Cost. 
+  
+If your models are considered to be the same model when recruiting a Warband, then, if chosen as VIM, those models are all considered to be VIM.  
+
+> [! Example]
+> Kota’s Human Form is chosen as a VIM. If she is replaced with her Fox Form, then Kota’s Fox Form is still the VIM.

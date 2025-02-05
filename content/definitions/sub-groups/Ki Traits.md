@@ -12,7 +12,7 @@
 [[Mantra]]
 [[Spirit]]
 ## Active
-[[Feats/Overwhelm]]
+[[Overwhelm-feat]]
 [[Willpower]]
 ## Inactive
 [[Mettle]]

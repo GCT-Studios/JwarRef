@@ -22,7 +22,7 @@ Markers should be placed next to a model, or its profile card, to indicate that 
 
 ![[Immobilised]]
 
-![[Impetuous State|Impetuous]]
+![[Impetuous-state|Impetuous]]
 
 ![[On Fire]]
 

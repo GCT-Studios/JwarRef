@@ -149,7 +149,7 @@ I need to include a little text here explaining how this living rulebook is gene
 
 ![[Impenetrable Defence]]
 
-![[Impetuous]]
+![[Impetuous-trait]]
 
 ![[Indomitable]]
 
@@ -189,7 +189,7 @@ I need to include a little text here explaining how this living rulebook is gene
 
 ![[Order]]
 
-![[Feats/Overwhelm]]
+![[Overwhelm-feat]]
 
 ![[Pack]]
 

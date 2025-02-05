@@ -79,8 +79,13 @@ Use the following steps to resolve a Melee Exchange:
 	   Regardless of Initiative the Active Player and Activating Model do not change.
 	2. Both players may now use Instant Ki Feats to change the initiative. The non-Activating player declares first. If the initiative was changed, the Activating player may then also declare Instant Ki Feats to change the initiative.
 	3. The initiative is now set and cannot be changed.
-4. Both players then calculate their model’s dice pool using its Melee pool Statistic value as the base number of dice used and apply any modifiers. They then decide if they will use any abilities, Ki Feats or increase the Melee pool Statistic through a Ki Boost. The Non Active Player must declare everything before the Active Player.
-5. Once the players have calculated their dice pools, they must both secretly decide how to allocate the dice between Attack and Defence. If players are using a Special Attack or Special Defence, then they must secretly remove a number of dice from their pool equal to the cost of the Special Attack or Defence (See Special Attacks & Defences). Also include the use of any effects, including Instant (Or active for the active player) Ki Feats, which alter the cost of Attacks or Defences or add additional Attacks or Defences. The Dice allocation and choice of Special Ability is Hidden Information until simultaneously revealed.
+4. Both players then calculate their model’s dice pool using its Melee Pool Statistic value as the base number of dice used and apply any modifiers.  
+   They then decide if they will use any abilities, Ki Feats or increase the Melee pool Statistic through a Ki Boost.  
+   The Player without the Initiative must declare everything before the Player with the Initiative.
+5. Once the players have calculated their dice pools, they must both secretly decide how to allocate the dice between Attack and Defence.  
+   If players are using a Special Attack or Special Defence, then they must secretly remove a number of dice from their pool equal to the cost of the Special Attack or Defence (See Special Attacks & Defences).  
+   Also include the use of any effects, including Instant (Or active for the active player) Ki Feats, which alter the cost of Attacks or Defences or add additional Attacks or Defences.  
+   The Dice allocation and choice of Special Ability is Hidden Information until simultaneously revealed.
 	1. Two distinct colours of dice are needed; one colour represents Attack and the other Defence. 
 
 > [!example]
@@ -93,14 +98,19 @@ Use the following steps to resolve a Melee Exchange:
 7. 
 	1. If the models are still in [[BtB]] both players roll all their dice simultaneously; otherwise, the melee action ends now, the Activating model removes an activation counter.
 	2. Perform any re-rolls in the order given in Conducting [[Re-Rolls|Conducting Re-Rolls]], then remove or add dice last. See for example the [[Unblockable]] and [[Impenetrable Defence]] traits.
-8. Both players then calculate their final Attack and Defence results by selecting the highest dice of each type (Defence and Attack), each player then collects up to two dice rolled of each type (Attack & Defence) which were not 1’s. Each of these supporting dice will add +1 to the highest dice rolled. The players apply any modifiers from traits and effects to their highest dice rolled to get their model’s final Attack and Defence results.
+8. Both players then calculate their final Attack and Defence results by selecting the highest dice of each type (Defence and Attack), each player then collects up to two dice rolled of each type (Attack & Defence) which were not 1’s.  
+   Each of these supporting dice will add +1 to the highest dice rolled. The players apply any modifiers from traits and effects to their highest dice rolled to get their model’s final Attack and Defence results.
 	1. Remember, if a player rolls no dice of one type then their final result of that type is 0. If a player rolls no Attack dice, then no Damage Roll is made in Step 9.
-9. If no dice are allocated to Attack, any Special Attacks do not trigger. If no dice are allocated to Defence, any Special Defences do not trigger. Any dice that are 1’s are not counted towards resolving the test but still count towards the player having allocated dice in the appropriate dice pool.
-10. The Attacker compares its final Attack result against the Defender’s final Defence result, using Tiebreakers if necessary Note: when checking which player has the most dice for tiebreakers, count all attack and defence dice (That did not roll 1s) for both players towards tiebreakers for both attack and defence.
+9. If no dice are allocated to Attack, any Special Attacks do not trigger.  
+   If no dice are allocated to Defence, any Special Defences do not trigger.  
+   Any dice that are 1’s are not counted towards resolving the test but still count towards the player having allocated dice in the appropriate dice pool.
+10. The Attacker compares its final Attack result against the Defender’s final Defence result, using Tiebreakers if necessary.  
+    Note: when checking which player has the most dice for tiebreakers, count all attack and defence dice (That did not roll 1s) for both players towards tiebreakers for both attack and defence.
 	1. If the Attacker was successful apply the effects of any Special Attacks used by the Attacker and move to Step 11.
 	2. If the Defender was successful apply any Special Defences used by the Defender. If this results in either model being removed from the table, the defender no longer being in BtB with the Attacker, or the defender becoming Prone, skip to Step 14 otherwise move to Step 13.
 11.	The players declare the use of any Instant (or active for the active player) Ki Feats for models involved in the exchange.
-12.	The Attacker makes a Damage Roll against the Defender and resolves any effects triggered by damage in melee. If the attack causes the Defender to become Prone or, if at the end of this step the Defender model is removed from the table or no longer in BtB with the Attacker, skip to Step 14.
+12.	The Attacker makes a Damage Roll against the Defender and resolves any effects triggered by damage in melee.  
+If the attack causes the Defender to become Prone or, if at the end of this step the Defender model is removed from the table or no longer in BtB with the Attacker, skip to Step 14.
 13.	Run through from Step 10 with the Defender becoming the Attacker unless it has already been the Attacker this Melee Exchange.
 14.	The Melee Exchange is now resolved, and both models remove one activation counter.
 15.	Any Boosts used for this Melee Exchange expire.

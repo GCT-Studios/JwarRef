@@ -4,8 +4,7 @@ timing: Instant
 subject: Special
 limitations:
   - OpG
+revision: 1
 ---
-Play in the Main Phase.  
-Remove [[Prone]] Markers from Friendly models.  
-Friendly Models cannot be [[Surprised]] for the Current Activation.  
-Until the End Phase, Friendly Models Deploying gain one Activation Counter.
+Friendly Models remove Prone Markers and cannot be surprised for the rest of the current activation.  
+Friendly Models that were Deployed this turn or are later Deployed this turn gain one Activation Counter.
