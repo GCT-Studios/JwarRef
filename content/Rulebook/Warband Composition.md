@@ -43,5 +43,5 @@ Only one profile card will have a Rice Cost. If needed during a game, use the un
   
 If your models are considered to be the same model when recruiting a Warband, then, if chosen as VIM, those models are all considered to be VIM.  
 
-> [! Example]
+> [!example]
 > Kota’s Human Form is chosen as a VIM. If she is replaced with her Fox Form, then Kota’s Fox Form is still the VIM.
