@@ -6,5 +6,6 @@ subject: Target
 range: 8
 limitations:
   - OpG
+revision: 1
 ---
-Place 4 Doom Tokens on Target model. During the Starting Phase remove a Doom Token. When the last Doom Token is removed the model suffers 7 Wounds.
+Place 4 Darkness Counters on Target Enemy model.
