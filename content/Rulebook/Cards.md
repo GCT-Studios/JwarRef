@@ -180,15 +180,15 @@ A player can only use one Theme per [[Warband]]. Themed lists allow you to trade
 ![[cards-themes.webp]]
 
 >[!example]
->Aiko is recruited into the Righteous Warriors Theme, Silverback can now be recruited even though animals, gorillas and Silverback are not listed in the Permitted models.
+>Aiko is recruited into the Righteous Warriors Theme. Silverback can now be recruited even though animals, gorillas and Silverback are not listed in the Permitted models.
 
 **Theme Card Traits:**
-- **Permitted (Type):** Only models with a matching type can be recruited into this Warband, Ronin models of the type may only be included if the theme states Ronin of that type are permitted.
-  If a Theme list card does not have this trait, all models from the chosen Faction are available to recruit into the theme.
+- **Permitted (Type):** Only models with a matching type can be recruited into this Warband, Ronin models of the type may only be included if the theme states Ronin of that type are permitted.  
+  If a Theme list card does not have this trait, all models from the chosen Faction are available to recruit into the theme.  
   If a Ronin Theme list card does not have this trait, all models from the chosen Faction and all Ronin available to that Faction are available to recruit into the theme.
-- **Exclusion (Type):** Models with a matching type cannot be recruited into this Warband.
-  If a profile qualifies for both the Permitted and Exclusion of a theme, the Exclusion takes priority, and the model may not be recruited.
-  Some models or special cards, when recruited into a Warband, permit other models to be recruited.
-  Other models may require a specific model to be recruited into the Warband before they can be included.
-  If a model is permitted in a Theme then any model it allows to be recruited is also allowed in the theme regardless of any Exclusion.
+- **Exclusion (Type):** Models with a matching type cannot be recruited into this Warband.  
+  If a profile qualifies for both the Permitted and Exclusion of a theme, the Exclusion takes priority, and the model may not be recruited.  
+  Some models or special cards, when recruited into a Warband, permit other models to be recruited.  
+  Other models may require a specific model to be recruited into the Warband before they can be included.  
+  If a model is permitted in a Theme then any model it allows to be recruited is also allowed in the theme regardless of any Exclusion.  
   If a model or special card is permitted in a theme list, any model summoned by that model is also allowed to be summoned.
