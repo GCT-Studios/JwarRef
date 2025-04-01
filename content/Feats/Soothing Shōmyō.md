@@ -1,5 +1,5 @@
 ---
-title: Soothing Shomyo
+title: Soothing Shōmyō
 cost: X
 timing: Complex
 subject: Aura
