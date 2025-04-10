@@ -4,5 +4,6 @@ cost: 2
 timing: Active
 subject: Target
 range: 6
+revision: 1
 ---
-Choose a model descriptor. Target Friendly model gains [[Vengeance]] [chosen descriptor] until the end of the current activation.
+Target Friendly model gains [[Vengeance]] [Enemy] until the end of the current activation.
