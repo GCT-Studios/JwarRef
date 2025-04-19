@@ -63,42 +63,26 @@ A: Yes.  Similarly if all dice roll 1s, you cannot benefit from these traits.
 > [!NOTE]
 > Previously this was different for each trait; this should be simpler overall.
 
-**Q: When a model is reduced to 0 Wounds but has Rise, Last Stand or anything else keeping it on the table, do effects triggering by the killed keyword still trigger?**  
-A: Yes. Active player chooses the order of operations. This can mean that e.g. the D&D theme replaces a model with Last Stand before it can trigger!
+**Q: When an effect adds terrain to the Battlefield, does it last until the End Phase?**  
+A: No, terrain is not “An Effect” and so is only removed when explicitly stated, so it will remain for the rest of the game if no condition for removal is given.  
 
-**Q: Do Unique Effects that trigger on taking damage apply even if the model is removed from play before they could usually trigger (e.g. Kami of the Evening Flame)?**  
-A: Yes, it is intended that they apply. They trigger during step 12a of the Melee Sequence and thus apply after the Melee Exchange, even if the model is removed from play at that time already.
+**Q: If an action causes you to rotate to face the thing you interact with is it considered movement?**  
+A: No, actions that force you to change facing to point directly at something are not considered movement (i.e. scenario actions, changing facing for melee, etc.).  Using available movement to change facing is considered moving.  
 
-**Q: Flame on Ki Feat sometimes adds Fire (1/2), sometimes Fire (1/1). Should they be the same Feat?**  
-A: Yes. They will be consolidated in a future errata.
+**Q: Can variable Ki feat have X=0?**  
+A: Yes, unless otherwise stated the value of X can start as minimum 0 but cannot be reduced to or below 0.  
 
-**Q: Can Command or Pack activations "chain activate" other Command or Pack Activations?**  
-A: No. No chaining. 
+**Q: What does it mean to "Use" a special ability?**  
+A: "Use" of a special ability refers to gaining the benefit and performing instructions in the text.  
 
-**Q: Surprised state: Does a model need to be out of LoS starting it's Activation, or does it only have to be out of LoS starting it's Movement or Targeting to successfully surprise an enemy model?**  
-A: Needs to start Activating out of LoS. 
+**Q: If you have initiative in a melee exchange and become prone in step 10b, can you still use the special defence you declared if you succeed in defence when step 10 happens on the repeat?**  
+A: No.  
 
-**Q: Curse Fate and Destiny's Fear make rolled dice being considered as "1". Do these "replaced" dice then get removed by the rules to count as a result of "0"? Does Kata avoid that?**  
-A: Yes, they count as 0. Kata applies, keeping them as a "1".
+**Q: If you throw/slam Model A who is already BtB with Model B, can you move Model A towards Model B moving 0 and making both prone?**  
+A: No. The model being thrown/slammed must move and enter BtB with another model to knock both down. The example above only Model A will go prone.  
 
-**Q: Can you reach negative Movement values and do they simply count as 0 then?**  
-A: Yes, negative movement counts as Move 0. To then get back to move 1+, you need to boost for each negative value until you reach a positive number.
-
-**Q: What happens to Tokens, Enhancements, Counters and Markers on a model that is removed from play?**  
-A: OpT and OpG Boxes stay checked on a model that is removed from play. Enhancements stay equipped on unique models. If a model is being brought back to life by any gameplay effect, this may cause the max. amount of an Enhancement piece being exceeded since that only applies during warband creation.  
-All Tokens, Markers and Counters are removed from a model that is being removed from play. 
-
-## Further Clarifications:
-
-Intercepting Ranged Attacks [Step 1 d) i) of the Ranged Sequence] uses "Line", not "LoS". No facing away to not allow the opponent to intercept.
-
-**[[Grapple Attack]]**: it is intended that it stops the Melee Exchange even against models that are _Immune [Held]_.
-
-Using the [[Heal]] trait to enter/leave BtB with an opponent without fighting is intended. There must, however, be a legal Target to move to and Heal to declare this.
-
-A [[Kami]] spending Ki is _not_ considered "taking damage".
-
-[[Cloudwalk]]/[[Intangible]]-models _must_ ignore Terrain (not optional). Uniques apply.
+**Q: Does Immovable prevent models from being placed elsewhere?**  
+A: Yes. If the effect says Place the model Elsewhere, it is still placing and is prevented by immovable.  
 
 ---
 

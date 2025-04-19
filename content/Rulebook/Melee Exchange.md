@@ -85,7 +85,7 @@ Use the following steps to resolve a Melee Exchange:
 5. Once the players have calculated their dice pools, they must both secretly decide how to allocate the dice between Attack and Defence.  
    If players are using a Special Attack or Special Defence, then they must secretly remove a number of dice from their pool equal to the cost of the Special Attack or Defence (See Special Attacks & Defences).  
    Also include the use of any effects, including Instant (Or active for the active player) Ki Feats, which alter the cost of Attacks or Defences or add additional Attacks or Defences.  
-   The Dice allocation and choice of Special Ability is Hidden Information until simultaneously revealed.
+   The Dice allocation and choice of Special Ability and any additional choices gained are Hidden Information until simultaneously revealed.  
 	1. Two distinct colours of dice are needed; one colour represents Attack and the other Defence. 
 
 > [!example]

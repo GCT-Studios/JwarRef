@@ -57,7 +57,7 @@ When a model is reduced to 0 wounds remaining on its Wound Track it is Killed; r
 When a model Heals wounds, it recovers marked wounds from its Wound Track.  
 A model cannot Heal more than it has marked wounds.  
 
-Some cards have multiple Wound Tracks to use for multiple identical models. The number of Wound Tracks is the limit to how many of these models you may recruit in a Warband.  
+Some cards have multiple Wound Tracks to use for multiple identical models. The number of Wound Tracks is the limit to how many of these models you may recruit or [[Summon]] into a Warband, either at Warband Creation or during the game.  
 
 Some Profile Cards, such as Kami models, have a Max symbol on the back next to their Size. These Profile cards are usually ones that have no wound tracks.  
 Whenever a rule refers to the number of Wound Tracks use the Max number instead if the card has one. You can recruit up to this number of these models into a Warband.

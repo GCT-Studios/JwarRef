@@ -23,6 +23,9 @@ If through a movement from a Slam Attack, Throw Attack or Throw Defence a model 
 
 Ranged attacks will never have Special Defences because there are no defence dice for a ranged attack. However, ranged weapons may have Special Attacks on their weapon grid.  
 
+Gaining Special Attacks  
+A model that gains a special ability by any means can only use that ability for melee weapons unless otherwise stated.  
+
 # Special Attacks
 
 ![[Combo Attack]]

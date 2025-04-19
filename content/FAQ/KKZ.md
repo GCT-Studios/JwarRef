@@ -4,9 +4,6 @@ A: No. You may only duplicate feats physically on the card.
 **Q: Can the Skirmish Mission theme allow me to exceed the Max value of Enhancements or Terrain special cards?**  
 A: No. While this is technically after the warband recruitment, restrictions will still apply.
 
-**Q: Can Axiam use Special Attacks gained from his Unique Effect on Ranged Weapons.**  
-A: No.
-
 **Q: Phantom's and Spectre's ability to [[Summon]] the other of the pair and replace themselves with the Summoned one has different wording, is this correct?**  
 A: Yes, this is correct. If you recruited Phantom (either alone or together with Spectre), Spectre cannot Summon Phantom. Phantom can always Summon Spectre if Spectre is not yet or no longer in play. Their ability to swap places on the battlefield is not affected by this. 
 
@@ -21,6 +18,3 @@ A: Spectre is the origin for this damage roll, so Spectre's weapon, modifiers an
 
 **Q: State Markers are not transferred over when Phantom or Spectre [[Summon]] the other of the pair, what happens to these Markers?**  
 A: Models that are not in play cannot have Markers, so all Markers are removed if the model leaves play.
-
-**Q: Sude: Does he become visible starting his Activation for a brief moment in time before re-entering invisibility with his unique effect?**  
-A: The Ninja player can choose the order of operations, so he can decide to first become invisible and then let the former invisibility end, meaning he stays invisible. 

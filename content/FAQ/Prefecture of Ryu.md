@@ -1,3 +1,2 @@
-Trained Dog Aki "teleports" to an Ashigaru that is being Ordered (as intended).  
-
-**Hiro's "Heir by Blood":** [[Inspiration]] lets you increase _either_ Melee _or_ Ranged, not both.
+**Q: Does Takashi Hida’s Daimyo’s Blessing Ki Feat give the same boost to all models in the pulse?**  
+A: Yes, choose either ranged or melee and all models in the pulse gain the chosen benefit.  

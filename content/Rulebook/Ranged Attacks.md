@@ -19,7 +19,8 @@ if you hit your Target or the Friendly model.
 
 ---
 1. 
-	1. If the Model has multiple ranged Weapons, choose which one it will make the Ranged Attack with.
+	1. If the model is in BtB with an enemy model, the ranged attack fails, move to step 7.  
+	   If the Model has multiple ranged Weapons, choose which one it will make the Ranged Attack with.
 	2. Target a model.
 	3. Measure the distance to the Enemy model and check this distance against the weapon’s Range Bands to see which Range the Ranged Attack is at.  
 	   If the distance is further than the Long Range of the weapon the action fails, move to step 7.
