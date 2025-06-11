@@ -7,4 +7,4 @@ limitations:
   - noBtB
   - OpT
 ---
-Target Enemy model gains a Blind Marker.
+Target Enemy model gains a [[Blind]] Marker.
