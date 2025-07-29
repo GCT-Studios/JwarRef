@@ -9,3 +9,6 @@
 6. The Opponent then becomes the Active Player and follows from Step 2.
    If the Opponent is unable to activate any models, then the current player continues to be the Active Player until they are also unable to activate any models.
 7. Once neither player can activate a model, move to the [[End Phase]].
+
+> [!NOTE] 
+> If at any point in the Main Phase either player has no models left in play, immediately move to the End Phase.

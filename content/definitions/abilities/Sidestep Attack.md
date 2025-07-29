@@ -1,9 +1,10 @@
 ---
 cssclasses:
   - diagram
+revision: 1
 ---
-If the Attack is successful, the Attacker leaves [[BtB]] and then move away from the Defender until the Attacker leaves The Defender’s [[ZoC]], at which point its movement ends.  
-The Attacker makes no damage roll.  
+If the Attack is successful, the Attacker leaves [[BtB]] and then move away from the Defender until the Attacker leaves the Defender’s [[ZoC]], at which point its movement ends.  
+The Defender does not suffer a Damage Roll from this Attack.  
 
 > [!EXAMPLE]
 > ![[special-sidestep_attack.webp]]

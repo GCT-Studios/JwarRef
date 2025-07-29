@@ -1,5 +1,8 @@
+---
+revision: 1
+---
 Any effect which does not specify when it can be used may be used any time.  
-The exception is during Melee Exchanges or Ranged Attacks, where the timing is restricted as detailed in the Melee Exchanges and Ranged Attacks section.  
+The exception is during Melee Exchanges or Ranged Attacks, where the timing is restricted as detailed in the [[Melee Exchange]]s and [[Ranged Attacks]] section.  
 
 Ki feats that state "when" they may be used can be used only when conditions are met. This can allow them to be used during melee exchanges and ranged attacks outside of the window normally allowed by those sections.  
 

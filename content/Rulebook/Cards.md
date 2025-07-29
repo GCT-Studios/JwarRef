@@ -1,3 +1,6 @@
+---
+revision: 1
+---
 # Profile Cards
 Profile cards contain all the rules specific to all models represented by that card. You may also use the profile card to keep track of the wounds sustained by your model(s), Ki Tokens and game effects.
 
@@ -14,7 +17,8 @@ Some models are aspected towards one or more of the six elements:
 | ![[element-earth.png]] | ![[element-water.png]] | ![[element-fire.png]] | ![[element-metal.png]] | ![[element-wind.png]] | ![[element-void.png]] |
 
 3. **Base Size & Max Symbol**
-If a profile has multiple base size symbols any of the available options are permitted.
+If a profile has multiple base size symbols any of the available options are permitted.  
+Profile Cards without wound tracks have a MAX symbol on the back. Whenever a rule refers to the number of wound tracks use the MAX number instead. You can recruit up to this number of these models into a warband.
 
 4. **Type**
 The type indicates all the keywords that refer to the model. A model can have multiple types, these are separated by commas, and a model is always all of its types.  
@@ -192,3 +196,5 @@ A player can only use one Theme per [[Warband]]. Themed lists allow you to trade
   Other models may require a specific model to be recruited into the Warband before they can be included.  
   If a model is permitted in a Theme then any model it allows to be recruited is also allowed in the theme regardless of any Exclusion.  
   If a model or special card is permitted in a theme list, any model summoned by that model is also allowed to be summoned.
+
+**Theme Benefits:** Unless otherwise stated, Theme benefits only affect Friendly models.

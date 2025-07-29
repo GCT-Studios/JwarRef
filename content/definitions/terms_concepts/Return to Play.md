@@ -1,1 +1,3 @@
-When returning a model to play the returning model loses all State Markers, Tokens, Counters, and game effects. Enhancements remain attached as per the [[Summon]] rule, used Enhancements and Ki Feats will remain used if use is limited. Unmark all wound boxes, or if a Kami, gain Ki Tokens equal to maximum Ki.  
+When returning a model to play the returning model loses all State Markers, Tokens, Counters, and game effects.  
+Enhancements remain attached as per the [[Summon]] rule, used Enhancements and Ki Feats will remain used if use is limited.  
+Unmark all wound boxes, or if a Kami, gain Ki Tokens equal to maximum Ki.  

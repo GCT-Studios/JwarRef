@@ -1,9 +1,10 @@
 ---
 cssclasses:
   - diagram
+revision: 1
 ---
 If the Attack is successful, the Defender is moved 2” in a straight line and becomes [[Prone]].  
-The Defender suffers half the wounds from the Damage Roll caused by this Attack.  
+The Defender suffers half the Wounds from the Damage Roll caused by this Attack.  
 
 > [!EXAMPLE]
 > ![[special-throw_attack.webp]]

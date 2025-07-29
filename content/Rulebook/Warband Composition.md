@@ -1,3 +1,6 @@
+---
+revision: 1
+---
 To recruit a Warband, players must choose a Rice Limit and a Faction to play.  
 The Rice Limit determines the size of the game and can be arbitrarily chosen .While you can play games with any amount of Rice you will find the following standard formats:  
 - 70 rice, Introductory level suggested for quicker games.
@@ -11,7 +14,19 @@ A player’s Warband in Bushido is made up of several models, and any Special ca
 The Rice Cost of your Warband must come to the total agreed upon with your Opponent.  
 A Player can only recruit one of each card; this does not prohibit the Opponent from recruiting the card for their Warband.  
 Sometimes two or more models are represented by the same profile card.  
-A player can choose to recruit as many models as there are Wound tracks on the profile card.  
+A player can choose to recruit as many models as there are Wound tracks, or up to the Max value, on the matching profile card.  
+
+Some models are represented by more than one model and profile card. Such models are considered to be the same model when creating a Warband.  
+Start the game using the model and profile card with a rice cost. Deploy that model unless the profile allows the option to select which model to deploy. Other profile cards and models relating to the same model are not in play until an effect allows them to replace a model in play or enter elsewhere.  
+Unless otherwise stated, if one such model is replaced with another, transfer all State Markers, Tokens, Counters, Enhancements and game effects to the newly deployed model in play on the battlefield deployed using the Replace rules.  Mark or unmark wound boxes on the new profile, or as otherwise directed, to match the replaced model's marked wound boxes. If the replace was the result of a Ki Feat that ends in the end phase, this replace will not expire in the end phase unless noted on the profile card.  
+If models are replaced within an Action, this replacement will resolve the removed model's part of the Action, then complete the remaining Action steps with the new model and profile. Remove an Activation Counter from the new model following the Action steps, if required, to resolve the declared Action.  
+Only one profile card will have a Rice Cost. If needed during a game, use the unadjusted Rice Cost printed on whichever profile card has a Rice Cost.  
+If your models are considered to be the same model when recruiting a Warband, then, if chosen as VIM, those models are all considered to be VIM.  
+
+
+> [!Example]
+> Kota’s Human Form is chosen as a VIM.  
+> If she is replaced with her Fox Form, then Kota’s Fox Form is still the VIM.
 
 ## Ronin Models
 Ronin represent wanderers, mercenaries, diplomats, outcasts and other individuals who may fight for more than one Faction.  

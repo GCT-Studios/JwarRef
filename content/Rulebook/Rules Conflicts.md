@@ -1,10 +1,13 @@
 ---
 title: "Rule #1: Rules Conflicts"
+revision: 1
 ---
 When two rules come into direct conflict, use the following order of precedence to determine how to proceed:
 1.	If one rule (Rule A) references another rule (Rule B) by name, then Rule A takes priority. If this does not resolve the conflict, then move on to step 2 below.
 2.	Rules that prevent something happening take priority over rules that force something to happen. If this does not resolve the conflict, then move on to step 3 below.
-3.	If effects happen at the same time, the active player chooses the order to resolve them.
+3.	If multiple effects happen at the same time:
+  1. If both Effects belong to the same player, that player determines the order they are resolved.
+  2. If the Effects belong to different players, the Active Player chooses the order to resolve them.
 
 > [!example]
 > Kenko uses Slam Attack on Manu.  

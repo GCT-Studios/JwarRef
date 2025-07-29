@@ -1,3 +1,6 @@
+---
+revision: 1
+---
 During the Starting Phase, each model gains 2 Activation Counters. Each time a player becomes the active player, they choose one model with activation counters to perform an action.  
 Once a simple action is completed, remove 1 Activation Counter. Once a complex action is completed remove 2 Activation Counters.  
 If a model participates in a [[Melee Exchange]] has Activation Counters, it loses 1 Activation Counter for participating in the Melee Exchange in addition to the Activating model who performs the Melee action.  
@@ -5,6 +8,7 @@ If a model participates in a [[Melee Exchange]] has Activation Counters, it lose
 If an effect says a model makes an action, such as a [[Walk Action]] or other standard action, even as part of a larger effect or another model’s activation, it loses an Activation Counter. If the effect allows the model to Walk, Melee or other effect but does not make an action, then it does not lose an Activation Counter.  
 
 A model with no Activation Counters is [[Exhausted]] and cannot be chosen to activate. If a model has only one Activation counter, it cannot declare a [[Actions|Complex action]].  
+Exhausted models cannot be chosen to activate, but can still participate in Melee Exchanges.  
 
 > [!example]
 > Hanso uses his Command trait on 2 Yarimen. Both Yarimen declare a melee action.

@@ -69,7 +69,7 @@ Once the Melee Exchange is over, remove an Activation Counter from both models.
 
 Use the following steps to resolve a Melee Exchange:
 
-1. If the two models are in BtB, Rotate both models so that their Facings are aligned with each other.  Otherwise Skip to Step 14.
+1. If the two models are in BtB, rotate both models so that their Facings are aligned with each other.  Otherwise skip to step 7.1.
 2. Choose which weapon will be used for the exchange, non-Activating model first. This will determine which Traits and Special attacks and defences are available.
 3. 
 	1. Determine which model has the Initiative.
@@ -83,10 +83,9 @@ Use the following steps to resolve a Melee Exchange:
    They then decide if they will use any abilities, Ki Feats or increase the Melee pool Statistic through a Ki Boost.  
    The Player without the Initiative must declare everything before the Player with the Initiative.
 5. Once the players have calculated their dice pools, they must both secretly decide how to allocate the dice between Attack and Defence.  
-   If players are using a Special Attack or Special Defence, then they must secretly remove a number of dice from their pool equal to the cost of the Special Attack or Defence (See Special Attacks & Defences).  
-   Also include the use of any effects, including Instant (Or active for the active player) Ki Feats, which alter the cost of Attacks or Defences or add additional Attacks or Defences.  
-   The Dice allocation and choice of Special Ability and any additional choices gained are Hidden Information until simultaneously revealed.  
-	1. Two distinct colours of dice are needed; one colour represents Attack and the other Defence. 
+   If players are using a Special Attack or Special Defence, then they must secretly remove a number of dice from their pool equal to the cost of the Special Attack or Defence (See [[Special Abilities]]).  
+   Also include the use of any effects, including Instant (or Active for the active player) Ki Feats, which alter the cost of Attacks or Defences, or add additional Attacks or Defences.  
+   The Dice allocation, choice of Special Ability, and any additional choices gained are Hidden Information until simultaneously revealed.  
 
 > [!example]
 > A model with a Melee pool of 3 may roll either 3 Attack dice, 2 Attack dice and 1 Defence dice, 1 Attack dice and 2 Defence dice or 3 Defence dice.
@@ -108,9 +107,9 @@ Use the following steps to resolve a Melee Exchange:
     Note: when checking which player has the most dice for tiebreakers, count all attack and defence dice (That did not roll 1s) for both players towards tiebreakers for both attack and defence.
 	1. If the Attacker was successful apply the effects of any Special Attacks used by the Attacker and move to Step 11.
 	2. If the Defender was successful apply any Special Defences used by the Defender. If this results in either model being removed from the table, the defender no longer being in BtB with the Attacker, or the defender becoming Prone, skip to Step 14 otherwise move to Step 13.
-11.	The players declare the use of any Instant (or active for the active player) Ki Feats for models involved in the exchange.
+11.	The players declare the use of any Instant (or Active for the active player) Ki Feats for models involved in the Melee Exchange.
 12.	The Attacker makes a Damage Roll against the Defender and resolves any effects triggered by damage in melee.  
-If the attack causes the Defender to become Prone or, if at the end of this step the Defender model is removed from the table or no longer in BtB with the Attacker, skip to Step 14.
+If at the end of this step either the Defender model is removed from the table, is no longer in BtB with the Attacker, or is [[Prone]] skip to Step 14.
 13.	Run through from Step 10 with the Defender becoming the Attacker unless it has already been the Attacker this Melee Exchange.
 14.	The Melee Exchange is now resolved, and both models remove one activation counter.
 15.	Any Boosts used for this Melee Exchange expire.

@@ -1,6 +1,7 @@
 ---
 cssclasses:
   - headedtable
+revision: 1
 ---
 A model must have a ranged weapon to make a Ranged Attack.  
 A Ranged Attack is a type of [[Challenge Test]], and the usual rules apply.  
@@ -25,7 +26,7 @@ if you hit your Target or the Friendly model.
 	3. Measure the distance to the Enemy model and check this distance against the weapon’s Range Bands to see which Range the Ranged Attack is at.  
 	   If the distance is further than the Long Range of the weapon the action fails, move to step 7.
 	4. The player Controlling the Targeted model may at this point nominate a different Friendly model as the new Target if:
-		1. Any LoS from the Attacker crosses through the nominated model’s ZoC before contacting the original Target’s Base.
+		1. Any line from the Attacker crosses through the nominated model’s ZoC before contacting the original Target’s Base.
 		2. The nominated model is able to draw LoS to the Activating model and is a valid target for the Ranged Attack.
 		3. The nominated model is not Exhausted or Insignificant.
 		4. If a model was nominated and the steps I, ii and iii were met, then the nominated model becomes the Targeted model.  
