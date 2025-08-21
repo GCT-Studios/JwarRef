@@ -72,9 +72,10 @@ A model that gains a special ability by any means can only use that ability for 
 # Exceptional Attacks & Defences
 Some techniques are only known to a few Masters of the sword or fist. Exceptional attacks and defences are detailed on individual profile cards; a few examples are detailed below.
 
-![[Eagle’s Flight Defence]]
-
 ![[Ivory Prison Attack]]
 
 ![[Gokusatsu Attack]]
 
+![[Eagle’s Flight Defence]]
+
+![[Web Defence]]
