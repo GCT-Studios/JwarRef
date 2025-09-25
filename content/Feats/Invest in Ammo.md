@@ -7,4 +7,4 @@ range: X
 limitations:
   - OpT
 ---
-Remove X Investment Counter from the Investment Card to remove X Reload Markers from Friendly models in the Pulse.
+Remove X Investment Counter from the Investment Card to remove X Reloading Markers from Friendly models in the Pulse.

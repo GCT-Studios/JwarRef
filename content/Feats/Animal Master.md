@@ -5,4 +5,4 @@ subject: Personal
 limitations:
   - noBtB
 ---
-This model gains [[Order ]][Animal] (6") until the End Phase.
+This model gains [[Order]] [Animal] (6") until the End Phase.
