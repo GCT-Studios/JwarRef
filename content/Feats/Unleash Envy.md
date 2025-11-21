@@ -8,6 +8,7 @@ limitations:
   - noBtB
   - OpT
 revision: 1
+tags: feat, Simple, Special
 ---
 Summon and Deploy an Envy within 2" of this model. It may not be placed in an Enemy model's ZoC or in BtB with an Enemy model.
 Place a number of Ki Tokens on Envy's profile card equal to the number spent for this Ki Feat instead of any from the [[Kami]] trait when deployed.

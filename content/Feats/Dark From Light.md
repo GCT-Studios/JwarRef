@@ -4,6 +4,7 @@ cost: Rank X
 timing: Simple
 subject: Aura
 range: X
+tags: feat, Simple, Aura
 ---
 In the Aura:
 - Satsui models in the Aura gain [[Spirit]] (+1).

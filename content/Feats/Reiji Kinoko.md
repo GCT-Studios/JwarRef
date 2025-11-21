@@ -4,6 +4,7 @@ cost: 1
 timing: Active
 subject: Personal
 revision: 1
+tags: feat, Active, Personal
 ---
 Replace this model with the Zoo model.
 Recover or Inflict Wounds so that Zoo's profile card has the same number of Wounds marked as Xi-Han.

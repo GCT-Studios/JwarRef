@@ -6,5 +6,6 @@ range: 6
 limitations:
   - noBtB
   - OpG
+tags: feat, Simple, Target
 ---
 Target Enemy model gains a Death Sentence Marker.

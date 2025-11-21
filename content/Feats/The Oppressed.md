@@ -5,6 +5,7 @@ subject: Target
 range: 4
 limitations:
   - OpT
+tags: feat, Active, Target
 ---
 Target non-Exhausted Enemy model must be chosen to activate next, ignoring Impetuous Markers.  
 The Opposing Player may not declare the use of a Pass Token next activation.  

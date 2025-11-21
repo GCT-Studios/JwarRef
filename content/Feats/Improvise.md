@@ -5,6 +5,7 @@ timing: Instant
 subject: Personal
 limitations:
   - OpG
+tags: feat, Instant, Personal
 ---
 Your opponent may not use Instant or Active Effects until the end of the current Activation.
 Apply any one non-Exceptional Special Attack and any one non-Exceptional Special Defence to this model's Melee Exchange at no cost this Activation.This model can only use these Special Abilities this activation.

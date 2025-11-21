@@ -3,6 +3,7 @@ title: All-In
 cost: 3
 timing: Instant
 subject: Personal
+tags: feat, Instant, Personal
 ---
 Before a Damage Roll on this model, this model's Controller may flip a coin and call heads or tails.
 If they call successfully, this model instead takes no damage. Otherwise, this model takes normal damage.

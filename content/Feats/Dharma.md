@@ -8,6 +8,7 @@ range: 9
 limitations:
   - noBtB
   - OpG
+tags: feat, Simple, Target
 ---
 When Target, non-Exhausted model next activates, you may choose a valid Simple Action for it to perform.
 The model's Controller must resolve the chosen Action.

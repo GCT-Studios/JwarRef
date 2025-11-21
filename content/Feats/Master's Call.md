@@ -6,6 +6,7 @@ subject: Special
 limitations:
   - noBtB
   - OpT
+tags: feat, Active, Special
 ---
 Summon a Small [[Swarm]] of Rats by Deploying it in BtB with Gendo or another Small [[Swarm]] of Rats.
 After Deploying the Small [[Swarm]] of Rats in BtB with this model you may remove this model and place it Elsewhere.

@@ -3,6 +3,7 @@ title: Hayai
 cost: 3
 timing: Instant
 subject: Personal
+tags: feat, Instant, Personal
 ---
 While this model is involved in a Melee Exchange, your Opponent may not use Instant or Active Effects.
 This effect ends once the current activation is complete.

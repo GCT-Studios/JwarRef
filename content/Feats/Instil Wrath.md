@@ -7,5 +7,6 @@ opposed: true
 range: 12
 limitations:
   - noBtB
+tags: feat, Simple, Target
 ---
 Target Enemy model becomes [[Berserk]] until the End Phase.

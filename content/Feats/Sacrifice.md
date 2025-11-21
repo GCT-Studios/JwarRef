@@ -7,6 +7,7 @@ range: 6
 limitations:
   - noBtB
 revision: 1
+tags: feat, Simple, Target
 ---
 Remove Target Friendly, non-[[Soulless]], non-[[Insignificant]] model that you own from play.
 If you do, add 4 Ki Tokens to the Yuta of Yurei card.

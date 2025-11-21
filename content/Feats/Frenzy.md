@@ -5,6 +5,7 @@ timing: Active
 subject: Personal
 limitations:
   - OpT
+tags: feat, Active, Personal
 ---
 Add X additional attack dice to each exchange when using [[Split Attack]] until the End Phase.
 X is equal to the number of Enemy models in BtB with this model.

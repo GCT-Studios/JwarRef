@@ -6,5 +6,6 @@ subject: Target
 range: 6
 limitations:
   - OpT
+tags: feat, Active, Target
 ---
 Target Friendly model gains [[Tireless]] until the End Phase.

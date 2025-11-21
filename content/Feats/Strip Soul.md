@@ -7,5 +7,6 @@ opposed: true
 range: 8
 limitations:
   - noBtB
+tags: feat, Simple, Target
 ---
 Target Enemy model gains one [[Spirit]] Block Marker and [[Insignificant]] until the End Phase.X is equal to the Ki Statistic of the Targeted Enemy model.

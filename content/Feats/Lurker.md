@@ -5,5 +5,6 @@ timing: Active
 subject: Personal
 limitations:
   - noBtB
+tags: feat, Active, Personal
 ---
 This model gains [[Camouflage]] (2) until the End Phase.

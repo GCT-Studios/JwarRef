@@ -7,6 +7,7 @@ opposed: true
 range: 6
 limitations:
   - noBtB
+tags: feat, Simple, Target
 ---
 Place 2 Seed Counters on Target Enemy model.
 Remove a Seed Counter each time the model activates, when the last Seed Counter is removed centre a 2" Pulse on the Target, deal 8 Damage split evenly (rounded down) between Enemy models in the Pulse.

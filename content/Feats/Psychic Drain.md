@@ -8,5 +8,6 @@ range: 8
 limitations:
   - noBtB
   - OpT
+tags: feat, Simple, Target
 ---
 Transfer up to 3 Ki Tokens from the Target Enemy model's profile card to this card.

@@ -5,6 +5,7 @@ subject: Target
 range: 2
 limitations:
   - OpT
+tags: feat, Instant, Target
 ---
 Use this Ki Feat at any time except during a model's activation.  
 Place the Target model Elsewhere. Remove that model's Activation Counters.  

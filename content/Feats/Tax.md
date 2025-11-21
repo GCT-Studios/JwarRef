@@ -6,5 +6,6 @@ subject: Aura
 range: 10
 limitations:
   - noBtB
+tags: feat, Active, Aura
 ---
 When an Enemy model within the Aura's area of effect uses a Ki Feat or Ki Boost, the cost in Ki Tokens is increased by 1, and this model gains 1 Ki Token.

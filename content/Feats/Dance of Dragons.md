@@ -3,6 +3,7 @@ title: Dance of Dragons
 cost: 3
 timing: Active
 subject: Personal
+tags: feat, Active, Personal
 ---
 Until the activation is complete, this model gains the following Ranged Attack:
 - Ranged Weapon Strength: +2

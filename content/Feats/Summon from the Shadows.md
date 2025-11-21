@@ -4,6 +4,7 @@ cost: 6
 timing: Active
 subject: Special
 revision: 1
+tags: feat, Active, Special
 ---
 Deploy a Horde Bakemono anywhere within 2" of this model.
 If there are no Bakemono cards available with a free wound track this feat cannot be used.

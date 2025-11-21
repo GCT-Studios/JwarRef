@@ -7,5 +7,6 @@ range: 4
 limitations:
   - noBtB
   - OpT
+tags: feat, Simple, Pulse
 ---
 All Bakemono not in BtB with an Enemy model within the Pulse's area of effect may make a 2" Walk.

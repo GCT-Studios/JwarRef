@@ -6,5 +6,6 @@ subject: Special
 range: 6
 limitations:
   - OpT
+tags: feat, Active, Special
 ---
 When Friendly Animal models Target or participate in a Melee Exchange with chosen Enemy model, they gain [[Bravery]] and [[Co-ordinated Attack]] [Friendly] until the End Phase.

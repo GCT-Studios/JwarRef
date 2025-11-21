@@ -6,5 +6,6 @@ range: 6
 limitations:
   - noBtB
   - OpT
+tags: feat, Instant, Pulse
 ---
 When an Enemy model Targets a Friendly model in the Pulse, you may change the Target to this model instead if this model is a valid Target.

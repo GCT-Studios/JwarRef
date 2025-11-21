@@ -4,6 +4,7 @@ timing: Active
 subject: Special
 limitations:
   - OpG
+tags: feat, Active, Special
 ---
 When this model succeeds in a melee attack roll, [[definitions/movement/Place]] the Enemy model in its Deployment Zone, the Enemy model gains a [[Prone]] Marker.  
 Make a Damage Roll as normal. Do not apply any of this model's Special Abilities to this Melee Exchange.

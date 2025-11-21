@@ -10,6 +10,7 @@ references:
   - trait-resistance
   - trait-unstable
 revision: 1
+tags: feat, Instant, Target
 ---
 This model and Target Friendly model gain [[Aggressive]], [[Fearless]], [[Resistance]] (1), and [[Unstable]] until the End Phase.
 This Ki Feat cannot be used if this model has no Ammo Tokens.

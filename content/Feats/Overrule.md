@@ -6,5 +6,6 @@ subject: Target
 range: 6
 limitations:
   - OpT
+tags: feat, Active, Target
 ---
 Target non-Exhausted Enemy model gains an [[Impetuous-state|Impetuous]] Marker.

@@ -6,6 +6,7 @@ subject: Personal
 limitations:
   - noWalk
   - noBtB
+tags: feat, Simple, Personal
 ---
 Make a Ranged Attack, ignoring [[Reloading]] Markers and the [[Reload]] Trait.
 On a successful attack, choose an Izu Serpent model that is not currently in play.

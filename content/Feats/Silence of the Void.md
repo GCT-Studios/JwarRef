@@ -3,6 +3,7 @@ title: Silence of the Void
 cost: Rank 3
 timing: Active
 subject: Personal
+tags: feat, Active, Personal
 ---
 Use only in the Main Phase.
 Add 2 to this model's statistics until the End Phase. This is considered a Ki Boost.

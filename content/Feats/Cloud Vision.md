@@ -6,5 +6,6 @@ range: "8"
 limitations:
   - noBtB
   - OpT
+tags: feat, Simple, Target
 ---
 Target Enemy model gains a [[Blind]] Marker.

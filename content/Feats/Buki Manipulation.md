@@ -3,6 +3,7 @@ title: Buki Manipulation
 cost: 2
 timing: Active
 subject: Personal
+tags: feat, Active, Personal
 ---
 This model's Buki 23 Weapon gains one of the following until the end of the current Melee Exchange:
 - [[Grapple Attack]] (1)

@@ -3,6 +3,7 @@ title: Tide Master
 cost: 2
 timing: Active
 subject: Personal
+tags: feat, Active, Personal
 ---
 This model gains one of the following until the current Ranged Attack is resolved:
 - Ranged Weapon Bands become 4/8/12

@@ -6,5 +6,6 @@ subject: Personal
 limitations:
   - noBtB
   - OpG
+tags: feat, Complex, Personal
 ---
 A Friendly Samurai or Ashigaru model in BtB gains the Weighted Tetsubo Enhancement card if permitted.

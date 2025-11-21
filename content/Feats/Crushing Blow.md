@@ -6,5 +6,6 @@ subject: Personal
 limitations:
   - OpA
 revision: 1
+tags: feat, Active, Personal
 ---
 This model's Melee Weapons gain [[Brutal]] (+1) and [[Pierce]] (2) until the end of the current activation. This Ki Feat can only be used once per activation.

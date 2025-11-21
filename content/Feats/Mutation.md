@@ -9,6 +9,7 @@ references:
   - trait-regenerate
   - trait-armour
 revision: 1
+tags: feat, Instant, Personal
 ---
 This model gains one of the following until the End Phase:
 - +1 Melee Weapon Strength

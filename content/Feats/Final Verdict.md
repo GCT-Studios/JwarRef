@@ -8,6 +8,7 @@ range: 9
 limitations:
   - noBtB
   - OpT
+tags: feat, Simple, Target
 ---
 Your Opponent must choose either a [[Death Sentence State|Death Sentence]] marker or a [[Controlled]] Marker.
 Target Enemy model gains one of the chosen Marker.

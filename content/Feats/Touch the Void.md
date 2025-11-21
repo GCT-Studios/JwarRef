@@ -5,6 +5,7 @@ timing: Instant
 subject: Special
 limitations:
   - OpT
+tags: feat, Instant, Special
 ---
 When this model is successfully attacked in a Melee Exchange, before the Damage Roll spend X Ki Tokens. X may not be greater than 3.
 For each Ki Token spent, prevent one Wound.

@@ -6,6 +6,7 @@ subject: Target
 range: 6
 limitations:
   - noBtB
+tags: feat, Complex, Target
 ---
 Target Bakemono gains an additional X unmarked Wound boxes until the End Phase. Mark Wounds on these Wound boxes first.
 X cannot be greater than 3.

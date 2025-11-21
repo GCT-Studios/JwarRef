@@ -4,6 +4,7 @@ timing: Instant
 subject: Special
 limitations:
   - OpT
+tags: feat, Instant, Special
 ---
 When an Enemy model declares an action which will bring it into BtB with this model, Make a Ranged Pool Challenge Test (6).  
 Modify this Challenge Number by the Target's size and any Ranged Defence Trait.  

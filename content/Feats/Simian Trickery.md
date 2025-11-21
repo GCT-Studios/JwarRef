@@ -4,6 +4,7 @@ cost: 2
 timing: Active
 subject: Personal
 revision: 1
+tags: feat, Active, Personal
 ---
 If Niseru is within 6" of this model choose:
 - Place Niseru in BtB with this model. If this model is in BtB with an Enemy model, Niseru must also be placed in Bt with at least 1 Enemy model.

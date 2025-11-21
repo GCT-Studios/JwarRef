@@ -7,6 +7,7 @@ opposed: true
 range: 8
 limitations:
   - noBtB
+tags: feat, Simple, Target
 ---
 Target Enemy model which has LoS to this model, make a Success Level 4 Damage Roll on the Target model.
 Wounds caused by this Ki Feat ignore [[Armour]].

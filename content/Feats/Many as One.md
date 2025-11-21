@@ -5,6 +5,7 @@ timing: Active
 subject: Special
 limitations:
   - noBtB
+tags: feat, Active, Special
 ---
 Summon and Deploy a Sagoya Kaidan within 3" of Target Enemy model.
 It may not be placed in an Enemy model's ZoC or in BtB with an Enemy model.

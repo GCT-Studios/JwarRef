@@ -7,5 +7,6 @@ range: 3
 limitations:
   - noBtB
 revision: 1
+tags: feat, Simple, Aura
 ---
 Enemy models treat the Aura as [Difficult, Obscuring, Small] terrain and must pass a Size Challenge Test (6) to enter BtB with this model; if the Test is failed that model may not enter BtB with this model this activation.

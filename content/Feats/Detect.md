@@ -6,5 +6,6 @@ subject: Pulse
 range: 6
 limitations:
   - noBtB
+tags: feat, Simple, Pulse
 ---
 Choose a model in the Pulse. That model loses [[Camouflage]] until the End Phase.
