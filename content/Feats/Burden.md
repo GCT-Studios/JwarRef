@@ -2,9 +2,10 @@
 cost: "1"
 timing: Simple
 subject: Target
-range: "8"
+range: "6"
 limitations:
   - OpT
 tags: feat, Simple, Target
+revision: 1
 ---
-Transfer a Shame Token from Target Shamed model to this model.
+Transfer a Shame Token from Target model to this model.

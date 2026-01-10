@@ -5,5 +5,6 @@ timing: Active
 subject: Target
 range: 6
 tags: feat, Active, Target
+revision: 1
 ---
-Target Friendly Kairai loses [[Slow]] until the End Phase.
+Target Friendly Kairai gains [[Jump Up]] and loses [[Slow]] and [[Aloof]] until the End Phase.

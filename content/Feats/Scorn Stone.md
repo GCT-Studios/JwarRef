@@ -1,10 +1,11 @@
 ---
 cost: "1"
 timing: Simple
-subject: Target
-range: "8"
+subject: Pulse
+range: "6"
 limitations:
   - OpT
 tags: feat, Simple, Target
+revision: 1
 ---
-Transfer a Shame Token from this model to Target model.
+Transfer any number of Shame Tokens from this model to other Friendly models in the Pulse.

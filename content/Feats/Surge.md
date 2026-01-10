@@ -1,8 +1,8 @@
 ---
 title: Surge
-cost: 2
+cost: 3
 timing: Active
 subject: Special
 tags: feat, Active, Special
 ---
-Call Lightning Ranged Attacks gain +1 Strength and [[Slam Attack]] (0) until the current activation is complete.
+This model's next Call Lightning Ranged Attack gains +1 Strength and [[Slam Attack]] (0).
