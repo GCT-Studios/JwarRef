@@ -1,8 +1,11 @@
 ---
 title: Slice
-cost: 3
+cost: 2
 timing: Active
 subject: Personal
 tags: feat, Active, Personal
+revision: 1
+limitations:
+  - OpT
 ---
-Until the end of this activation, this model's Kama weapon gains [[Bleed]] (1/3) while in a Melee Exchange with a Surprised Enemy model.
+Until the end of this Activation, this model’s Kama Edge Melee Weapon gains [[Bleed]] (1/3).

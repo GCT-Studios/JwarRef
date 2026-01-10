@@ -6,9 +6,11 @@ range: 2
 limitations:
   - OpT
 tags: feat, Instant, Target
+revision: 1
 ---
-Use this Ki Feat at any time except during a model's activation.  
-Place the Target model Elsewhere. Remove that model's Activation Counters.  
-In the End Phase, Place the affected model with 2" of this model. If this is not possible, Place that model as close to this model as possible.  
-If the Ki Feat Targets an Enemy model you must Succeed in an Opposed Size Test.  
-When this model is removed from play for any reason, first Place any affected models within 2" of this model.
+Use this Ki Feat any time in the Main Phase except during a model’s Activation.  
+Place the Target Friendly model Elsewhere (this will then remove that model's Activation Counters).  In the End Phase, Place the affected Model within 2” of this model. If this is not possible, Place that model as close to this model as possible.  
+When this model is removed from play for any reason, first place any affected models within 2” of this model.  
+
+This Ki feat may Target an Enemy model. Perform an Opposed Size Test, if Successful the Ki Feat is used as above, but on an Enemy model.  Once this Ki Feat is Successfully used on an Enemy model, it may not be used again on Enemy models for the rest of the game.  
+An Enemy VIM affected by this Ki Feat remains the VIM when returned to the Battlefield despite being removed to Elsewhere.

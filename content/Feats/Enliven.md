@@ -2,7 +2,9 @@
 title: Enliven
 cost: 1
 timing: Active
-subject: Personal
+subject: Target
+range: "6"
 tags: feat, Active, Personal
+revision: 1
 ---
-This model loses [[Slow]] until the end of the current activation.
+Target model loses [[Slow]] until the end of the current activation.

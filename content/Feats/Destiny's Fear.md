@@ -1,11 +1,13 @@
 ---
-cost: "5"
+cost: "4"
 timing: Simple
-subject: Special
+subject: Aura
+range: ∞
 limitations:
-  - OpT
+  - noBtB
 tags: feat, Simple, Special
+revision: 1
 ---
-Roll a number of D6 equal to the number of Friendly Kumo models in play.  
-Reroll 1s and dice with the same value until all dice have unique values.  
-Until the End Phase [[Poisoned]] Enemy models consider any dice they roll that match those rolled for this feat to be a value of 1.
+Until the End Phase Poisoned Enemy models in the Aura consider any test dice results of 2 to be a value of 1. 
+
+Poisoned Enemy Models that are within Webbed Ground Terrain also treat values of 3 as a value of 1.

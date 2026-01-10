@@ -7,7 +7,7 @@ range: BtB
 limitations:
   - OpT
 tags: feat, Instant, Target
+revision: 1
 ---
-During an Enemy model's activation in which it enters BtB with this model, that Enemy model gains a Control Marker.  
-No Melee Exchange takes place, this model does not lose an Activation Counter.  
+When an Enemy model enters BtB with this model, no Melee Exchange takes place; this model does not lose an Activation Counter.  After the Activation is complete, that Enemy model gains a Control Marker. 
 This is a Trap Effect.
