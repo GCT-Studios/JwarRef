@@ -3,7 +3,10 @@ title: Swallow Whole
 cost: 5
 timing: Active
 subject: Personal
-tags: feat, Active, Personal
+tags: 
+- feat
+- Active
+- Personal
 ---
 This feat must be declared before Initiative is determined in a Melee Exchange. If this model's Attack is successful, place the Enemy model Elsewhere.
 Affected Enemy models suffer one Wound (ignoring [[Tough]]) if they are Elsewhere in the End Phase. For each Wound taken, this model gains 1 Ki Token.

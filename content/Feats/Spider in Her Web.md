@@ -3,6 +3,9 @@ cost: "3"
 timing: Simple
 subject: Pulse
 range: "6"
-tags: feat, Simple, Pulse
+tags: 
+- feat
+- Simple
+- Pulse
 ---
 Each Enemy model in the Pulse must make a [[Size Challenge Test]] (6) and if Unsuccessful gains an [[Immobilised]] Marker.

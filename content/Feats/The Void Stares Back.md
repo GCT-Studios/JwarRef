@@ -7,7 +7,10 @@ opposed: true
 range: 8
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target non-Satsui Enemy model which has LoS to this model.
 Make a Success Level 4 Damage Roll on the Target model.

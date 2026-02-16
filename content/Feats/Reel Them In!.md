@@ -6,6 +6,9 @@ subject: Pulse
 range: 3
 limitations:
   - noBtB
-tags: feat, Active, Pulse
+tags: 
+- feat
+- Active
+- Pulse
 ---
 When a Friendly model in the Pulse Damages an Enemy model with a Harpoon Ranged Attack, the Enemy model becomes [[Prone]].

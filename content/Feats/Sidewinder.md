@@ -6,7 +6,10 @@ subject: Target
 range: BtB
 limitations:
   - OpG
-tags: feat, Instant, Target
+tags: 
+- feat
+- Instant
+- Target
 ---
 Before a Melee Exchange, this model swaps positions with the Enemy model.
 Both models must remain in BtB.

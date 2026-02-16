@@ -5,6 +5,9 @@ timing: Active
 subject: Personal
 limitations:
   - noBtB
-tags: feat, Active, Personal
+tags: 
+- feat
+- Active
+- Personal
 ---
 Remove any [[Reloading]] Markers from this model.

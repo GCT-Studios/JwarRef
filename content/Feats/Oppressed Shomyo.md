@@ -5,7 +5,10 @@ subject: Aura
 range: "4"
 limitations:
   - noBtB
-tags: feat, Complex, Aura
+tags: 
+- feat
+- Complex
+- Aura
 revision: 1
 title: Oppressed Shōmyō
 ---

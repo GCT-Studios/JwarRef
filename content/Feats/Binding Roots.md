@@ -6,6 +6,9 @@ subject: Pulse
 range: 3
 limitations:
   - noBtB
-tags: feat, Simple, Pulse
+tags: 
+- feat
+- Simple
+- Pulse
 ---
 Choose up to X Enemy models within the Pulse's area of effect. Each model chosen becomes [[Immobilised]].

@@ -8,6 +8,9 @@ limitations:
   - noBtB
   - OpT
 revision: 1
-tags: feat, Instant, Pulse
+tags: 
+- feat
+- Instant
+- Pulse
 ---
 During an Enemy model's activation when it begins a movement in the Pulse, once the movement is completed this model may Walk up to its Move towards that model's final position.

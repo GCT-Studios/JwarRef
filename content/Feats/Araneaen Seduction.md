@@ -7,6 +7,9 @@ opposed: true
 limitations:
   - noBtB
   - OpT
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Target model gains [[Stupid]] until the End Phase.

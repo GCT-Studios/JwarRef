@@ -3,7 +3,10 @@ cost: 3
 timing: Active
 subject: Aura
 range: 3
-tags: feat, Active, Aura
+tags: 
+- feat
+- Active
+- Aura
 ---
 Enemy models treat the Aura as [Normal, Obscuring,Large] Terrain.  
 Models in the Aura are in a Blizzard, those models gain Cover and Slow.  

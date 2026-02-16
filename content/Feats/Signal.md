@@ -6,7 +6,10 @@ subject: Pulse
 range: 8
 limitations:
   - OpG
-tags: feat, Active, Pulse
+tags: 
+- feat
+- Active
+- Pulse
 ---
 When you become the [[Active Player]], before choosing to activate, choose any number of Friendly Kabuki models in the Pulse to activate in the same single activation.
 Each model resolves any movement before any Melee Exchanges are resolved.

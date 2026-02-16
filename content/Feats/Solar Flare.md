@@ -3,6 +3,7 @@ cost: 0
 timing: Simple
 subject: Pulse
 range: 6
+tags:
 ---
 This model gains one Ki Token for each Bǎi Qiān in the Pulse.  
 Then it must Channel one Ki Token to each Bǎi Qiān in the Pulse, it may Channel more than once this activation.  

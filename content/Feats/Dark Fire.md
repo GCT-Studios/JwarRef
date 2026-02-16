@@ -7,6 +7,9 @@ opposed: true
 range: 8
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target gains X [[On Fire]] (1) Markers.

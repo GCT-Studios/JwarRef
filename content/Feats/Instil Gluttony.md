@@ -5,7 +5,10 @@ timing: Simple
 subject: Target
 opposed: true
 range: 12
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target model gains a [[Controlled]] Marker and, while it has any [[Controlled]] Markers from this Ki Feat, the Target gains the following Weapon:
 Gluttonous Maw:

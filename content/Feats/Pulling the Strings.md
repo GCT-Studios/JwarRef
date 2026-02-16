@@ -5,6 +5,9 @@ timing: Simple
 subject: Target
 range: "6"
 opposed: true
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 You may [[Walk]] [[definitions/feats/Target]] Enemy model 2".

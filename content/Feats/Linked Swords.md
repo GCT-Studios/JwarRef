@@ -3,6 +3,9 @@ title: Linked Swords
 cost: 2
 timing: Instant
 subject: Personal
-tags: feat, Instant, Personal
+tags: 
+- feat
+- Instant
+- Personal
 ---
 This model gains [[Reach]] and its Hook Swords Weapon gains [[Chain Weapon]] (1) until the end of the current activation.

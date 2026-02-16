@@ -5,7 +5,10 @@ timing: Active
 subject: Target
 range: 6
 revision: 1
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Target non-Exhausted Enemy model must be chosen to activate next, ignoring [[Impetuous-state|Impetuous]] Markers.
 The Opposing Player may not declare the use of a Pass Token next activation.

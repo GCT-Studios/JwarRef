@@ -5,7 +5,10 @@ subject: Aura
 range: "6"
 limitations:
   - noBtB
-tags: feat, Simple, Pulse
+tags: 
+- feat
+- Simple
+- Pulse
 revision: 1
 ---
 Choose Melee Pool or Ranged Pool.  

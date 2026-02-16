@@ -7,6 +7,9 @@ limitations:
   - noWalk
   - noBtB
   - OpG
-tags: feat, Complex, Special
+tags: 
+- feat
+- Complex
+- Special
 ---
 Remove all Activation Counters from the board.

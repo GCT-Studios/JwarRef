@@ -5,6 +5,9 @@ timing: Simple
 subject: Target
 opposed: true
 range: 6
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target model gains [[Tough]] (-1).

@@ -4,7 +4,10 @@ cost: 3
 timing: Simple
 subject: Personal
 revision: 2
-tags: feat, Active, Special
+tags: 
+- feat
+- Active
+- Special
 limitations:
   - noBtB
   - noWalk

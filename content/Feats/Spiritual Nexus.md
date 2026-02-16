@@ -5,7 +5,10 @@ subject: Aura
 range: 6
 limitations:
   - noBtB
-tags: feat, Active, Aura
+tags: 
+- feat
+- Active
+- Aura
 ---
 Friendly Faction models within the Aura can use this model as point of origin for Target or Pulse Ki Feats until the End Phase.  
 Use this model to draw LoS and Range for the Ki Feat.  

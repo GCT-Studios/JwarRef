@@ -6,7 +6,10 @@ subject: Target
 range: 6
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 revision: 1
 ---
 Perform a Walk with the Target model.  

@@ -8,6 +8,9 @@ range: 12
 limitations:
   - noBtB
   - OpT
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Remove all Activation Counters from the Target.

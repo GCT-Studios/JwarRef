@@ -7,7 +7,10 @@ limitations:
   - OpA
 range: 6
 revision: 1
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Place Target Model within 1" of its current location.
 If the Target model is an Enemy, you must first succeed in an Opposed Ki Test with the Target model.

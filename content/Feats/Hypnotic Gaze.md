@@ -8,6 +8,9 @@ range: 12
 limitations:
   - noBtB
   - OpT
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target enemy model loses an Activation Counter and gains one [[Stunned]] Marker.

@@ -6,6 +6,9 @@ subject: Target
 range: 3
 limitations:
   - OpT
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Target Friendly Non-[[Soulless]], Non-Animal model gains an Activation Counter.

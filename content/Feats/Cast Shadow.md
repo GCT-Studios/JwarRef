@@ -7,7 +7,10 @@ range: BtB
 limitations:
   - noBtB
   - OpT
-tags: feat, Simple, Special
+tags: 
+- feat
+- Simple
+- Special
 ---
 Place a Shadow Terrain Element onto the [[Battlefield]] in [[BtB]] with this model.
 

@@ -8,6 +8,9 @@ range: 9
 limitations:
   - noBtB
   - OpT
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target Enemy model gains a [[Death Sentence State|Death Sentence]] Marker.

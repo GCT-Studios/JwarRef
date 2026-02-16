@@ -4,6 +4,9 @@ cost: 1
 timing: Instant
 subject: Target
 range: BtB
-tags: feat, Instant, Target
+tags: 
+- feat
+- Instant
+- Target
 ---
 When this model suffers Wounds in a Melee Exchange, after the activation is complete, the Enemy model becomes [[Immobilised]].

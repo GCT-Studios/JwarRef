@@ -3,6 +3,9 @@ title: Shapeshift
 cost: 1
 timing: Active
 subject: Special
-tags: feat, Active, Special
+tags: 
+- feat
+- Active
+- Special
 ---
 Replace this model with its other form (Fox Form / Human Form). Transfer marked Wounds, State Markers, Enhancement, and any Tokens to the other model.

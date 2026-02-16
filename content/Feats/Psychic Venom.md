@@ -7,6 +7,9 @@ opposed: true
 range: 8
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target Enemy model gains X [[Poisoned]] (2) Markers. X may not be greater than 3.

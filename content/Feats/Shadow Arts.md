@@ -5,6 +5,9 @@ timing: Active
 subject: Personal
 limitations:
   - noBtB
-tags: feat, Active, Personal
+tags: 
+- feat
+- Active
+- Personal
 ---
 This model gains [[Lightfooted]] and [[Assassin]] until the end of the current activation.

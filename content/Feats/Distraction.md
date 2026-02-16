@@ -6,6 +6,9 @@ subject: Target
 range: 6
 limitations:
   - noBtB
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Target Enemy model must perform a Ki Challenge Test (6). If it fails you may change that model's Facing.

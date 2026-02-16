@@ -4,7 +4,10 @@ timing: Instant
 subject: Personal
 limitations:
   - noBtB
-tags: feat, Instant, Personal
+tags: 
+- feat
+- Instant
+- Personal
 revision: 1
 ---
 Use this Ki Feat any time except during a model’s Activation.  

@@ -5,7 +5,10 @@ timing: Instant
 subject: Special
 limitations:
   - OpG
-tags: feat, Instant, Special
+tags: 
+- feat
+- Instant
+- Special
 revision: 1
 ---
 When this model is Deployed from Flank, you may deploy it in the centre point of the battlefield.  

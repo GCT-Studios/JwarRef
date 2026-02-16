@@ -6,6 +6,9 @@ subject: Aura
 range: BtB
 limitations:
   - OpG
-tags: feat, Simple, Aura
+tags: 
+- feat
+- Simple
+- Aura
 ---
 Non-[[Soulless]] Enemy models in the Aura and non- [[Soulless]] models in BtB with them lose [[Aggressive]], may not place dice in Attack or use Special Defences in a Melee Exchange or Target this model with Ki Feats.

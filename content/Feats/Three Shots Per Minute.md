@@ -6,6 +6,9 @@ subject: Personal
 limitations:
   - noWalk
   - noBtB
-tags: feat, Simple, Personal
+tags: 
+- feat
+- Simple
+- Personal
 ---
 This model removes all [[Reloading]] Markers.

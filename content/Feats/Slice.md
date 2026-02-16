@@ -3,7 +3,10 @@ title: Slice
 cost: 2
 timing: Active
 subject: Personal
-tags: feat, Active, Personal
+tags: 
+- feat
+- Active
+- Personal
 revision: 1
 limitations:
   - OpT

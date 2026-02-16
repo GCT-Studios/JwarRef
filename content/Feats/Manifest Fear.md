@@ -6,6 +6,9 @@ subject: Target
 range: 8
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 This model and a Friendly 'Animal - Rat' model switch places. This feat may be used while this model is Elsewhere.

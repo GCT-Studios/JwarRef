@@ -5,7 +5,10 @@ timing: Active
 subject: Personal
 limitations:
   - OpT
-tags: feat, Active, Personal
+tags: 
+- feat
+- Active
+- Personal
 ---
 When this model declares a Ranged Attack Action choose one of the following until the current Ranged Attack Action is resolved:
 - This model's Cannon Weapon gains [[Slam Attack]] (0).

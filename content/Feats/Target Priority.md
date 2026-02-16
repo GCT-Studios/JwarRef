@@ -6,6 +6,9 @@ range: 8
 opposed: true
 limitations:
   - OpT
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Target model gains one [[Death Sentence]] Marker.

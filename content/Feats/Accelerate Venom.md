@@ -7,6 +7,9 @@ opposed: true
 range: 6
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target Enemy model removes its highest value [[Poisoned]] Marker and suffers a number of Wounds equal to the removed [[Poisoned]] Marker's value.

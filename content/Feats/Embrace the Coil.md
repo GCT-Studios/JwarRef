@@ -6,7 +6,10 @@ range: 8
 opposed: true
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Choose an Izu Serpent model that is not currently in play.  
 Summon and Deploy the chosen lzu Serpent model in BB with the Target model, ignoring the usual BtB restriction on Deploying a model.  

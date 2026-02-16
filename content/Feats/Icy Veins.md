@@ -5,7 +5,10 @@ timing: Active
 subject: Target
 range: 8
 revision: 2
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Target model gains [[Fearless]], [[Durable]] [Ranged], [[Immune]] [Bleed], and [[Slow]] until the End Phase.  
 If Target is an Enemy, you must succeed in an Opposed Ki Test.  

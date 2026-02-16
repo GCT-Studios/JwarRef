@@ -4,7 +4,10 @@ cost: 2
 timing: Active
 subject: Target
 range: BtB
-tags: feat, Active, Target
+tags: 
+- feat
+- Active
+- Target
 ---
 Target Samurai model gains the following Ranged Attack until the End Phase:
 - Ranged Weapon Strength: +1

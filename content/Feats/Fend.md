@@ -3,6 +3,9 @@ title: Fend
 cost: 2
 timing: Instant
 subject: Personal
-tags: feat, Instant, Personal
+tags: 
+- feat
+- Instant
+- Personal
 ---
 This model gains [[Push Attack]] (0) until the end of the current activation.

@@ -6,7 +6,10 @@ subject: Target
 range: BtB
 limitations:
   - OpT
-tags: feat, Instant, Target
+tags: 
+- feat
+- Instant
+- Target
 revision: 2
 ---
 When an Enemy model enters BtB with this model, no Melee Exchange takes place; this model does not lose an Activation Counter.  

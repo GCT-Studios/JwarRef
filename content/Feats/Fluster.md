@@ -7,7 +7,10 @@ range: 8
 opposed: true
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target Enemy model gains an [[Impetuous-state|Impetuous]] Marker.
 Until the End Phase, while the Enemy model has an [[Impetuous-state|Impetuous]] Marker, it may not Target or declare actions that will bring it into BtB with Friendly Ito models that have Impetuous Markers.

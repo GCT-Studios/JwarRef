@@ -5,7 +5,10 @@ timing: Instant
 subject: Pulse
 range: 12
 revision: 1
-tags: feat, Instant, Pulse
+tags: 
+- feat
+- Instant
+- Pulse
 ---
 When an Enemy model without [[Cloudwalk]] or [[Intangible]], and not in BtB with a Friendly model, declares a Walk in the Pulse, that model must make a Walk Challenge Test (X).
 X is 8 for models declaring a Run or Charge Action. X is 7 otherwise.

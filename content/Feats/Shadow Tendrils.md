@@ -7,6 +7,9 @@ opposed: true
 range: 8
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target Enemy model suffers -3 Move until the End Phase.

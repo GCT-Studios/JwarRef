@@ -5,7 +5,10 @@ subject: Special
 limitations:
   - noBtB
   - OpT
-tags: feat, Simple, Special
+tags: 
+- feat
+- Simple
+- Special
 ---
 Replace this model by Deploying a Friendly Orphan model that has been removed from play; then remove this model from play.  
 The Orphan model gains Ki equal to its Ki statistic.  

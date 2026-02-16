@@ -5,7 +5,10 @@ subject: Target
 range: 2
 limitations:
   - OpT
-tags: feat, Instant, Target
+tags: 
+- feat
+- Instant
+- Target
 revision: 1
 ---
 Use this Ki Feat any time in the Main Phase except during a model’s Activation.  

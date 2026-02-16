@@ -7,7 +7,10 @@ range: X
 limitations:
   - noBtB
   - OpT
-tags: feat, Simple, Pulse
+tags: 
+- feat
+- Simple
+- Pulse
 ---
 Transfer 1 Ki Token from all models in the Pulse to this model, each model that transferred a Ki Token suffers 1 Wound.
 Wounds caused by this effect ignore [[Tough]].

@@ -4,7 +4,10 @@ cost: 2
 timing: Instant
 subject: Personal
 revision: 1
-tags: feat, Instant, Personal
+tags: 
+- feat
+- Instant
+- Personal
 ---
 Use this feat in the Starting Phase or when this model is targeted by an enemy effect or a model declares an action or resolves an effect that will bring it into BtB with this model while this model is undamaged.
 

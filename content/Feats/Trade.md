@@ -5,6 +5,9 @@ timing: Simple
 subject: Personal
 limitations:
   - noBtB
-tags: feat, Simple, Personal
+tags: 
+- feat
+- Simple
+- Personal
 ---
 This model gains [[Channel]] (10/8") and [[Leech]] (10/8") until the End Phase.

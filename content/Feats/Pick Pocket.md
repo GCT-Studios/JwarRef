@@ -6,6 +6,9 @@ subject: Target
 range: 8
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target Friendly Urchin that is within 2" of an Enemy model. If the Enemy model has an enhancement - equipment card, transfer it to Fai-ginn's card.

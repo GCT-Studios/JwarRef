@@ -6,7 +6,10 @@ subject: Target
 range: 4
 limitations:
   - noBtB
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Until the End Phase, when Target model performs a Test, their Controller rolls an additional die.
 This model's Controller must remove a dice of their choice from that Test before it is resolved.

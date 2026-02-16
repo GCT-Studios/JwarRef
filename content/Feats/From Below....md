@@ -6,6 +6,9 @@ subject: Special
 limitations:
   - noBtB
   - OpG
-tags: feat, Simple, Special
+tags: 
+- feat
+- Simple
+- Special
 ---
 Deploy a non-Unique Gashadokuro model in BtB with this model but not in an Enemy model's ZoC.

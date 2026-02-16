@@ -7,6 +7,9 @@ range: X
 limitations:
   - noBtB
   - OpG
-tags: feat, Complex, Aura
+tags: 
+- feat
+- Complex
+- Aura
 ---
 All non-[[Soulless]] models in the Aura or in BtB with a model in the Aura lose [[Aggressive]], may not place dice in Attack, use Special Defences during Melee Exchanges, Target Enemy models with Ki Feats or move through the Aura with a Charge or Run Action.

@@ -6,6 +6,9 @@ subject: Aura
 range: 3
 limitations:
   - noBtB
-tags: feat, Simple, Aura
+tags: 
+- feat
+- Simple
+- Aura
 ---
 Friendly Bushi models in the Aura do not suffer the Melee Penalty for having Run.

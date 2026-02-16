@@ -6,7 +6,10 @@ subject: Target
 range: BtB
 limitations:
   - OpG
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target model that you own makes a Ki Challenge Test (5).
 If successful, unmark all Wound boxes.

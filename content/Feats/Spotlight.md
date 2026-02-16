@@ -3,7 +3,10 @@ title: Spotlight
 cost: 1
 timing: Active
 subject: Special
-tags: feat, Active, Special
+tags: 
+- feat
+- Active
+- Special
 ---
 You may centre a 2" [[Aura]] on a Friendly Lantern.
 Kabuki models in the Aura gain [[Kata]].

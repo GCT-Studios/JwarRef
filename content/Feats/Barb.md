@@ -7,6 +7,9 @@ range: 6
 opposed: true
 limitations:
   - OpT
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target model cannot move except directly toward this model.

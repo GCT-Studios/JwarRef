@@ -4,6 +4,9 @@ cost: 2
 timing: Instant
 subject: Target
 range: 6
-tags: feat, Instant, Target
+tags: 
+- feat
+- Instant
+- Target
 ---
 Target model gains [[Aware]] and [[Ranged Defence]] (1) until the End Phase.

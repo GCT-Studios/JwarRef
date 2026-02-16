@@ -5,6 +5,9 @@ timing: Active
 subject: Personal
 limitations:
   - OpG
-tags: feat, Active, Personal
+tags: 
+- feat
+- Active
+- Personal
 ---
 This model's Arquebus weapon gains [[Fire]] (1/2) until the current action is resolved.

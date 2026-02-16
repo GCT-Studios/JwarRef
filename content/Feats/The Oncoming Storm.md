@@ -4,7 +4,10 @@ timing: Active
 subject: Special
 limitations:
   - OpT
-tags: feat, Active, Special
+tags: 
+- feat
+- Active
+- Special
 ---
 Replace this model by Summoning and Deploying any Ronin Lesser Air Kami (ignoring which Faction may recruit that model), remove this model and place it Elsewhere. You still cannot have more of that Kami model in play than the Max value on its card.  
 If this model is Elsewhere, it may use this feat.  

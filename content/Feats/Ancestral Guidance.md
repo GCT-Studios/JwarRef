@@ -6,7 +6,10 @@ subject: Aura
 range: ∞
 limitations:
   - OpG
-tags: feat, Complex, Aura
+tags: 
+- feat
+- Complex
+- Aura
 ---
 Choose one of the following:
 - Takashi Hida: Friendly models in the Aura gain [[Indomitable]] (3).

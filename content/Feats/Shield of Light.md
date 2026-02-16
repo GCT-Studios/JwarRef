@@ -5,7 +5,10 @@ subject: Pulse
 range: 3
 limitations:
   - OpT
-tags: feat, Instant, Pulse
+tags: 
+- feat
+- Instant
+- Pulse
 ---
 When a Friendly model within the pulse is successfully attacked in a Melee Exchange, before the Damage Roll spend X Ki Tokens.  
 X may not be greater than 3.  

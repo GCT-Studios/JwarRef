@@ -7,7 +7,10 @@ range: 6
 limitations:
   - noWalk
   - OpG
-tags: feat, Complex, Target
+tags: 
+- feat
+- Complex
+- Target
 ---
 While Target Friendly Metal [[Kami]] is within 6" of an Enemy model, Friendly models with no other Friendly models within 3" of them gain [[Armour]] (X).
 X is equal to the number of Ki Tokens on the [[Kami]].

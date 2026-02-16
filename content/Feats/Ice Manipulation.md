@@ -4,7 +4,10 @@ timing: Active
 subject: Personal
 limitations:
   - OpT
-tags: feat, Active, Personal
+tags: 
+- feat
+- Active
+- Personal
 ---
 When this model declares a Ranged Attack Action this model gains +1 Ranged Pool and chooses one of the following until the current Ranged Attack Action is resolved:
 - this model ignores [[Camouflage]] and Cover

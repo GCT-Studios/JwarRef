@@ -8,7 +8,10 @@ limitations:
   - noBtB
   - OpT
 revision: 1
-tags: feat, Active, Special
+tags: 
+- feat
+- Active
+- Special
 ---
 Place the Scorched Earth template in BtB with this model.
 It is a Terrain element \[Destructible]\[Difficult, Obscuring, Zero].

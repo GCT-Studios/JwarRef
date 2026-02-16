@@ -6,6 +6,9 @@ subject: Target
 range: 6
 limitations:
   - OpT
-tags: feat, Simple, Target
+tags: 
+- feat
+- Simple
+- Target
 ---
 Target Enemy that is not an Animal must choose to either gain a [[Death Sentence State|Death Sentence]] Marker or transfer 1 of its Ki Tokens to this model.
