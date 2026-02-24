@@ -171,7 +171,7 @@ table tr td:first-child {
 MOBILE ONLY
 -------------------------------------------*/
 
-@media (max-width: $mobileBreakpoint) {
+@media (max-width: $mobile) {
 	table {
 		width: 100%;
 	}
