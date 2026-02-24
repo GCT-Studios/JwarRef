@@ -29,6 +29,9 @@ export default {
       lightMode: "Trzyb jasny",
       darkMode: "Tryb ciemny",
     },
+    readerMode: {
+      title: "Tryb czytania",
+    },
     explorer: {
       title: "Przeglądaj",
     },
@@ -48,7 +51,7 @@ export default {
     },
     search: {
       title: "Szukaj",
-      searchBarPlaceholder: "Search for something",
+      searchBarPlaceholder: "Wpisz frazę wyszukiwania",
     },
     tableOfContents: {
       title: "Spis treści",
@@ -65,6 +68,7 @@ export default {
     error: {
       title: "Nie znaleziono",
       notFound: "Ta strona jest prywatna lub nie istnieje.",
+      home: "Powrót do strony głównej",
     },
     folderContent: {
       folder: "Folder",

@@ -5,6 +5,7 @@ export default {
     title: "بدون عنوان",
     description: "توضیح خاصی اضافه نشده است",
   },
+  direction: "rtl" as const,
   components: {
     callout: {
       note: "یادداشت",
@@ -28,6 +29,9 @@ export default {
     themeToggle: {
       lightMode: "حالت روشن",
       darkMode: "حالت تاریک",
+    },
+    readerMode: {
+      title: "حالت خواندن",
     },
     explorer: {
       title: "مطالب",
@@ -65,6 +69,7 @@ export default {
     error: {
       title: "یافت نشد",
       notFound: "این صفحه یا خصوصی است یا وجود ندارد",
+      home: "بازگشت به صفحه اصلی",
     },
     folderContent: {
       folder: "پوشه",
