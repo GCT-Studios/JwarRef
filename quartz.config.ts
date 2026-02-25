@@ -9,6 +9,7 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "JwarRef",
+    pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -36,6 +37,7 @@ const config: QuartzConfig = {
           secondary: "#953232",
           tertiary: "#87abb2",
           highlight: "#b7b7b755",
+          textHighlight: "#fff23688",
         },
         darkMode: { 
           light: "#2c2720",
@@ -46,6 +48,7 @@ const config: QuartzConfig = {
           secondary: "#d4c0a8", // links
           tertiary: "#67949e",
           highlight: "#231f19",
+          textHighlight: "#b3aa0288",
         },
       },
     },
@@ -63,7 +66,6 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.SubSymbols(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),

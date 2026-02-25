@@ -31,20 +31,20 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer({
-      title: "Sections",
-      filterFn: (node) => {
-        // set containing names of everything you want to filter out
-        const omit = new Set(["definitions","LRB"])
-        return !omit.has(node.name.toLowerCase())
-      }
-    }
-    )),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+                   grow: true,
+        },
+        { Component: Component.Darkmode() },
+                   { Component: Component.ReaderMode() },
+      ],
+    }),
+    Component.Explorer(),
   ],
   right: [
-//    Component.Graph(),
+    //Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -56,17 +56,16 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer({
-      title: "Sections",
-      filterFn: (node) => {
-        // set containing names of everything you want to filter out
-        const omit = new Set(["definitions","LRB"])
-        return !omit.has(node.name.toLowerCase())
-      }
-    }
-    )),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+                   grow: true,
+        },
+        { Component: Component.Darkmode() },
+      ],
+    }),
+    Component.Explorer(),
   ],
   right: [],
 }
