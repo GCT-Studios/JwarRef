@@ -1,8 +1,11 @@
+**Q: Does Sude become visible starting his Activation before re-entering Invisibility with his Unique Effect?**  
+A: The Ninja player can choose the order of operations, so they can decide the model to first become Invisible and then let the former Invisibility end, meaning the model stays invisible.
+
 **Q: Can the KKZ Worm ability "Kohai" be used to duplicate feats gained from special cards?**  
 A: No. You may only duplicate feats physically on the card.
 
 **Q: Can the Skirmish Mission theme allow me to exceed the Max value of Enhancements or Terrain special cards?**  
-A: No. While this is technically after the warband recruitment, restrictions will still apply.
+A: No. While this is technically after the Warband recruitment, restrictions will still apply.
 
 **Q: Phantom's and Spectre's ability to [[Summon]] the other of the pair and replace themselves with the Summoned one has different wording, is this correct?**  
 A: Yes, this is correct. If you recruited Phantom (either alone or together with Spectre), Spectre cannot Summon Phantom. Phantom can always Summon Spectre if Spectre is not yet or no longer in play. Their ability to swap places on the battlefield is not affected by this. 

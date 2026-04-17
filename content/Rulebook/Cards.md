@@ -150,6 +150,10 @@ Some event cards may result in another special card being put into play, often a
 - **Max (X):** This card can be purchased for a Warband up to X times.
 - **Requirement \[Type]:** This card is restricted in how it can be played or recruited and requires a \[Type] of model or specifies another restriction.
 
+A Warband recruiting an Event – Curse card must play the Event as directed on the card. You may not choose to keep it unplayed. To Recruit a Curse Card that affects models, you must have at least one model in your Warband that is affected by the Event - Curse card.  
+
+>[!NOTE]
+>Only Event – Curse cards are affected by this, not ordinary Event cards, even if they have the word Curse in the name.
 ## Terrain Cards
 Terrain cards allow a player to deploy a specified Terrain element on the table during the player’s normal Deployment of their Warband.  
 
