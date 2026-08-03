@@ -62,7 +62,8 @@
 - [[Immune]]
 - [[Immovable]]
 - [[Impenetrable Defence]]
-- [[Impetuous-trait]]
+- [[Impetuous-trait|Impetuous]]
+- [[In Defiance of the Gods]] (added after rulebook printing)
 - [[Indomitable]]
 - [[Insignificant]]
 - [[Intangible]]
@@ -71,6 +72,7 @@
 - [[Jump Up]]
 - [[Kami]]
 - [[Kata]]
+- [[Kumo]] (added after rulebook printing)
 - [[Ki Block]]
 - [[Last Stand]]
 - [[Leadership]]

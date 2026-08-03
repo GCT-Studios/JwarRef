@@ -1,0 +1,3 @@
+In the Starting Phase, you may choose for this model to gain [[Cloudwalk]] and when this model inflicts Wounds through a Melee Exchange, it gains a number of Ki Tokens equal to the Wounded model's Ki Statistic and Spirit Trait.  
+If you do, at the end of each of this model's activations, if it has inflicted no Damage in a Melee Exchange, it gains a [[Bleeding]] (1) Marker.  
+This effect expires in the End Phase.
