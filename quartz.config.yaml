@@ -40,6 +40,11 @@ configuration:
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
+  links:
+    markdownLinkResolution: shortest
+  contentIndex:
+    enableSiteMap: true
+    enableRSS: true
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -83,11 +88,6 @@ plugins:
     layout:
       position: right
       priority: 30
-  - source: github:quartz-community/crawl-links
-    enabled: true
-    options:
-      markdownLinkResolution: shortest
-    order: 60
   - source: github:quartz-community/description
     enabled: true
     order: 70
@@ -99,9 +99,6 @@ plugins:
   - source: github:quartz-community/citations
     enabled: false
     order: 85
-  - source: github:quartz-community/hard-line-breaks
-    enabled: true
-    order: 90
   - source: github:quartz-community/ox-hugo
     enabled: false
     order: 91
@@ -109,8 +106,6 @@ plugins:
     enabled: false
     order: 92
   - source: github:quartz-community/fonts
-    enabled: true
-  - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
     enabled: false
@@ -133,11 +128,6 @@ plugins:
       display: all
   - source: github:quartz-community/alias-redirects
     enabled: false
-  - source: github:quartz-community/content-index
-    enabled: true
-    options:
-      enableSiteMap: true
-      enableRSS: true
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
@@ -260,8 +250,6 @@ plugins:
         - author
       excludedProperties: []
       hidePropertiesView: false
-      delimiters: ---
-      language: yaml
     order: 5
     layout:
       position: beforeBody
@@ -274,10 +262,7 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
-  - source:
-      name: quartz-themes
-      repo: github:saberzero1/quartz-themes
-      subdir: plugin
+  - source: "@quartz-themes/core"
     enabled: true
     options:
       theme: praxis
