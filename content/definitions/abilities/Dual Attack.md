@@ -1,0 +1,1 @@
+If the Attack is Successful, after rolling Damage, make one more Damage roll at the same Success Level.

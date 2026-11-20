@@ -1,0 +1,1 @@
+![[Subject-Personal.png]]  The Ki Feat [[definitions/feats/Target]]s the user only.
