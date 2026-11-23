@@ -1,5 +1,6 @@
 ---
 revision: 2
+updated: 2025-07
 ---
 If either:  
 1. this model did not begin its activation in [[BtB]] with an Enemy model, performs an action that [[Target]]s or brings it into BtB with that Enemy model, starts outside of [[LoS]] of that Enemy model and remains outside of its LoS during movement, or
