@@ -9,5 +9,6 @@ tags:
 - Active
 - Target
 revision: 1
+updated: 2026-01
 ---
 Target Friendly Kairai gains [[Jump Up]] and loses [[Slow]] and [[Aloof]] until the End Phase.

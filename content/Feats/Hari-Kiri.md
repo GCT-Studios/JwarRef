@@ -9,6 +9,7 @@ tags:
 - Instant
 - Personal
 revision: 1
+updated: 2026-01
 ---
 Use this Ki Feat any time except during a model’s Activation.  
 Remove this model from play.  

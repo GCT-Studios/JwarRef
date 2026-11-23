@@ -9,6 +9,7 @@ references:
   - trait-regenerate
   - trait-armour
 revision: 1
+updated: before 2022-11
 tags: 
 - feat
 - Instant

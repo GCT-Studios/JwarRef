@@ -10,6 +10,7 @@ tags:
   - Active
   - Target
 revision: 1
+updated: 2026-04
 ---
 Make an Opposed Melee Pool Test against a Target Enemy Immobilised or Held model.  
 If successful, the Target gains a Control Marker.  

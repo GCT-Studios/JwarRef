@@ -11,6 +11,7 @@ tags:
 - Simple
 - Target
 revision: 1
+updated: 2026-01
 ---
 Target Friendly Gorilla or Faction model that is not Soulless or Insignificant.  
 That model gains a Virtue Token.

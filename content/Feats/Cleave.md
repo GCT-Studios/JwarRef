@@ -3,7 +3,8 @@ title: Cleave
 cost: 2
 timing: Active
 subject: Personal
-revision: 2
+revision: 1
+updated: 2025-02
 tags: 
 - feat
 - Active

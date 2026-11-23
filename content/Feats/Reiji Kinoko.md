@@ -4,6 +4,7 @@ cost: 1
 timing: Active
 subject: Personal
 revision: 2
+updated: 2026-01
 tags: 
 - feat
 - Active

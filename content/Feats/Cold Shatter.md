@@ -11,6 +11,8 @@ tags:
 - feat
 - Simple
 - Target
+revision: 1
+updated: 2025-02
 ---
 The next time target model suffers damage in a melee exchange, it suffers double the damage, ignoring Durable if that would be enough to kill the target.  
 If not, this effect expires immediately.

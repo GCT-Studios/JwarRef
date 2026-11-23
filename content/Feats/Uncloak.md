@@ -4,6 +4,7 @@ cost: 2
 timing: Instant
 subject: Personal
 revision: 2
+updated: 2026-04
 tags:
   - feat
   - Instant

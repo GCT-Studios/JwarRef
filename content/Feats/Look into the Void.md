@@ -11,6 +11,8 @@ tags:
 - feat
 - Simple
 - Target
+revision: 1
+updated: 2026-01
 ---
 Target Enemy model which has LoS to this model, make a Success Level 4 Damage Roll on the Target model.
 Wounds caused by this Ki Feat ignore [[Armour]].

@@ -10,5 +10,6 @@ tags:
 - Simple
 - Target
 revision: 1
+updated: 2026-01
 ---
 Transfer any number of Shame Tokens from this model to other Friendly models in the Pulse.

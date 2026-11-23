@@ -10,6 +10,7 @@ tags:
 - Instant
 - Target
 revision: 1
+updated: 2026-01
 ---
 Use this Ki Feat any time in the Main Phase except during a model’s Activation.  
 Place the Target Friendly model Elsewhere (this will then remove that model's Activation Counters).  In the End Phase, Place the affected Model within 2” of this model. If this is not possible, Place that model as close to this model as possible.  

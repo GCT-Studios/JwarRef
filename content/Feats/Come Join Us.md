@@ -11,6 +11,7 @@ tags:
 - Instant
 - Target
 revision: 1
+updated: 2026-01
 ---
 When an Enemy model enters BtB with this model, no Melee Exchange takes place; this model does not lose an Activation Counter.  After the Activation is complete, that Enemy model gains a Control Marker. 
 This is a Trap Effect.

@@ -10,6 +10,7 @@ tags:
 - Complex
 - Aura
 revision: 1
+updated: 2026-01
 title: Oppressed Shōmyō
 ---
 Friendly models in the Aura gain the [[Strong]] and [[Lightfooted]]traits.
