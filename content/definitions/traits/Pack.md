@@ -1,5 +1,7 @@
 ---
 title: Pack (X/Y")
+revision: 1
+updated: 2025-02
 ---
 When this model activates, you may choose up to X non-Exhausted Friendly models with the Pack trait within Y” to also activate.  
 This model and each model chosen must declare a melee, ranged or charge action against the same target.  

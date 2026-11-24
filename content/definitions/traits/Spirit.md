@@ -1,6 +1,7 @@
 ---
 title: Spirit (X)
 revision: 1
+updated: 2025-02
 ---
 This model modifies its Ki Statistic by X when resolving Ki tests or when attempting to Target or move into BtB with a Disguised model.  
 Apply this before gaining any dice for having zero or lower Ki Statistic in any test.  

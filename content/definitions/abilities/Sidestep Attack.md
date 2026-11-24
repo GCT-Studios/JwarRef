@@ -1,7 +1,8 @@
 ---
 cssclasses:
   - diagram
-revision: 1
+revision: 2
+updated: 2025-07
 ---
 If the Attack is successful, the Attacker leaves [[BtB]] and then move away from the Defender until the Attacker leaves the Defender’s [[ZoC]], at which point its movement ends.  
 The Defender does not suffer a Damage Roll from this Attack.  

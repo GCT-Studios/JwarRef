@@ -1,5 +1,6 @@
 ---
 revision: "1"
+updated: before 2022-11
 ---
 While a model has a Berserk Marker, it gains the [[Aggressive]] trait.  
 When a model gains a Berserk Marker, it gains an [[Impetuous-state|Impetuous]] Marker.  

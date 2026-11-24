@@ -1,5 +1,6 @@
 ---
-revision: 1
+revision: 2
+updated: 2025-07
 ---
 When this model is deployed it gains Ki tokens equal to its maximum Ki.  
 When this model would suffer wounds, instead remove an equal number of Ki tokens.  

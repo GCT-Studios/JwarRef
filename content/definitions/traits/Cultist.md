@@ -1,6 +1,7 @@
 ---
 title: Cultist (X/Y")
 revision: 1
+updated: before 2022-11
 ---
 When this model activates it may inflict up to X Wounds on any Friendly model(s) within Y”, including itself, that have this trait, up to X value.  
 A model may not suffer more Wounds than it has unmarked Wound boxes.  

@@ -1,5 +1,6 @@
 ---
 revision: 1
+updated: before 2022-11
 ---
 This model may not be Moved or Placed except when making a Disengage, Melee, Run, Walk, or Charge, or by using a rule on a Friendly card.  
 This model cannot gain [[Prone]] Markers.  

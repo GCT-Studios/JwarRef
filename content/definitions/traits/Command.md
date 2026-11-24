@@ -1,3 +1,8 @@
+---
+updated: 2025-02
+revision: 1
+title: Command [Descriptor](X/Y")
+---
 This model may declare a Simple action, Command:  
 The model nominates and activates up to X other non-Exhausted, Friendly [Descriptor] models within Y”.  
 These models each perform a Standard, Simple action.  

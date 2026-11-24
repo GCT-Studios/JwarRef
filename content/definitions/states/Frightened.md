@@ -1,5 +1,6 @@
 ---
 revision: "1"
+updated: before 2022-11
 ---
 This model gains the [[Defensive]] trait and suffers -1 Melee Pool and -1 Range Pool modifiers.  
 It may not declare [[Actions]] that would move it into [[BtB]] with Enemy models with the [[Fear]] trait.  
