@@ -1,2 +1,0 @@
-## Tournament, or Event, Organiser
-The person or group of people who are organising the event. They are ultimately responsible for making the event happen and have the final decision on disagreements on the day.

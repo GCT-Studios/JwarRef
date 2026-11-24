@@ -1,1 +1,0 @@
-If the Defence is successful, then the Attacker becomes [[Prone]].

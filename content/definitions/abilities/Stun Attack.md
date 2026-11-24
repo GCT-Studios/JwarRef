@@ -1,1 +1,0 @@
-If the attack is Successful, the Defender gains a [[Stunned]] Marker after the Damage Roll.

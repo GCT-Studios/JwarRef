@@ -1,1 +1,0 @@
-Generate refers to gaining Ki in the starting phase, step 2. Any other time a model gains Ki it is not Generated unless specifically stated.
