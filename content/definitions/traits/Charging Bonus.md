@@ -1,5 +1,8 @@
 ---
 title: Charging Bonus [Bonus]
+page: 60
+pageR1: 63
+pageR2: 63
 ---
 When this model makes a Charge action it gains the bracketed Bonus until the end of its current activation.  
 If the bonus is a Weapon Trait, then it applies to all valid weapons.  

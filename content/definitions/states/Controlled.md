@@ -1,3 +1,8 @@
+---
+page: 50
+pageR1: 52
+pageR2: 53
+---
 A Controlled model switches [[Warband]] for a number of actions dependent on the number of Control Markers it has.  
 Whilst Controlled, the model generates Ki Tokens normally, but cannot spend or remove any Tokens it possesses, Ki or otherwise.  
 The controlling player may declare any [[Actions|action]] the model would normally be able to perform without spending Tokens.  

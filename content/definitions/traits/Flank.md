@@ -1,6 +1,9 @@
 ---
 revision: 1
 updated: 2025-02
+page: 62
+pageR1: 65
+pageR2: 65
 ---
 When this model would be Deployed, this model’s Controller must choose whether this model will use Flank or not.  
 If the player chooses not to use Flank, this model is Deployed as normal.  

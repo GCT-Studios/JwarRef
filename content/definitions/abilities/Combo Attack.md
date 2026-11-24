@@ -1,3 +1,8 @@
+---
+page: 47
+pageR1: 49
+pageR2: 49
+---
 If the Attack is successful then after resolving a Damage Roll, deduct 2 from the Success Level of the Attack.  
 If the new Success Level is 0 or greater make another Damage Roll against the Defender.  
 Repeat this process until the Success Level is less than 0.  

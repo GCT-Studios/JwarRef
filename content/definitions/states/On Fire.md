@@ -1,3 +1,8 @@
+---
+page: 52
+pageR1: 54
+pageR2: 55
+---
 If a model has On Fire markers it is considered to be On Fire.  
 
 During the [[End Phase]] remove the highest value On Fire marker.  

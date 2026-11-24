@@ -1,5 +1,8 @@
 ---
 title: Rise (X)
+page: 66
+pageR1: 69
+pageR2: 70
 ---
 When this model is reduced to 0 wounds, immediately make a Challenge test with a Challenge Number of X.  
 If successful the model Heals all Wounds and becomes [[Prone]].  

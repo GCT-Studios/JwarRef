@@ -3,7 +3,11 @@ cssclasses:
   - diagram
 revision: 2
 updated: 2025-07
+page: 48
+pageR1: 49
+pageR2: 49
 ---
+
 If the Attack is successful, the Defender is moved 2” in a straight line and becomes [[Prone]].  
 The Defender suffers half the Wounds from the Damage Roll caused by this Attack.  
 

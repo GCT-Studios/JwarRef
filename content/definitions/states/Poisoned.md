@@ -1,3 +1,8 @@
+---
+page: 52
+pageR1: 54
+pageR2: 55
+---
 If a model has Poisoned markers, it is considered to be Poisoned.  
 During the [[End Phase]] remove the highest value Poisoned marker.  
 The model suffers a number of wounds equal to the removed Poisoned marker's value.  

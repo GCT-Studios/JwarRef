@@ -1,5 +1,8 @@
 ---
 title: Dread (X)
+page: 61
+pageR1: 64
+pageR2: 64
 ---
 Models making a fear test against this model reduce their Ki statistic by X.  
 This cannot reduce the number of dice rolled below 1 die.  

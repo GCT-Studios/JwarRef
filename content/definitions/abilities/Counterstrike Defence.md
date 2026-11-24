@@ -1,2 +1,7 @@
+---
+page: 48
+pageR1: 50
+pageR2: 50
+---
 If this Defence is successful, and the Attacker allocated any dice to Attack, then deduct 2 from the Success Level of the Defence.  
 If the Success Level is 0 or greater, then make a Damage Roll against the Attacker using the modified Success Level of the Defence.  

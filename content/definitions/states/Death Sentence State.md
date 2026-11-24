@@ -1,6 +1,10 @@
 ---
-revision: "2"
+revision: 2
 title: Death Sentence
+updated: 2025-07
+page: 51
+pageR1: 53
+pageR2: 53
 ---
 While a model with any Death Sentence markers is the target of a [[Ranged Attacks|Ranged Attack]] or is involved in a [[Melee Exchange|Melee Exchange]], the Enemy Model gains +1 Melee Pool or +1 Ranged Pool as well as +1 to any [[Wound Table|Damage Rolls]].  
 The benefit for the Attacker is the same whether the target has one or multiple Death Sentence markers.  

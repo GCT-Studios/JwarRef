@@ -3,7 +3,11 @@ cssclasses:
   - diagram
 revision: 1
 updated: before 2022-11
+page: 47
+pageR1: 49
+pageR2: 49
 ---
+
 If the Attack is successful, move the Defender 1” directly away from the Attacker, then move the Attacker 1” directly towards the Defender.  
 The Defender suffers half the Wounds from the Damage Roll caused by this Attack.
 

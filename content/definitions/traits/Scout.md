@@ -1,5 +1,8 @@
 ---
 title: Scout (X/Y")
+page: 67
+pageR1: 69
+pageR2: 70
 ---
 This model may deploy after both player’s normal Deployment and may deploy anywhere within Y” of the Controlling player’s normal Deployment Zone.  
 If a Warband contains one or more models with Scout, the player adds the highest X value to the result of Deployment Tactical Tests.  

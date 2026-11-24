@@ -1,5 +1,8 @@
 ---
 title: Bodyguard [Descriptor](X")
+page: 59
+pageR1: 61
+pageR2: 62
 ---
 If an Enemy model declares an action that would move it into [[BtB]] with a [Descriptor] Friendly model, or Targets the [Descriptor] Friendly model with a Ranged Attack, this model may switch positions with the Friendly model before the action begins if the following conditions are met:
 - The Friendly model is within X” and in LoS.

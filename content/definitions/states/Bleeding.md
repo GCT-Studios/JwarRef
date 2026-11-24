@@ -1,3 +1,8 @@
+---
+page: 50
+pageR1: 52
+pageR2: 52
+---
 If a model has Bleed markers it is considered to be Bleeding.  
 During the [[End Phase]] remove the highest value Bleed marker.  
 The model suffers a number of wounds equal to the removed Bleed marker's value.  

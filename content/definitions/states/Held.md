@@ -1,3 +1,8 @@
+---
+page: 51
+pageR1: 53
+pageR2: 54
+---
 As long as a model is Held it gains the [[Defensive]] trait and cannot declare any actions except the [[Disengage Action]], a [[Ki Feats|Ki Feat]] usable in [[BtB]], or the [[Stand Up Action]].  
 
 A Held model cannot move or be moved - except to change facing - and suffers a -1 Melee Pool modifier.  

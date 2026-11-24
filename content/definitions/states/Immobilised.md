@@ -1,3 +1,8 @@
+---
+page: 52
+pageR1: 54
+pageR2: 54
+---
 When an Immobilised model declares a Melee, Run, Charge, Scenario, Stand Up, Heal, or any action including movement (including changing facing before the action), the model must make a Size (6) Challenge test.  
 If unsuccessful the model's action is considered resolved.  
 If successful the model removes all Immobilised markers and resolves its action as normal.  

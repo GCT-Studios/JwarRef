@@ -1,6 +1,9 @@
 ---
 revision: 1
 updated: 2025-02
+page: 60
+pageR1: 63
+pageR2: 63
 ---
 When this model moves it ignores Terrain elements, other models, and Zones of Control. It may end its move in an enemy [[ZoC]].  
 This does not allow a model to move out of Melee unless it also has the [[Agile]] trait.  
