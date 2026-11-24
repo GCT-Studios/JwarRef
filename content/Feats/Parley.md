@@ -1,0 +1,16 @@
+---
+title: Parley
+cost: 2
+timing: Instant
+subject: Target
+range: BtB
+limitations:
+  - OpT
+revision: 1
+updated: before 2022-11
+tags: 
+- feat
+- Instant
+- Target
+---
+Use this Ki Feat when an Enemy model enters BtB with this model. That Enemy model's activation ends immediately.
