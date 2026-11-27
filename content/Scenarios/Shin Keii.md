@@ -1,5 +1,5 @@
 - Type:
-	- Basic Circle [[Objective]]
+	- Basic Circle [[Objectives]]
 - Game Length:
 	- [[Fixed]] (6)
 - Scenario Objective Interaction:

@@ -77,7 +77,7 @@ cssclasses:
 
 ![[Surprised]]
 
-![[definitions/terms_concepts/Target]]
+![[Targeting]]
 
 ![[Test]]
 

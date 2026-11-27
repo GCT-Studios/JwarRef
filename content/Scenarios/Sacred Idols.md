@@ -1,5 +1,5 @@
 - Type:
-	- Basic Centre [[Objective]] (Small)
+	- Basic Centre [[Objectives]] (Small)
 - Game Length:
 	- [[Fixed]] (6)
 - Scenario Objective Interaction:

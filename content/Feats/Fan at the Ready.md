@@ -7,4 +7,4 @@ tags:
   - Instant
   - Personal
 ---
-This model gains [[Lighting Reflexes]] when using its Tessen Melee Weapon until the end of the current activation.
+This model gains [[Lightning Reflexes]] when using its Tessen Melee Weapon until the end of the current activation.

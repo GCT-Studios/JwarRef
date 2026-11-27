@@ -21,7 +21,7 @@
 
 A terrain element’s size is what is physically represented on the table - but should be agreed upon by both players before the start of the game if either player considers it likely that the Size of a particular piece of terrain might be unclear.  
 
-If players cannot agree on the size of a terrain element, by default the Size of a piece of terrain ([as with models](Rulebook/definitions/terms_concepts%201/Size.md): Tiny, Small, Medium, Large or Huge) to be the Size of the smallest base it can fit on. If it is too big for a 50mm base, it is Huge.  
+If players cannot agree on the size of a terrain element, by default the Size of a piece of terrain [[Size|as with models]]: Tiny, Small, Medium, Large or Huge) to be the Size of the smallest base it can fit on. If it is too big for a 50mm base, it is Huge.  
 Some [[Clear]] terrain has no Size (Water for example) and is listed as Size Zero. Given this definitive test, it should be possible to define the Size of a piece of terrain during the game, as and when it becomes relevant to gameplay.  
 This does not work for some elements, e.g. walls, so it is only to decide when players cannot agree on odd items of terrain. In a Tournament situation, ask the organiser.  
 

@@ -4,7 +4,7 @@ cssclasses:
 ---
 The unit of measure in Bushido is inches.  
 - [[Movement]] distances are measured from the nearest base edge to the point the model wishes to move following the route the model’s base will take.
-- Targeting  distances are measured from the nearest base edge of a model to the nearest base edge of the [[definitions/terms_concepts/Target]].
+- Targeting  distances are measured from the nearest base edge of a model to the nearest base edge of the [[Targeting]].
 - Measurements, whether distances, [[LoS]], or other measurements, may be taken at any time for any reason by either player.
 - When measuring if a model or point is within a given range then precisely up to that range is considered within.
 - If a range is given as [[BtB]], then the model is in range of itself.

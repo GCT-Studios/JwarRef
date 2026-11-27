@@ -1,5 +1,5 @@
 ---
-title: Order [Descriptor](X")
+title: Order [Descriptor] (X")
 revision: 1
 updated: 2025-06
 page: 65
@@ -7,5 +7,5 @@ pageR1: 67
 pageR2: 69
 ---
 This model may declare a Complex action, Order:  
-This model immediately nominates X other Friendly \[Descriptor\] models within Y”. Those models gain one Activation Counter.  
+This model immediately nominates X other Friendly \[Descriptor] models within Y”. Those models gain one Activation Counter.  
 Models may only be affected by the Order Action once per Turn.

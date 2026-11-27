@@ -263,7 +263,7 @@ plugins:
   - source: "@quartz-themes/core"
     enabled: true
     options:
-      theme: abecedarium
+      theme: Minimal
       mode: dark
 layout:
   groups:

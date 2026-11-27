@@ -1,5 +1,5 @@
 - Type:
-	- Advanced Centre [[Objective]] (Small) & [[VIM]]
+	- Advanced Centre [[Objectives]] (Small) & [[VIM]]
 - Game Length:
 	- [[Variable]] (5)
 - Victory Conditions:
