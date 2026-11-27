@@ -1,0 +1,1 @@
+This model has [[Parry]] (+1), [[Ranged Defence]] (+1) and [[Armour]] (+1) unless Surprised.
