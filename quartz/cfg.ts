@@ -109,6 +109,16 @@ export interface GlobalConfiguration {
    * - "referenced": Only copy assets referenced by published pages
    */
   publishAssets?: "all" | "referenced"
+  /** How file paths become URLs. */
+  slugs?: SlugsConfig
+}
+
+export interface SlugsConfig {
+  /**
+   * Strip accents and other diacritics from generated slugs (`české/čeština.md` →
+   * `ceske/cestina`), aliases and permalinks; links are resolved the same way. Off by default.
+   */
+  stripDiacritics?: boolean
 }
 
 /** Shared by every built-in: `enabled: false` turns it off (e.g. to replace it with a plugin). */
@@ -136,7 +146,7 @@ export interface LinksConfig extends BuiltinToggle {
   lazyLoad?: boolean
   /** Add an icon after external links. Default `true`. */
   externalLinkIcon?: boolean
-  /** Add a `broken` class to internal links whose target does not exist. Default `false`. */
+  /** Add a `broken` class to internal links whose target does not exist, as Obsidian marks unresolved links. Default `true`. */
   disableBrokenWikilinks?: boolean
 }
 

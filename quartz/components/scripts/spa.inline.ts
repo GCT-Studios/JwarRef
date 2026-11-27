@@ -62,6 +62,67 @@ function stopLoading() {
   }
 }
 
+// Scroll positions are restored by the router, not the browser (#2674). The browser
+// saves an entry's position when `pushState` runs and restores it on Back while the
+// *other* page's content is still shown, before the router swaps the page in, so
+// positions came out wrong. Each entry keeps its own `scrollY` in `history.state`.
+history.scrollRestoration = "manual"
+let renderedPath = window.location.pathname
+let saveTimer: ReturnType<typeof setTimeout> | undefined
+
+// Each entry the router creates gets a key, so a position that was still waiting to be saved
+// when Back or Forward left its entry (history.state is the new entry's by then) is kept here
+// and written to the entry when it is shown again.
+type EntryState = { key?: string; scrollY?: unknown } | null
+const newKey = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+const unsavedScroll = new Map<string, number>()
+let shownKey: string | undefined
+
+function entryKey(): string {
+  let key = (history.state as EntryState)?.key
+  if (typeof key !== "string") {
+    key = newKey()
+    history.replaceState({ ...(history.state ?? {}), key }, "")
+  }
+  return key
+}
+
+function pushEntry(url: URL) {
+  history.pushState({ key: newKey() }, "", url)
+  shownKey = entryKey()
+}
+
+function saveScroll() {
+  clearTimeout(saveTimer)
+  saveTimer = undefined
+  history.replaceState({ ...(history.state ?? {}), scrollY: window.scrollY }, "")
+}
+
+function savedScroll(): number | undefined {
+  const key = entryKey()
+  const unsaved = unsavedScroll.get(key)
+  if (unsaved !== undefined) {
+    unsavedScroll.delete(key)
+    history.replaceState({ ...(history.state ?? {}), scrollY: unsaved }, "")
+    return unsaved
+  }
+  const y = (history.state as EntryState)?.scrollY
+  return typeof y === "number" ? y : undefined
+}
+
+/** Scrolls to where the current entry was left, else to its `#heading`, else to the top. */
+function restoreScroll() {
+  const y = savedScroll()
+  if (y !== undefined) {
+    window.scrollTo({ top: y, behavior: "instant" })
+    return
+  }
+  const hash = window.location.hash
+  const el = hash ? document.getElementById(decodeURIComponent(hash.substring(1))) : null
+  if (el) el.scrollIntoView({ behavior: "instant" })
+  else window.scrollTo({ top: 0, behavior: "instant" })
+}
+
 let isNavigating = false
 let p: DOMParser
 async function _navigate(url: URL, isBack: boolean = false) {
@@ -104,6 +165,10 @@ async function _navigate(url: URL, isBack: boolean = false) {
 
   if (!contents) return
 
+  // Keep the position of the page being left, for Back. (On Back, the entry has
+  // already changed: what's on screen belongs to another entry.)
+  if (!isBack) saveScroll()
+
   // notify about to nav
   const event: CustomEventMap["prenav"] = new CustomEvent("prenav", { detail: {} })
   document.dispatchEvent(event)
@@ -132,13 +197,13 @@ async function _navigate(url: URL, isBack: boolean = false) {
   micromorph(document.body, html.body)
 
   // scroll into place and add history
-  if (!isBack) {
-    if (url.hash) {
-      const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
-      el?.scrollIntoView()
-    } else {
-      window.scrollTo({ top: 0 })
-    }
+  if (isBack) {
+    restoreScroll()
+  } else if (url.hash) {
+    const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
+    el?.scrollIntoView()
+  } else {
+    window.scrollTo({ top: 0 })
   }
 
   // now, patch head, re-executing scripts
@@ -150,8 +215,9 @@ async function _navigate(url: URL, isBack: boolean = false) {
   // delay setting the url until now
   // at this point everything is loaded so changing the url should resolve to the correct addresses
   if (!isBack) {
-    history.pushState({}, "", finalUrl)
+    pushEntry(finalUrl)
   }
+  renderedPath = window.location.pathname
 
   notifyNav(getFullSlug(window))
   delete announcer.dataset.persist
@@ -182,21 +248,52 @@ function createRouter() {
       event.preventDefault()
 
       if (isSamePage(url) && url.hash) {
+        // Save where the reader was, then add the entry, then jump: Back returns here.
+        saveScroll()
+        pushEntry(url)
         const el = document.getElementById(decodeURIComponent(url.hash.substring(1)))
         el?.scrollIntoView()
-        history.pushState({}, "", url)
         return
       }
 
       navigate(url, false)
     })
 
-    window.addEventListener("popstate", (event) => {
-      const { url } = getOpts(event) ?? {}
-      if (window.location.hash && window.location.pathname === url?.pathname) return
+    window.addEventListener("popstate", () => {
+      // Whatever is pending belongs to the entry just left: keep it for when it's shown again.
+      if (saveTimer !== undefined && shownKey !== undefined) {
+        unsavedScroll.set(shownKey, window.scrollY)
+      }
+      clearTimeout(saveTimer)
+      saveTimer = undefined
+      shownKey = entryKey()
+      // Back or Forward between headings of the page on screen: only scroll.
+      if (window.location.pathname === renderedPath) {
+        restoreScroll()
+        return
+      }
       navigate(new URL(window.location.toString()), true)
-      return
     })
+
+    // Record the position as the reader scrolls, so that Forward (and Back to an
+    // entry left without a link) also lands where the reader was.
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (isNavigating) return
+        clearTimeout(saveTimer)
+        saveTimer = setTimeout(() => {
+          if (!isNavigating) saveScroll()
+        }, 150)
+      },
+      { passive: true },
+    )
+    // A reload or a return from another site: the browser no longer restores it.
+    window.addEventListener("pagehide", () => {
+      if (!isNavigating) saveScroll()
+    })
+    shownKey = entryKey()
+    if (savedScroll() !== undefined) restoreScroll()
   }
 
   return new (class Router {

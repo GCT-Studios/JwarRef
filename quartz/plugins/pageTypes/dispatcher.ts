@@ -15,6 +15,7 @@ import {
   pathToRoot,
   simplifySlug,
   slugifyFilePath,
+  applySlugOptions,
 } from "../../util/path"
 import { ProcessedContent, defaultProcessedContent } from "../vfile"
 import { write } from "../emitters/helpers"
@@ -29,6 +30,7 @@ import { htmlToJsx } from "../../util/jsx"
 import { trace } from "../../util/trace"
 import { attributeError, originOf } from "../../util/pluginErrors"
 import { rejectingFilter } from "../../processors/filter"
+import { markUnpublishedLinks } from "../builtins/links"
 import fs from "fs"
 import path from "path"
 
@@ -215,7 +217,9 @@ export async function generateVirtualPages(
     const layout = resolveLayout(pt, defaults, byPageType)
     const fileBacked = (pt.fileExtensions?.length ?? 0) > 0
     for (const vp of virtualPages) {
-      const vpSlug = vp.slug as FullSlug
+      // A folder's page lives at the folder's slug; with `slugs.stripDiacritics` that is the
+      // stripped one, whatever the page type computed from the file path (folder-page).
+      const vpSlug = (vp.slug.endsWith("/index") ? applySlugOptions(vp.slug) : vp.slug) as FullSlug
       const vpRelativePath = (vpSlug + ".md") as FilePath
       const [tree, vfile] = defaultProcessedContent({
         slug: vpSlug,
@@ -379,6 +383,24 @@ function populateVirtualPageHtmlAst(
   return virtualEntries.filter((ve) => !failed.has(ve))
 }
 
+/**
+ * Mark links to pages that are not emitted: removed by a filter, or a folder / tag page no page
+ * type generated (markUnpublishedLinks). Returns the pages whose links changed, which watch mode
+ * re-emits although their source didn't change.
+ */
+function markLinksToUnpublishedPages(
+  ctx: BuildCtx,
+  content: ProcessedContent[],
+  virtualEntries: VirtualEntry[],
+): Set<FullSlug> {
+  const changed = new Set<FullSlug>()
+  if (ctx.removedPages) {
+    const generated = new Set<string>(virtualEntries.map((ve) => ve.vpSlug))
+    markUnpublishedLinks(content, ctx.removedPages, generated, changed)
+  }
+  return changed
+}
+
 export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>> = (userOpts) => {
   const defaults = userOpts?.defaults ?? {}
   const byPageType = userOpts?.byPageType ?? {}
@@ -409,6 +431,8 @@ export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>>
         defaults,
         byPageType,
       )
+
+      markLinksToUnpublishedPages(ctx, content, virtualEntries)
 
       if (virtualEntries.some((ve) => ve.fileBacked)) {
         ctx.trie = folderTrie(allFiles, virtualEntries)
@@ -503,6 +527,11 @@ export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>>
       )
 
       ctx.trie = folderTrie(allFiles, virtualEntries)
+
+      // a page whose links to a published / removed page changed is re-emitted too
+      for (const slug of markLinksToUnpublishedPages(ctx, content, virtualEntries)) {
+        changedSlugs.add(slug)
+      }
 
       const allFilesWithVirtual = [...allFiles, ...virtualEntries.map((ve) => ve.vfile.data)]
 

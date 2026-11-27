@@ -7,13 +7,20 @@ import { VFile } from "vfile"
 import { Element, Root, Text } from "hast"
 import { visit } from "unist-util-visit"
 import { BUILTINS, instantiateBuiltins, officialPluginName, planBuiltins, PlanInput } from "."
+import { normalizePluginName, orderPlugins } from "../loader/plugin-order"
 import {
   Frontmatter,
   normalizeFrontmatter,
   extractLinksFromValue,
   readFrontmatterData,
 } from "./frontmatter"
-import { Links } from "./links"
+import {
+  Links,
+  LinksInstance,
+  markLinksToRemovedPages,
+  markUnpublishedLinks,
+  removedPages,
+} from "./links"
 import {
   buildLayeredCSS,
   buildUnlayeredCSS,
@@ -34,7 +41,8 @@ import {
 import type { PluginJsonEntry } from "../loader/types"
 import type { BuildCtx } from "../../util/ctx"
 import type { ContentDetails } from "../types"
-import type { FullSlug } from "../../util/path"
+import type { FullSlug, SimpleSlug } from "../../util/path"
+import { setSlugOptions } from "../../util/path"
 import type { ProcessedContent } from "../vfile"
 
 const entry = (source: string, extra: Partial<PluginJsonEntry> = {}): PluginJsonEntry => ({
@@ -180,6 +188,39 @@ describe("planBuiltins", () => {
   })
 })
 
+describe("plugin order constraints naming a replaced plugin", () => {
+  test("after: crawl-links / before: remove-draft order against the built-in", () => {
+    const transformers = instantiateBuiltins(plan([]), "transformer")
+    const links = transformers.find((b) => b.instance.name === "Links")!
+    assert.ok(links.names.includes("crawl-links"))
+    const known = new Set(
+      [...transformers.flatMap((b) => b.names), "my-plugin"].map(normalizePluginName),
+    )
+    // same order as Links (60): without the mapping the constraint was ignored and the list
+    // order (built-ins first) put Links first anyway, so run it before
+    const mine = {
+      order: 60,
+      instance: { name: "Mine" },
+      label: "my-plugin",
+      names: ["my-plugin"],
+      before: ["crawl-links"],
+    }
+    const ordered = orderPlugins(
+      [
+        ...transformers.map((b) => ({
+          order: b.order,
+          instance: b.instance as { name: string },
+          label: b.instance.name,
+          names: b.names,
+        })),
+        mine,
+      ],
+      known,
+    ).map((i) => i.name)
+    assert.ok(ordered.indexOf("Mine") < ordered.indexOf("Links"), ordered.join(", "))
+  })
+})
+
 describe("frontmatter built-in", () => {
   const ctx = () => ({ allSlugs: [] as FullSlug[] }) as unknown as BuildCtx
 
@@ -221,6 +262,63 @@ describe("frontmatter built-in", () => {
       extractLinksFromValue({ related: ["[[My Note#Part]]", "see [x](other.md)"], n: 1 }),
       ["my-note#part", "other.md"],
     )
+  })
+
+  test("frontmatter Markdown links with an angle-bracket destination drop the brackets", () => {
+    assert.deepStrictEqual(
+      extractLinksFromValue([
+        "[Exec Briefing](<./Exec Briefing.md>)",
+        "[x](<./Exec Briefing.md#Next steps>)",
+        "[y](./Exec Briefing.md)",
+      ]),
+      ["./Exec Briefing.md", "./Exec Briefing.md#Next steps", "./Exec Briefing.md"],
+    )
+  })
+
+  test("frontmatter Markdown links: parentheses, titles and escapes as CommonMark reads them (#2672)", () => {
+    assert.deepStrictEqual(
+      extractLinksFromValue([
+        "[b](<Note (2024).md>)",
+        '[c](<My Note.md> "t")',
+        "[d](notes/Note_(2024).md)",
+        "[e](other.md 'single')",
+        "[f](other.md (paren title))",
+        '[g](<a b.md>  "t" )',
+        "[h](a\\(1\\).md)",
+        "[i](./My Note.md)",
+        "[j](unclosed.md",
+        "two: [k](k.md) and [l](<l l.md>)",
+      ]),
+      [
+        "Note (2024).md",
+        "My Note.md",
+        "notes/Note_(2024).md",
+        "other.md",
+        "other.md",
+        "a b.md",
+        "a(1).md",
+        "./My Note.md",
+        "k.md",
+        "l l.md",
+      ],
+    )
+  })
+
+  test("reads YAML frontmatter with YAML 1.2's core schema, as Obsidian does", () => {
+    const data = readFrontmatterData(
+      "---\ntitle: Hello world\ndate: 2024-01-02\ndraft: True\nn: 012\nnone: ~\nratio: .5\nalias: yes\n---\n",
+    )
+    assert.deepStrictEqual(data, {
+      title: "Hello world",
+      date: "2024-01-02",
+      draft: true,
+      n: 12,
+      none: null,
+      ratio: 0.5,
+      alias: "yes",
+    })
+    // a block without a document holds no properties
+    assert.deepStrictEqual(readFrontmatterData("---\n# only a comment\n---\nbody\n"), {})
   })
 
   test("refuses JavaScript frontmatter instead of executing it", async () => {
@@ -337,11 +435,64 @@ describe("links built-in", () => {
     assert.deepStrictEqual(file.data.links?.sort(), ["folder/sibling", "t"])
   })
 
+  test("slugs.stripDiacritics: link targets are stripped like the slugs they point at (#2410)", () => {
+    setSlugOptions({ stripDiacritics: true })
+    try {
+      const img: Element = {
+        type: "element",
+        tagName: "img",
+        properties: { src: "obr%C3%A1zek.png" },
+        children: [],
+      }
+      const { els, file } = run(
+        [a("./%C4%8Ce%C5%A1tina#%C4%8Cesk%C3%BD-nadpis", "Čeština"), a("Příliš"), img],
+        "ceske/page",
+        { markdownLinkResolution: "shortest" },
+        ["ceske/page", "ceske/cestina", "jine/prilis", "ceske/obrazek.png"],
+      )
+      const [cestina, prilis] = els.filter((e) => e.tagName === "a")
+      assert.strictEqual(cestina.properties.href, "../ceske/cestina#český-nadpis")
+      assert.ok(!(cestina.properties.className as string[]).includes("broken"))
+      assert.strictEqual(prilis.properties.href, "../jine/prilis")
+      assert.strictEqual(
+        els.find((e) => e.tagName === "img")!.properties.src,
+        "../ceske/obrazek.png",
+      )
+      assert.ok(file.data.links?.includes("ceske/cestina" as SimpleSlug))
+    } finally {
+      setSlugOptions(undefined)
+    }
+  })
+
+  test("without slugs.stripDiacritics link targets keep their diacritics", () => {
+    const { els } = run([a("Příliš")], "page", { markdownLinkResolution: "shortest" }, [
+      "page",
+      "jine/příliš",
+    ])
+    assert.strictEqual(els[0].properties.href, "./jine/příliš")
+  })
+
+  test("footnote anchors stay internal without Obsidian's note-link class", () => {
+    const fn = (props: Record<string, unknown>): Element => ({
+      type: "element",
+      tagName: "a",
+      properties: { href: "#user-content-fn-1", ...props },
+      children: [{ type: "text", value: "1" }],
+    })
+    const { els } = run([fn({ dataFootnoteRef: "" }), fn({ dataFootnoteBackref: "" })])
+    for (const el of els.filter((e) => e.tagName === "a")) {
+      const classes = el.properties.className as string[]
+      assert.ok(classes.includes("internal"))
+      assert.ok(!classes.includes("internal-link"))
+    }
+  })
+
   test("makes internal links relative, records outgoing links, marks external ones", () => {
     const { els, file } = run(
       [a("other/note", "Note"), a("https://example.com"), a("#heading")],
       "folder/page",
       { markdownLinkResolution: "absolute" },
+      ["folder/page", "other/note"],
     )
     const [internal, external] = els.filter((e) => e.tagName === "a")
     assert.strictEqual(internal.properties.href, "../other/note")
@@ -435,6 +586,62 @@ describe("links built-in", () => {
     )
   })
 
+  test("missing targets get the broken class by default, as Obsidian marks them", () => {
+    const { els } = run([a("missing"), a("page")], "page", {}, ["page"])
+    assert.ok((els[0].properties.className as string[]).includes("broken"))
+    assert.ok(!(els[1].properties.className as string[]).includes("broken"))
+  })
+
+  test("tag and folder pages, generated later, are not broken", () => {
+    const { els } = run([a("tags/specimen"), a("folder/"), a("empty/")], "page", {}, [
+      "page",
+      "folder/note",
+    ])
+    const broken = els.map((e) => (e.properties.className as string[]).includes("broken"))
+    assert.deepStrictEqual(broken, [false, false, true])
+  })
+
+  test("links to files Quartz emits are not broken; missing vault files are", () => {
+    const targets = [
+      "/index.xml",
+      "/sitemap.xml",
+      "/static/icon.png",
+      "/robots.txt",
+      "/404.html",
+      "/page.html",
+      "/pic.png",
+      "/missing.png",
+      "/missing.pdf",
+      "/missing.html",
+      "/v1.2",
+    ]
+    const { els } = run(
+      targets.map((t) => a(t)),
+      "page",
+      {},
+      ["page", "pic.png"],
+    )
+    const broken = els.map((e) => (e.properties.className as string[]).includes("broken"))
+    assert.deepStrictEqual(broken, [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+    ])
+  })
+
+  test("disableBrokenWikilinks: false leaves missing targets unmarked", () => {
+    const { els } = run([a("missing")], "page", { disableBrokenWikilinks: false }, ["page"])
+    assert.ok(!(els[0].properties.className as string[]).includes("broken"))
+  })
+
   test("disableBrokenWikilinks adds a broken class to missing targets", () => {
     const { els } = run([a("missing")], "page", { disableBrokenWikilinks: true }, ["page"])
     assert.ok((els[0].properties.className as string[]).includes("broken"))
@@ -488,6 +695,99 @@ describe("content index built-in", () => {
       "tags",
       "title",
     ])
+  })
+
+  test("writes the page date to contentIndex.json as an ISO string (explorer#5)", () => {
+    const created = new Date("2024-01-02T03:04:05.000Z")
+    const modified = new Date("2025-06-07T08:09:10.000Z")
+    const dated = page("dated", { defaultDateType: "created", dates: { created, modified } })
+    const idx = buildContentIndex(ctxWith([]), [dated, page("undated")])
+    const json = JSON.parse(serializeContentIndex(idx))
+    assert.strictEqual(json.dated.date, "2024-01-02T03:04:05.000Z")
+    assert.ok(!("description" in json.dated))
+    // pages without a date keep the build-time stand-in for RSS, but not in the JSON
+    assert.ok(idx.get("undated" as FullSlug)!.date instanceof Date)
+    assert.ok(!("date" in json.undated))
+  })
+
+  test("dateFromFrontmatter marks dates set in frontmatter for the configured type", () => {
+    const fmModified = new Date("2024-03-04T00:00:00") // local midnight, like the date plugin
+    const gitModified = new Date("2025-01-01T10:00:00.000Z")
+    const created = new Date("2020-01-01T00:00:00.000Z")
+    const fromFm = page("fm", {
+      defaultDateType: "modified",
+      frontmatter: { title: "FM", modified: "2024-03-04" },
+      dates: { created, modified: fmModified },
+    })
+    const fromGit = page("git", {
+      defaultDateType: "modified",
+      frontmatter: { title: "GIT", created: "2020-01-01T00:00:00.000Z" },
+      dates: { created, modified: gitModified },
+    })
+    // frontmatter has a date, but for another type than the configured one
+    const otherType = page("other", {
+      defaultDateType: "created",
+      frontmatter: { title: "O", modified: "2024-03-04" },
+      dates: { created: gitModified, modified: fmModified },
+    })
+    // frontmatter value lost to a higher-priority source (date differs)
+    const overridden = page("over", {
+      defaultDateType: "modified",
+      frontmatter: { title: "OV", modified: "2023-01-01" },
+      dates: { created, modified: gitModified },
+    })
+    const json = JSON.parse(
+      serializeContentIndex(
+        buildContentIndex(ctxWith([]), [fromFm, fromGit, otherType, overridden, page("undated")]),
+      ),
+    )
+    assert.strictEqual(json.fm.dateFromFrontmatter, true)
+    assert.strictEqual(json.fm.date, fmModified.toISOString())
+    for (const slug of ["git", "other", "over", "undated"]) {
+      assert.ok(!("dateFromFrontmatter" in json[slug]), slug)
+    }
+  })
+
+  test("stand-in dates of the date plugin are not written to contentIndex.json", () => {
+    const now = new Date()
+    const published = new Date("2024-05-06T00:00:00")
+    const json = JSON.parse(
+      serializeContentIndex(
+        buildContentIndex(ctxWith([]), [
+          // created-modified-date >= 1.0.5 lists the dates it filled with the build time
+          page("marked", {
+            defaultDateType: "published",
+            dates: { created: now, modified: now, published: now },
+            fallbackDates: ["published"],
+          }),
+          // older versions don't: a published date only counts when frontmatter sets it
+          page("old", {
+            defaultDateType: "published",
+            frontmatter: { title: "OLD" },
+            dates: { created: now, modified: now, published: now },
+          }),
+          page("invalid", {
+            defaultDateType: "published",
+            frontmatter: { title: "INV", published: "not a date" },
+            dates: { created: now, modified: now, published: now },
+          }),
+          page("real", {
+            defaultDateType: "published",
+            frontmatter: { title: "REAL", published: "2024-05-06" },
+            dates: { created: now, modified: now, published },
+            fallbackDates: [],
+          }),
+          page("oldReal", {
+            defaultDateType: "published",
+            frontmatter: { title: "OR", published: "2024-05-06" },
+            dates: { created: now, modified: now, published },
+          }),
+        ]),
+      ),
+    )
+    for (const slug of ["marked", "old", "invalid"]) assert.ok(!("date" in json[slug]), slug)
+    assert.strictEqual(json.real.date, published.toISOString())
+    assert.strictEqual(json.oldReal.date, published.toISOString())
   })
 
   test("plugins add fields through extendContentIndex", () => {
@@ -694,5 +994,114 @@ describe("fonts built-in", () => {
     } finally {
       delete (globalThis as Record<string, unknown>).__quartzFonts
     }
+  })
+})
+
+describe("links to pages removed by filters (crawl-links#7)", () => {
+  const link = (slug: string, className: string[] = ["internal", "internal-link"]): Element => ({
+    type: "element",
+    tagName: "a",
+    properties: { href: `./${slug}`, "data-slug": slug, className: [...className] },
+    children: [{ type: "text", value: slug }],
+  })
+  const page = (slug: string, links: Element[], data: Record<string, unknown> = {}) => {
+    const file = new VFile("")
+    file.data = { slug: slug as FullSlug, ...data } as VFile["data"]
+    return [{ type: "root", children: links } as Root, file] as ProcessedContent
+  }
+  const anchors = (item: ProcessedContent) => (item[0] as Root).children as Element[]
+
+  test("marks links to removed pages and their aliases broken, with the filter", () => {
+    const home = page("index", [
+      link("draft"),
+      link("old-name"),
+      link("published"),
+      link("folder/index"),
+    ])
+    const draft = page("draft", [], { aliases: ["old-name"] })
+    const published = page("published", [])
+    const folderIndex = page("folder/index", [])
+    const all = [home, draft, published, folderIndex]
+    const marked = markLinksToRemovedPages(all, [home, published], (s) =>
+      s === "draft" || s === "folder/index" ? "RemoveDrafts" : undefined,
+    )
+    const [toDraft, toAlias, toPublished, toFolder] = anchors(home)
+    assert.strictEqual(marked, 2)
+    assert.ok((toDraft.properties.className as string[]).includes("broken"))
+    assert.strictEqual(toDraft.properties["data-filtered"], "RemoveDrafts")
+    assert.ok((toAlias.properties.className as string[]).includes("broken"))
+    assert.ok(!(toPublished.properties.className as string[]).includes("broken"))
+    // a folder whose index note is a draft still gets a generated folder page
+    assert.ok(!(toFolder.properties.className as string[]).includes("broken"))
+  })
+
+  test("a removed page's alias that a published page owns is not broken", () => {
+    const home = page("index", [link("shared")])
+    const draft = page("draft", [], { aliases: ["shared"] })
+    const owner = page("shared", [])
+    markLinksToRemovedPages([home, draft, owner], [home, owner])
+    assert.ok(!(anchors(home)[0].properties.className as string[]).includes("broken"))
+  })
+
+  test("unmarks links when the target is published again (watch mode)", () => {
+    const home = page("index", [link("draft")])
+    const draft = page("draft", [])
+    markLinksToRemovedPages([home, draft], [home])
+    assert.ok((anchors(home)[0].properties.className as string[]).includes("broken"))
+    markLinksToRemovedPages([home, draft], [home, draft])
+    const a = anchors(home)[0]
+    assert.deepStrictEqual(a.properties.className, ["internal", "internal-link"])
+    assert.strictEqual(a.properties["data-filtered"], undefined)
+  })
+
+  test("leaves links marked broken by the links transformer alone", () => {
+    const home = page("index", [link("missing", ["internal", "internal-link", "broken"])])
+    markLinksToRemovedPages([home], [home])
+    assert.ok((anchors(home)[0].properties.className as string[]).includes("broken"))
+  })
+
+  test("marks links to folder and tag pages no page type generated", () => {
+    const home = page("index", [
+      link("drafts/index"),
+      link("notes/index"),
+      link("tags/unused"),
+      link("tags/used"),
+      link("tags/parent"),
+      link("index"),
+    ])
+    const generated = new Set(["notes/index", "tags/used", "tags/parent/index", "tags/index"])
+    const changed = new Set<FullSlug>()
+    const marked = markUnpublishedLinks([home], new Map(), generated, changed)
+    const broken = anchors(home).map((a) => (a.properties.className as string[]).includes("broken"))
+    assert.deepStrictEqual(broken, [true, false, true, false, false, false])
+    assert.strictEqual(marked, 2)
+    assert.strictEqual(anchors(home)[0].properties["data-missing"], "")
+    assert.deepStrictEqual([...changed], ["index"])
+  })
+
+  test("reports the pages whose marks changed, so watch mode re-emits them", () => {
+    const home = page("index", [link("draft")])
+    const other = page("other", [link("published")])
+    const draft = page("draft", [])
+    const all = [home, other, draft]
+    const changed = new Set<FullSlug>()
+    markUnpublishedLinks([home, other], removedPages(all, [home, other]), new Set(), changed)
+    assert.deepStrictEqual([...changed], ["index"])
+    changed.clear()
+    // nothing changed: nothing to re-emit
+    markUnpublishedLinks([home, other], removedPages(all, [home, other]), new Set(), changed)
+    assert.deepStrictEqual([...changed], [])
+    // the draft is published: its link is unmarked, the page re-emitted
+    markUnpublishedLinks([home, other, draft], removedPages(all, all), new Set(), changed)
+    assert.deepStrictEqual([...changed], ["index"])
+    assert.deepStrictEqual(anchors(home)[0].properties.className, ["internal", "internal-link"])
+  })
+
+  test("the Links instance says whether it marks broken links", () => {
+    assert.strictEqual((Links() as LinksInstance).marksBrokenLinks, true)
+    assert.strictEqual(
+      (Links({ disableBrokenWikilinks: false }) as LinksInstance).marksBrokenLinks,
+      false,
+    )
   })
 })

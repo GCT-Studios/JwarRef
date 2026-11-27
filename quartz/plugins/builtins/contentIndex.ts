@@ -3,7 +3,7 @@ import fs from "node:fs/promises"
 import { Root } from "hast"
 import { toHtml } from "hast-util-to-html"
 import { styleText } from "util"
-import { getDate } from "@quartz-community/utils"
+import { dateIsFromFrontmatter as dateIsFromFrontmatterOfType, realDate } from "../../util/dates"
 import { ContentIndexConfig, GlobalConfiguration } from "../../cfg"
 import { BuildCtx } from "../../util/ctx"
 import { escapeHTML } from "../../util/escape"
@@ -53,6 +53,7 @@ export const CORE_CONTENT_INDEX_FIELDS = new Set([
   "content",
   "richContent",
   "date",
+  "dateFromFrontmatter",
   "description",
 ])
 
@@ -150,6 +151,38 @@ export function prepareContentIndex(ctx: BuildCtx, content: ProcessedContent[]):
   return index
 }
 
+/**
+ * Pages without a date, or with one the date plugin filled in with the build time (its
+ * `fallbackDates`), get the build time, so RSS and the sitemap keep working as before.
+ * Those stand-in dates are remembered here and not written to contentIndex.json, where a
+ * build-time date would look like a real one to client-side sorting (explorer, recent notes).
+ */
+const buildTimeDates = new WeakSet<Date>()
+function buildTimeDate(): Date {
+  const date = new Date()
+  buildTimeDates.add(date)
+  return date
+}
+
+function entryDate(data: QuartzPluginData): Date {
+  // a stand-in date of the date plugin (fallbackDates) is a build-time date as well
+  const date = realDate(data, data.defaultDateType as string | undefined)
+  if (!date) return buildTimeDate()
+  if (dateIsFromFrontmatter(data, date)) frontmatterDates.add(date)
+  return date
+}
+
+/**
+ * Whether the page's `date` is the one its frontmatter sets for the configured date type
+ * (`defaultDateType`). See util/dates.
+ */
+export function dateIsFromFrontmatter(data: QuartzPluginData, date: Date | undefined): boolean {
+  return dateIsFromFrontmatterOfType(data, date)
+}
+
+/** Pages whose date came from frontmatter (see dateIsFromFrontmatter). */
+const frontmatterDates = new WeakSet<Date>()
+
 /** Build the index from processed content (also used by tests and potentially other emitters). */
 export function buildContentIndex(
   ctx: BuildCtx,
@@ -176,7 +209,7 @@ export function buildContentIndex(
         options.rssFullHtml && data.encrypted !== true
           ? escapeHTML(toHtml(tree as Root, { allowDangerousHtml: true }))
           : undefined,
-      date: getDate(data as Parameters<typeof getDate>[0]) ?? new Date(),
+      date: entryDate(data),
       description: (data.description as string | undefined) ?? "",
     }
     index.set(slug, applyContentIndexExtensions(ctx, extensions, entry, data))
@@ -240,13 +273,25 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?:
   </rss>`
 }
 
-/** Entries as written to contentIndex.json (date and description are RSS/sitemap-only). */
+/**
+ * Entries as written to contentIndex.json. `date` is the page's date (the one
+ * `defaultDateType` selects, as shown by ContentMeta and used by RSS) as an ISO 8601 string,
+ * left out for pages without a date. `dateFromFrontmatter: true` is added when that date is the
+ * one the page's frontmatter sets for the date type (absent otherwise). `description` is
+ * RSS-only.
+ */
 export function serializeContentIndex(idx: ContentIndexMap): string {
   const simplified = Object.fromEntries(
-    Array.from(idx).map(([slug, { date: _date, description: _description, ...rest }]) => [
-      slug,
-      rest,
-    ]),
+    Array.from(idx).map(([slug, { date, description: _description, ...rest }]) => {
+      const hasDate = date instanceof Date && !isNaN(date.getTime()) && !buildTimeDates.has(date)
+      if (!hasDate) return [slug, rest]
+      return [
+        slug,
+        frontmatterDates.has(date)
+          ? { ...rest, date: date.toISOString(), dateFromFrontmatter: true }
+          : { ...rest, date: date.toISOString() },
+      ]
+    }),
   )
   return JSON.stringify(simplified)
 }

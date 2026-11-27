@@ -7,7 +7,13 @@ import {
   JSResourceToScriptElement,
   StaticResources,
 } from "../util/resources"
-import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+import {
+  FullSlug,
+  RelativeURL,
+  getSlugOptions,
+  joinSegments,
+  normalizeHastElement,
+} from "../util/path"
 import { clone } from "../util/clone"
 import { Root, Element, ElementContent } from "hast"
 import { GlobalConfiguration, SidebarModes } from "../cfg"
@@ -15,7 +21,7 @@ import { i18n } from "../i18n"
 import { styleText } from "util"
 import { resolveFrame } from "./frames"
 import type { PageTreeTransforms, TreeTransform } from "../plugins/types"
-import { createIdScopes, scopeTranscludedIds, sliceWithFootnotes } from "./transcludeScope"
+import { blockOf, createIdScopes, scopeTranscludedIds, sliceWithFootnotes } from "./transcludeScope"
 import type { BuildCtx } from "../util/ctx"
 
 interface RenderComponents {
@@ -51,6 +57,17 @@ function headingHasId(heading: Element, id: string): boolean {
     )
   return hasAlias(heading)
 }
+/**
+ * `configuration.slugs` for scripts in the browser. @quartz-community/utils (1.3+) keeps its slug
+ * options on this global, so every plugin script that slugs (the explorer places pages by their
+ * file path) slugs as the build did. Nothing is written with the default options.
+ */
+export function slugOptionsScript(): string {
+  const options = getSlugOptions()
+  if (!options.stripDiacritics) return ""
+  return `;globalThis[Symbol.for("@quartz-community/utils/slugOptions")] = ${JSON.stringify(options)}`
+}
+
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
@@ -102,7 +119,8 @@ export function pageResources(
     `.catch(e => { console.warn("[Quartz] Could not load ${contentIndexPath} (" + e.message + "); is configuration.contentIndex disabled?"); return {} });` +
     // Absolute URL of static/ (plugin assets live in static/plugins/<to>). Resolved once on the
     // first page, so it stays valid across SPA navigations.
-    `window.quartzStaticUrl = new URL(${JSON.stringify(joinSegments(baseDir, "static") + "/")}, location.href).href`
+    `window.quartzStaticUrl = new URL(${JSON.stringify(joinSegments(baseDir, "static") + "/")}, location.href).href` +
+    slugOptionsScript()
 
   const resources: StaticResources = {
     css: [
@@ -139,6 +157,73 @@ export function pageResources(
   return resources
 }
 
+/** Lucide's maximize-2, Obsidian's icon for opening an embedded note. */
+const MAXIMIZE_ICON: Element = {
+  type: "element",
+  tagName: "svg",
+  properties: {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    className: ["svg-icon", "lucide-maximize-2"],
+  },
+  children: ["M15 3h6v6", "m21 3-7 7", "m3 21 7-7", "M9 21H3v-6"].map((d) => ({
+    type: "element",
+    tagName: "path",
+    properties: { d },
+    children: [],
+  })),
+}
+
+/**
+ * Obsidian's embed markup around transcluded content, so Obsidian themes' embed
+ * styles apply: the title (the note's, for a whole-note embed), then the content in a
+ * rendered view, then Quartz's link to the original, then Obsidian's icon link to it
+ * (`.markdown-embed-link`), which Quartz hides and Obsidian's styles show.
+ */
+function obsidianEmbed(title: string, content: ElementContent[], link: Element): ElementContent[] {
+  const embedLink: Element = {
+    type: "element",
+    tagName: "a",
+    properties: {
+      href: link.properties.href,
+      className: ["markdown-embed-link"],
+      ariaLabel: (link.children[0] as { value?: string } | undefined)?.value,
+      dataNoPopover: true,
+    },
+    children: [structuredClone(MAXIMIZE_ICON)],
+  }
+  return [
+    {
+      type: "element",
+      tagName: "div",
+      properties: { className: ["embed-title", "markdown-embed-title"] },
+      children: title ? [{ type: "text", value: title }] : [],
+    },
+    {
+      type: "element",
+      tagName: "div",
+      properties: { className: ["markdown-embed-content"] },
+      children: [
+        {
+          type: "element",
+          tagName: "div",
+          properties: { className: ["markdown-preview-view", "markdown-rendered"] },
+          children: content,
+        },
+      ],
+    },
+    link,
+    embedLink,
+  ]
+}
+
 /** @internal Exported for testing only. */
 export function renderTranscludes(
   root: Root,
@@ -172,6 +257,15 @@ export function renderTranscludes(
       }
 
       const inner = el.children[0] as Element
+      const linkToOriginal = (): Element => ({
+        type: "element",
+        tagName: "a",
+        properties: {
+          href: inner.properties?.href,
+          class: ["internal", "internal-link", "transclude-src"],
+        },
+        children: [{ type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal }],
+      })
       const transcludeTarget = (inner.properties["data-slug"] ?? slug) as FullSlug
       if (visited.has(transcludeTarget)) {
         console.warn(
@@ -214,8 +308,9 @@ export function renderTranscludes(
 
       let blockRef = el.properties.dataBlock as string | undefined
       if (blockRef?.startsWith("#^")) {
-        // block transclude
-        blockRef = blockRef.slice("#^".length)
+        // block transclude: `data.blocks` is keyed by the block's name, lowercased (`para-1`); the
+        // block element's id is `^para-1` (rehype-obsidian), its anchor `#^para-1`
+        blockRef = blockRef.slice("#^".length).toLowerCase()
         let blockNode = page.blocks?.[blockRef]
         if (blockNode) {
           if (blockNode.tagName === "li") {
@@ -227,20 +322,11 @@ export function renderTranscludes(
             }
           }
 
-          el.children = [
-            normalizeHastElement(blockNode, slug, transcludeTarget),
-            {
-              type: "element",
-              tagName: "a",
-              properties: {
-                href: inner.properties?.href,
-                class: ["internal", "internal-link", "transclude-src"],
-              },
-              children: [
-                { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
-              ],
-            },
-          ]
+          el.children = obsidianEmbed(
+            "",
+            [normalizeHastElement(blockNode, slug, transcludeTarget)],
+            linkToOriginal(),
+          )
         }
       } else if (blockRef?.startsWith("#") && page.htmlAst) {
         // header transclude
@@ -248,7 +334,9 @@ export function renderTranscludes(
         let startIdx = undefined
         let startDepth = undefined
         let endIdx = undefined
-        for (const [i, htmlEl] of page.htmlAst.children.entries()) {
+        for (const [i, child] of page.htmlAst.children.entries()) {
+          // The heading, inside its block wrapper if it has one (`div.el-h2 > h2`).
+          const htmlEl = blockOf(child as ElementContent)
           if (!(htmlEl.type === "element" && htmlEl.tagName.match(headerRegex))) continue
           const depth = Number(htmlEl.tagName.substring(1))
 
@@ -268,55 +356,25 @@ export function renderTranscludes(
           continue
         }
 
-        el.children = [
-          ...sliceWithFootnotes(page.htmlAst.children as ElementContent[], startIdx, endIdx).map(
-            (c) => normalizeHastElement(c as Element, slug, transcludeTarget),
-          ),
-          {
-            type: "element",
-            tagName: "a",
-            properties: {
-              href: inner.properties?.href,
-              class: ["internal", "internal-link", "transclude-src"],
-            },
-            children: [
-              { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
-            ],
-          },
-        ]
-      } else if (page.htmlAst) {
-        // page transclude
-        el.children = [
-          {
-            type: "element",
-            tagName: "h1",
-            properties: {},
-            children: [
-              {
-                type: "text",
-                value:
-                  page.frontmatter?.title ??
-                  i18n(cfg.locale).components.transcludes.transcludeOf({
-                    targetSlug: page.slug!,
-                  }),
-              },
-            ],
-          },
-          ...(page.htmlAst.children as ElementContent[]).map((c) =>
+        el.children = obsidianEmbed(
+          "",
+          sliceWithFootnotes(page.htmlAst.children as ElementContent[], startIdx, endIdx).map((c) =>
             normalizeHastElement(c as Element, slug, transcludeTarget),
           ),
-          {
-            type: "element",
-            tagName: "a",
-            properties: {
-              href: inner.properties?.href,
-              class: ["internal", "internal-link", "transclude-src"],
-            },
-            children: [
-              { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
-            ],
-          },
-        ]
+          linkToOriginal(),
+        )
+      } else if (page.htmlAst) {
+        // page transclude
+        el.children = obsidianEmbed(
+          page.frontmatter?.title ??
+            i18n(cfg.locale).components.transcludes.transcludeOf({
+              targetSlug: page.slug!,
+            }),
+          (page.htmlAst.children as ElementContent[]).map((c) =>
+            normalizeHastElement(c as Element, slug, transcludeTarget),
+          ),
+          linkToOriginal(),
+        )
       }
 
       // Recurse into the replaced children to resolve nested transclusions,

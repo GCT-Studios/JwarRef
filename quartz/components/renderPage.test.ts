@@ -3,7 +3,9 @@ import { toHtml } from "hast-util-to-html"
 import assert from "node:assert"
 import { renderTranscludes, pageResources, transformPageContent } from "./renderPage"
 import { Root, Element } from "hast"
-import { FullSlug } from "../util/path"
+import { FullSlug, setSlugOptions } from "../util/path"
+import { slugifyFilePath } from "@quartz-community/utils"
+import vm from "node:vm"
 import { GlobalConfiguration } from "../cfg"
 import { QuartzComponentProps } from "./types"
 import { StaticResources } from "../util/resources"
@@ -49,6 +51,42 @@ function makeComponentData(
 }
 
 describe("renderTranscludes", () => {
+  test("wraps transcluded content in Obsidian's embed markup", () => {
+    const root: Root = { type: "root", children: [makeTranscludeBlockquote("target")] }
+    const targetHtml: Root = {
+      type: "root",
+      children: [
+        {
+          type: "element",
+          tagName: "p",
+          properties: {},
+          children: [{ type: "text", value: "Target content" }],
+        },
+      ],
+    }
+    renderTranscludes(
+      root,
+      cfg,
+      "current" as FullSlug,
+      makeComponentData([makePageData("target", targetHtml)]) as QuartzComponentProps,
+      new Set<FullSlug>(["current" as FullSlug]),
+    )
+    const [title, content, link, embedLink] = (root.children[0] as Element).children as Element[]
+    assert.deepStrictEqual(title.properties.className, ["embed-title", "markdown-embed-title"])
+    assert.deepStrictEqual(content.properties.className, ["markdown-embed-content"])
+    const view = content.children[0] as Element
+    assert.deepStrictEqual(view.properties.className, [
+      "markdown-preview-view",
+      "markdown-rendered",
+    ])
+    assert.strictEqual((view.children[0] as Element).tagName, "p")
+    assert.deepStrictEqual(link.properties.class, ["internal", "internal-link", "transclude-src"])
+    // Obsidian's icon link to the note, after Quartz's (hidden unless a theme shows it).
+    assert.deepStrictEqual(embedLink.properties.className, ["markdown-embed-link"])
+    assert.strictEqual(embedLink.properties.href, link.properties.href)
+    assert.strictEqual((embedLink.children[0] as Element).tagName, "svg")
+  })
+
   test("resolves a single page transclusion", () => {
     const root: Root = {
       type: "root",
@@ -80,6 +118,48 @@ describe("renderTranscludes", () => {
     const bq = root.children[0] as Element
     const texts = JSON.stringify(bq.children)
     assert.ok(texts.includes("Target content"), "transcluded content should be inlined")
+  })
+
+  test("a block transclusion finds the block by its name and scopes its ^id", () => {
+    const block: Element = {
+      type: "element",
+      tagName: "p",
+      properties: { id: "^para-1" },
+      children: [
+        { type: "text", value: "Block text " },
+        {
+          type: "element",
+          tagName: "a",
+          properties: { href: "#^para-1" },
+          children: [{ type: "text", value: "self" }],
+        },
+      ],
+    }
+    const heading: Element = {
+      type: "element",
+      tagName: "h2",
+      properties: { id: "para-1" },
+      children: [{ type: "text", value: "Para 1" }],
+    }
+    const targetHtml: Root = { type: "root", children: [heading, block] }
+    const allFiles = [makePageData("target", targetHtml, { blocks: { "para-1": block } })]
+    const root: Root = {
+      type: "root",
+      children: [makeTranscludeBlockquote("target", "#^Para-1")],
+    }
+    renderTranscludes(
+      root,
+      cfg,
+      "current" as FullSlug,
+      makeComponentData(allFiles) as QuartzComponentProps,
+      new Set<FullSlug>(["current" as FullSlug]),
+    )
+    const html = toHtml(root)
+    assert.ok(html.includes("Block text"), html)
+    assert.ok(!html.includes("Para 1"), "the heading of the same name isn't transcluded")
+    const id = /<p id="([^"]+)"/.exec(html)?.[1]
+    assert.ok(id?.endsWith("^para-1") && id !== "^para-1", `scoped block id, got ${id}`)
+    assert.ok(html.includes(`href="#${id}"`), "the link inside points at the scoped id")
   })
 
   test("allows the same page to be embedded twice as siblings", () => {
@@ -182,6 +262,43 @@ describe("renderTranscludes", () => {
     )
     assert.ok(secondText.includes("Details text"), "second header section should resolve")
     assert.ok(!secondText.includes("Circular transclusion"), "should not show circular warning")
+  })
+
+  test("a header transclusion finds headings inside Obsidian's block wrappers", () => {
+    const root: Root = {
+      type: "root",
+      children: [makeTranscludeBlockquote("target", "#details")],
+    }
+    const wrap = (tagName: string, properties: Element["properties"], value: string): Element => ({
+      type: "element",
+      tagName: "div",
+      properties: { className: [`el-${tagName}`] },
+      children: [{ type: "element", tagName, properties, children: [{ type: "text", value }] }],
+    })
+    const targetHtml: Root = {
+      type: "root",
+      children: [
+        wrap("h2", { id: "intro" }, "Intro"),
+        wrap("p", {}, "Intro text"),
+        wrap("h2", { id: "details" }, "Details"),
+        wrap("p", {}, "Details text"),
+        wrap("h2", { id: "after" }, "After"),
+        wrap("p", {}, "After text"),
+      ],
+    }
+
+    renderTranscludes(
+      root,
+      cfg,
+      "current" as FullSlug,
+      makeComponentData([makePageData("target", targetHtml)]) as QuartzComponentProps,
+      new Set<FullSlug>(["current" as FullSlug]),
+    )
+
+    const html = toHtml(root.children[0] as Element)
+    assert.ok(html.includes('<div class="el-p"><p>Details text</p></div>'), html)
+    assert.ok(!html.includes("Intro text"), "the slice starts at its heading")
+    assert.ok(!html.includes("After text"), "the slice ends at the next heading")
   })
 
   test("a header transclusion matches a heading's Obsidian-anchor alias", () => {
@@ -384,6 +501,40 @@ describe("pageResources", () => {
       externalJs.src.startsWith("/quartz/"),
       `expected js src to start with /quartz/, got: ${externalJs.src}`,
     )
+  })
+
+  const inlineScript = (result: ReturnType<typeof pageResources>) =>
+    result.js
+      .filter((j) => j.contentType === "inline")
+      .map((j) => ("script" in j ? j.script : ""))
+      .join("\n")
+
+  test("slugs.stripDiacritics reaches scripts in the browser (#2410)", () => {
+    setSlugOptions({ stripDiacritics: true })
+    try {
+      const script = inlineScript(pageResources("." as FullSlug, emptyResources))
+      // run it as the page does; the global it sets is the one utils reads
+      const page = vm.createContext({
+        fetch: () => new Promise(() => {}),
+        location: { href: "https://x/" },
+        URL,
+      })
+      vm.runInContext(script.replace("window.", "globalThis."), page)
+      const set = vm.runInContext(
+        `JSON.stringify(globalThis[Symbol.for("@quartz-community/utils/slugOptions")])`,
+        page,
+      )
+      assert.strictEqual(set, JSON.stringify({ stripDiacritics: true }))
+      // same global as utils in this thread: a script with utils 1.3 slugs as the build does
+      assert.strictEqual(slugifyFilePath("české/čeština.md" as never), "ceske/cestina")
+    } finally {
+      setSlugOptions(undefined)
+    }
+  })
+
+  test("the default slug options write nothing to the page", () => {
+    const script = inlineScript(pageResources("." as FullSlug, emptyResources))
+    assert.ok(!script.includes("slugOptions"), script)
   })
 
   test("omits subpath prefix when baseDir is empty (serve mode)", () => {

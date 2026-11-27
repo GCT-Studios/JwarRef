@@ -6,7 +6,6 @@ export {
   isRelativeURL,
   isAbsoluteURL,
   getFullSlug,
-  slugifyFilePath,
   simplifySlug,
   joinSegments,
   endsWith,
@@ -34,6 +33,23 @@ export type {
 } from "@quartz-community/utils"
 
 // --- v5-specific exports below ---
+
+// `configuration.slugs` (stripDiacritics) lives in @quartz-community/utils, on a global shared by
+// every copy of the package, so core's slugs and plugins' slugs (tag pages, canvas, bases,
+// alias-redirects …) agree. The config loader sets it in the main thread and in every worker.
+import { getSlugOptions, stripDiacritics } from "@quartz-community/utils"
+export {
+  getSlugOptions,
+  setSlugOptions,
+  slugifyFilePath,
+  stripDiacritics,
+} from "@quartz-community/utils"
+export type { SlugOptions } from "@quartz-community/utils"
+
+/** `stripDiacritics` when `configuration.slugs.stripDiacritics` is on, else unchanged. */
+export function applySlugOptions(s: string): string {
+  return getSlugOptions().stripDiacritics ? stripDiacritics(s) : s
+}
 
 export const QUARTZ = "quartz"
 
