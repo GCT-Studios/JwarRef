@@ -41,8 +41,8 @@ import {
 import type { PluginJsonEntry } from "../loader/types"
 import type { BuildCtx } from "../../util/ctx"
 import type { ContentDetails } from "../types"
-import type { FullSlug, SimpleSlug } from "../../util/path"
-import { setSlugOptions } from "../../util/path"
+import type { FilePath, FullSlug, SimpleSlug } from "../../util/path"
+import { setSlugOptions, slugifyFilePath } from "../../util/path"
 import type { ProcessedContent } from "../vfile"
 
 const entry = (source: string, extra: Partial<PluginJsonEntry> = {}): PluginJsonEntry => ({
@@ -459,6 +459,25 @@ describe("links built-in", () => {
         "../ceske/obrazek.png",
       )
       assert.ok(file.data.links?.includes("ceske/cestina" as SimpleSlug))
+    } finally {
+      setSlugOptions(undefined)
+    }
+  })
+
+  test("slugs.stripDiacritics: a percent-encoded % in a link target is decoded once", () => {
+    setSlugOptions({ stripDiacritics: true })
+    try {
+      // `Kódování/Mezera je %20.md`, linked as Obsidian writes a Markdown link to it
+      const target = slugifyFilePath("Kódování/Mezera je %20.md" as FilePath)
+      assert.strictEqual(target, "kodovani/mezera-je--percent20")
+      const { els } = run(
+        [a("K%C3%B3dov%C3%A1n%C3%AD/Mezera%20je%20%2520.md")],
+        "index",
+        { markdownLinkResolution: "shortest" },
+        ["index", target],
+      )
+      assert.strictEqual(els[0].properties.href, "./kodovani/mezera-je--percent20")
+      assert.ok(!(els[0].properties.className as string[]).includes("broken"))
     } finally {
       setSlugOptions(undefined)
     }
@@ -1077,6 +1096,51 @@ describe("links to pages removed by filters (crawl-links#7)", () => {
     assert.strictEqual(marked, 2)
     assert.strictEqual(anchors(home)[0].properties["data-missing"], "")
     assert.deepStrictEqual([...changed], ["index"])
+  })
+
+  test("links to published folder notes and pages are not marked once page types ran", () => {
+    // `notes/index` is a content page (notes/index.md or a folder note), so no page type
+    // generates it: it is live because it is published, not because it was generated
+    const home = page("index", [
+      link("notes/index"),
+      link("projects/index"),
+      link("published"),
+      link("aka"),
+      link("tags/x"),
+    ])
+    const notes = page("notes/index", [])
+    const projects = page("projects/index", [], { aliases: ["aka"] })
+    const published = page("published", [])
+    const changed = new Set<FullSlug>()
+    const marked = markUnpublishedLinks(
+      [home, notes, projects, published],
+      new Map(),
+      new Set(["tags/x"]),
+      changed,
+    )
+    assert.strictEqual(marked, 0)
+    for (const a of anchors(home)) {
+      assert.deepStrictEqual(a.properties.className, ["internal", "internal-link"])
+      assert.strictEqual(a.properties["data-missing"], undefined)
+      assert.strictEqual(a.properties["data-filtered"], undefined)
+    }
+    assert.deepStrictEqual([...changed], [])
+  })
+
+  test("a folder note that is a draft: its folder page is generated, or the link is missing", () => {
+    const home = page("index", [link("notes/index"), link("drafts/index")])
+    const notesIndex = page("notes/index", [])
+    const draftsIndex = page("drafts/index", [])
+    const all = [home, notesIndex, draftsIndex]
+    const removed = removedPages(all, [home], () => "RemoveDrafts")
+    // folder index notes are left to the generated pages
+    assert.deepStrictEqual([...removed], [])
+    markUnpublishedLinks([home], removed, new Set(["notes/index"]))
+    const [toNotes, toDrafts] = anchors(home)
+    assert.ok(!(toNotes.properties.className as string[]).includes("broken"))
+    assert.ok((toDrafts.properties.className as string[]).includes("broken"))
+    assert.strictEqual(toDrafts.properties["data-missing"], "")
+    assert.strictEqual(toDrafts.properties["data-filtered"], undefined)
   })
 
   test("reports the pages whose marks changed, so watch mode re-emits them", () => {
