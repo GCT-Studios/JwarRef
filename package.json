@@ -137,15 +137,11 @@
     "esbuild": "^0.28.2",
     "prettier": "^3.8.1",
     "tsx": "^4.21.0",
-<<<<<<< HEAD
     "typescript": "^5.9.3"
   },
   "allowScripts": {
     "sharp@0.34.5": true,
     "esbuild@0.28.2": true,
     "@parcel/watcher@2.6.0": true
-=======
-    "typescript": "^7.0.2"
->>>>>>> 29be20f41c8ca3e544f3f17adcf043ac0f78bef2
   }
 }
